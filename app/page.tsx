@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className="mt-4 space-y-1 text-base text-zinc-600 dark:text-zinc-400 md:text-lg">
                 <div className="flex items-center">
                     <PenTool className="h-4 w-4 mr-2" />
-                    <span>UX/UI Designer</span>
+                    <span>Experience Designer</span>
                 </div>
                 <div className="flex items-center">
                     <MapPin className="h-4 w-4 mr-2" />
