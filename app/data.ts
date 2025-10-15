@@ -17,10 +17,10 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'GameKnight',
+    name: 'Ludos',
     description:
-      'GameKnight aims to elevate the social experience of game nights for groups of friends worldwide. The app removes common logistical hurdles by providing an intuitive platform for hosts to manage events and track scores, allowing players to focus less on the rules and more on the fun.',
-    link: '/gameknight',
+      'Ludos aims to elevate the social experience of game nights for groups of friends worldwide. The app removes common logistical hurdles by providing an intuitive platform for hosts to manage events and track scores, allowing players to focus less on the rules and more on the fun.',
+    link: '/ludos',
     image: '/placeholder.png',
     id: 'project1',
   },
