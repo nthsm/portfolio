@@ -17,18 +17,18 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Ludos',
-    description:
-      'Ludos aims to elevate the social experience of game nights for groups of friends worldwide. The app removes common logistical hurdles by providing an intuitive platform for hosts to manage events and track scores, allowing players to focus less on the rules and more on the fun.',
-    link: '/ludos',
-    image: '/placeholder.png',
-    id: 'project1',
-  },
-  {
     name: 'Circuit Source',
     description:
       'A peer-to-peer marketplace concept designed to help Florida State University students safely buy and sell tech and gaming gear within a trusted campus community.',
     link: '/circuit-source',
+    image: '/placeholder.png',
+    id: 'project1',
+  },
+  {
+    name: 'Ludos',
+    description:
+      'Ludos aims to elevate the social experience of game nights for groups of friends worldwide. The app removes common logistical hurdles by providing an intuitive platform for hosts to manage events and track scores, allowing players to focus less on the rules and more on the fun.',
+    link: '/ludos',
     image: '/placeholder.png',
     id: 'project2',
   },
