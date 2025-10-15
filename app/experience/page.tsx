@@ -187,7 +187,7 @@ export default function ExperiencePage() {
             <ExperienceItem 
                 title="Freelance UX Designer"
                 company="Self-Employed"
-                duration="2024 — Present"
+                duration="2025 — Present"
                 location="Remote"
             >
                 <p>As a freelance designer, my work typically involves user research, creating wireframes and prototypes, and conducting usability tests to refine designs.</p>
