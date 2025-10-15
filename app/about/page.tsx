@@ -46,7 +46,7 @@ export default function AboutPage() {
             
             <div className="prose prose-zinc prose-xl dark:prose-invert max-w-none">
               <p>
-                I love the blend of <span className="not-prose gradient-text font-bold"> creativity, analytical thinking, people skills, and problem-solving </span> that UX design and research requires.
+                I love the blend of <span className="not-prose gradient-text font-bold"> creativity, analytical thinking, people skills, and problem-solving </span> that experience design and research requires.
               </p>
               <p>
                 As a designer, I lead with my core talents of <span className="not-prose gradient-text font-bold"> organization and empathy </span> to create products that are <span className="not-prose gradient-text font-bold"> equitable, enjoyable, and useful </span> for all people.
