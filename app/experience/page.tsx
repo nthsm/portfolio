@@ -194,7 +194,7 @@ export default function ExperiencePage() {
             </ExperienceItem>
             <ExperienceItem 
                 title="Guest Experience Associate"
-                company="Target Corp."
+                company="Target Corporation"
                 duration="2022 — Present"
                 location="Tallahassee, FL"
             >
@@ -220,7 +220,7 @@ export default function ExperiencePage() {
         </Section>
         
         <Section title="Certifications" icon={Award}>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4">
                  <a href="https://coursera.org/share/8d94bef718bcd12eb437bb7357e24e19" target="_blank" rel="noopener noreferrer">
                     <Image src="/googleux.png" alt="Google UX Certificate" width={200} height={150} className="rounded-lg transition-transform hover:scale-105" />
                 </a>
