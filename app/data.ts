@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Circuit Source',
     description:
-      'A peer-to-peer marketplace concept designed to help FSU students safely buy and sell tech and gaming gear within a trusted campus community.',
+      'A peer-to-peer marketplace concept designed to help Florida State University students safely buy and sell tech and gaming gear within a trusted campus community.',
     link: '/circuit-source',
     image: '/placeholder.png',
     id: 'project2',
