@@ -1,4 +1,4 @@
-import { SiLinkedin, SiStrava } from 'react-icons/si';
+import { SiLinkedin, SiStrava, SiMedium } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 export type Project = {
@@ -44,5 +44,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'Strava',
     link: 'https://www.strava.com/athletes/139602024',
     icon: SiStrava,
+  },
+  {
+    label: 'Medium',
+    link: 'https://medium.com/@nthsm',
+    icon: SiMedium,
   },
 ]
