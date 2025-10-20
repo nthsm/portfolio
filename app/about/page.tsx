@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { ArrowUpRight, Download, Eye, Briefcase, Mail } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -25,7 +26,25 @@ const itemVariants = {
   },
 }
 
+interface MediumArticle {
+  title: string;
+  link: string;
+  thumbnail: string;
+  content: string;
+}
+
 export default function AboutPage() {
+  const [articles, setArticles] = useState<MediumArticle[]>([]);
+
+  useEffect(() => {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nthsm')
+      .then(res => res.json())
+      .then(data => {
+        setArticles(data.items);
+      })
+      .catch(err => console.error(err));
+  }, []);
+
   return (
     <motion.div
       className="not-prose"
@@ -38,7 +57,7 @@ export default function AboutPage() {
           
           <div className="flex-1"> 
             <h1 className={cn("text-5xl md:text-6xl font-extrabold tracking-tight mb-4 gradient-text leading-normal inline-block")}>
-                Hello, I'm Nathan Smith.
+                A little about me.
             </h1>
             <p className="text-xl md:text-2xl mb-12 text-zinc-700 dark:text-zinc-300 not-prose">
                 I design intuitive and human-centered technology.
@@ -63,10 +82,35 @@ export default function AboutPage() {
                   This helps me <span className="not-prose gradient-text font-bold"> understand both the technical and business sides</span> of product development.
               </p>
               <p>
-                If you want to know <span className="not-prose gradient-text font-bold"> more about my professional experience, </span> you can view an interactive version of my resume on the experience page.
+                If you want to know <span className="not-prose gradient-text font-bold"> more about my professional experience, </span> you can view an interactive version of my resume on the experience page or a traditional copy on my LinkedIn.
+              </p>
+              <p>
+                I also write about design, technology, and personal development on my <span className="not-prose gradient-text font-bold"> Medium blog. </span>Feel free to check it out below!
               </p>
             </div>
           </div> 
+
+          {articles.length > 0 && (
+            <div className="mt-16">
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-4xl mb-8">
+                From the Blog
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {articles.slice(0, 3).map((article) => (
+                  <a
+                    key={article.title}
+                    href={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-6 bg-white dark:bg-zinc-800/50 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  >
+                    <h3 className="text-xl font-semibold mb-2 text-zinc-900 dark:text-zinc-100">{article.title}</h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-base" dangerouslySetInnerHTML={{ __html: article.content.substring(0, 150) + '...' }} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="pt-8 flex flex-col sm:flex-row gap-4">
             <Link
