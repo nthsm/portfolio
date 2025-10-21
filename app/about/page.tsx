@@ -82,7 +82,7 @@ export default function AboutPage() {
                   This helps me <span className="not-prose gradient-text font-bold"> understand both the technical and business sides</span> of product development.
               </p>
               <p>
-                If you want to know <span className="not-prose gradient-text font-bold"> more about my professional experience, </span> you can view an interactive version of my resume on the experience page or a traditional copy on my LinkedIn.
+                If you want to know <span className="not-prose gradient-text font-bold"> more about my professional experience, </span> you can view an interactive version of my resume on the experience page or a traditional copy on my LinkedIn, which is on the contact page.
               </p>
               <p>
                 I also write about design, technology, and personal development on my <span className="not-prose gradient-text font-bold"> Medium blog. </span>Feel free to check it out below!
