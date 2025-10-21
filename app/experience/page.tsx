@@ -10,8 +10,13 @@ const skillsData = {
     "Figma": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
     "Prototyping": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
     "Wireframing": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "User Research": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Circuit Source", "Ludos"],
-    "Usability Testing": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Circuit Source"],
+    "User Research": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
+    "Usability Testing": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source"],
+    "Journey Mapping": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
+    "Empathy Mapping": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
+    "Data Visualization": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "B.S. in Management Information Systems", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
+    "Accessibility (WCAG)": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
+    "Personas": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
     "HTML": ["M.S. in Information Technology (User-Centered Design)"],
     "CSS": ["M.S. in Information Technology (User-Centered Design)"],
     "JavaScript": ["M.S. in Information Technology (User-Centered Design)"],
@@ -19,11 +24,15 @@ const skillsData = {
     "Next.js": ["Portfolio Website"],
     "Tailwind CSS": ["Portfolio Website"],
     "Python": ["B.S. in Management Information Systems"],
+    "SQL": ["B.S. in Management Information Systems"],
     "Obsidian": ["M.S. in Information Technology (User-Centered Design)", "Freelance UX Designer"],
     "Jira": ["B.S. in Management Information Systems"],
-    "Google Slides": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer"],
-    "Google Forms": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer"],
-    "Microsoft Excel": ["B.S. in Management Information Systems", "Microsoft Office Specialist: Excel Associate"],
+    "Tableau": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
+    "Tableau Prep": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
+    "IBM SPSS": ["B.S. in Management Information Systems"],
+    "Google Suite": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer"],
+    "Microsoft Suite": ["B.S. in Management Information Systems", "Microsoft Office Specialist: Excel Associate"],
+    "VSCode": ["Portfolio Website", "B.S. in Management Information Systems", "M.S. in Information Technology (User-Centered Design)"],
 };
 
 const Expandable = ({ title, children, isOpen, onToggle }: { title: React.ReactNode; children: React.ReactNode; isOpen: boolean; onToggle: () => void; }) => {
@@ -194,7 +203,7 @@ export default function ExperiencePage() {
                 <div>
                     <h3 className="font-semibold text-lg mb-2">Design</h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing"].map(skill => (
+                        {["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas"].map(skill => (
                             <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
                         ))}
                     </div>
@@ -202,7 +211,7 @@ export default function ExperiencePage() {
                 <div>
                     <h3 className="font-semibold text-lg mb-2">Development</h3>
                     <div className="flex flex-wrap gap-2">
-                        {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "Python"].map(skill => (
+                        {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "Python", "SQL"].map(skill => (
                             <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
                         ))}
                     </div>
@@ -210,7 +219,7 @@ export default function ExperiencePage() {
                 <div>
                     <h3 className="font-semibold text-lg mb-2">Tools</h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Obsidian", "Jira", "Google Slides", "Google Forms", "Microsoft Excel"].map(skill => (
+                        {["Obsidian", "Jira", "Google Suite", "Microsoft Suite", "Tableau", "Tableau Prep", "IBM SPSS", "VSCode"].map(skill => (
                             <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
                         ))}
                     </div>
