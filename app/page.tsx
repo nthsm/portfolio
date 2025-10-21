@@ -36,6 +36,7 @@ export default function HomePage() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
+        className="pb-24 md:pb-32"
       >
         <motion.div className="mb-24 text-left" variants={itemVariants}>
             <h1 className="text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block">
@@ -65,7 +66,7 @@ export default function HomePage() {
               <Link
                 href={project.link}
                 className={cn(
-                  'rounded-lg',
+                  'rounded-lg overflow-hidden group transition-shadow duration-300 shadow-xl hover:shadow-2xl',
                   index % 2 !== 0 && 'md:order-2',
                 )}
               >
@@ -74,7 +75,7 @@ export default function HomePage() {
                   alt={project.name}
                   width={800}
                   height={600}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105 hover:z-10 relative rounded-lg"
+                  className="h-full w-full object-cover rounded-lg transform-gpu transition-transform duration-300 group-hover:scale-105"
                 />
               </Link>
               <div
