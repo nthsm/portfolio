@@ -159,7 +159,7 @@ export default function ContactPage() {
             </div>
             
             <div className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 text-center">
-                <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200">Or connect with me on social media</h3>
+                <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200">Connect with me on social media</h3>
                 <div className="flex justify-center items-center gap-6 mt-4">
                     {SOCIAL_LINKS.map((social) => (
                         <a
