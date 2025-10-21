@@ -14,13 +14,11 @@
   --backdrop-blur-xs: 2px;
 }
 
-.gradient-text {
+.gradient-button {
   background: linear-gradient(to right, #0B698E 0%, #0B8E72 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
-  font-weight: 800 !important;
+  color: white;
 }
+
 
 body {
   font-family: var(--font-figtree), sans-serif;
