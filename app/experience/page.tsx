@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
+import { PROJECTS } from '@/app/data'
 
 const skillsData = {
     "Figma": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
@@ -25,7 +26,7 @@ const skillsData = {
     "Tailwind CSS": ["Portfolio Website"],
     "Python": ["B.S. in Management Information Systems"],
     "SQL": ["B.S. in Management Information Systems"],
-    "Obsidian": ["M.S. in Information Technology (User-Centered Design)", "Freelance UX Designer"],
+    "Obsidian": ["M.S. in Information Technology (User-Centered Design)", "Freelance UX Designer", "Google UX Design Professional Certificate"],
     "Jira": ["B.S. in Management Information Systems"],
     "Tableau": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
     "Tableau Prep": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
@@ -33,6 +34,11 @@ const skillsData = {
     "Google Suite": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer"],
     "Microsoft Suite": ["B.S. in Management Information Systems", "Microsoft Office Specialist: Excel Associate"],
     "VSCode": ["Portfolio Website", "B.S. in Management Information Systems", "M.S. in Information Technology (User-Centered Design)"],
+    "Microsoft Office Specialist: Excel Associate": ["Microsoft Suite"],
+    "Google UX Design Professional Certificate": ["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas", "Tableau", "Tableau Prep", "Google Suite"],
+    "Circuit Source": ["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas", "Tableau", "Tableau Prep", "Google Suite"],
+    "Ludos": ["Figma", "Prototyping", "Wireframing", "User Research", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas"],
+    "Portfolio Website": ["React", "Next.js", "Tailwind CSS", "VSCode"],
 };
 
 const Expandable = ({ title, children, isOpen, onToggle }: { title: React.ReactNode; children: React.ReactNode; isOpen: boolean; onToggle: () => void; }) => {
@@ -42,8 +48,8 @@ const Expandable = ({ title, children, isOpen, onToggle }: { title: React.ReactN
         onClick={onToggle}
         className="w-full text-left flex items-start cursor-pointer"
       >
-        <ChevronDown 
-            className={cn("transition-transform duration-300 mr-4 mt-1.5 flex-shrink-0", isOpen && "rotate-180")} 
+        <ChevronDown
+            className={cn("transition-transform duration-300 mr-4 mt-1.5 flex-shrink-0", isOpen && "rotate-180")}
         />
         <div className="flex-grow">{title}</div>
       </div>
@@ -103,7 +109,7 @@ const ExperienceItem = ({ title, company, duration, location, children, id, sele
   return (
     <div className={cn("relative pl-8 mb-8 last:mb-0 transition-opacity duration-300", selectedSkill && !isRelated ? "opacity-30" : "opacity-100")}>
         <div className="absolute left-[15px] top-1 h-full w-px bg-zinc-200 dark:bg-zinc-800"></div>
-         <Expandable 
+         <Expandable
             isOpen={isOpen}
             onToggle={() => setIsOpen(!isOpen)}
             title={
@@ -118,7 +124,7 @@ const ExperienceItem = ({ title, company, duration, location, children, id, sele
                 </div>
             }
         >
-            {children && <div className="prose prose-zinc dark:prose-invert mt-2">{children}</div>}
+                {children && <div className="prose prose-zinc dark:prose-invert mt-2">{children}</div>}
         </Expandable>
     </div>
   );
@@ -181,12 +187,28 @@ const SkillPill = ({ skill, onClick, isSelected }: { skill: string; onClick: () 
     );
 };
 
+const certifications = [
+  { id: "Google UX Design Professional Certificate", name: "Google UX Certificate", href: "https://coursera.org/share/8d94bef718bcd12eb437bb7357e24e19", imgSrc: "/googleux.png" },
+  { id: "Microsoft Office Specialist: Excel Associate", name: "Microsoft Excel Certificate", href: "https://www.credly.com/badges/7db8b30e-9e5b-4f0e-b38b-e81f8ccc23c5/public_url", imgSrc: "/microsoftexcel.png" }
+];
+
 export default function ExperiencePage() {
     const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
     const handleSkillClick = (skill: string) => {
       setSelectedSkill(prevSkill => (prevSkill === skill ? null : skill));
     };
+
+    const isItemRelated = (itemId: string): boolean => {
+      if (!selectedSkill) return true;
+      const relatedItemsForSkill = skillsData[selectedSkill as keyof typeof skillsData] || [];
+      if (relatedItemsForSkill.includes(itemId)) {
+          return true;
+      }
+      const skillsForItem = skillsData[itemId as keyof typeof skillsData] || [];
+      return skillsForItem.includes(selectedSkill);
+    };
+
 
   return (
     <motion.div
@@ -283,25 +305,43 @@ export default function ExperiencePage() {
 
             <Section title="Certifications" icon={Award}>
                 <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4">
-                    <a href="https://coursera.org/share/8d94bef718bcd12eb437bb7357e24e19" target="_blank" rel="noopener noreferrer">
-                        <Image src="/googleux.png" alt="Google UX Certificate" width={200} height={150} className="rounded-lg transition-transform hover:scale-105" />
-                    </a>
-                    <a href="https://www.credly.com/badges/7db8b30e-9e5b-4f0e-b38b-e81f8ccc23c5/public_url" target="_blank" rel="noopener noreferrer">
-                        <Image src="/microsoftexcel.png" alt="Microsoft Excel Certificate" width={200} height={150} className="rounded-lg transition-transform hover:scale-105" />
-                    </a>
+                    {certifications.map((cert) => (
+                        <a
+                            key={cert.id}
+                            href={cert.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={cn("transition-opacity duration-300", !isItemRelated(cert.id) ? "opacity-30" : "opacity-100")}
+                        >
+                            <Image src={cert.imgSrc} alt={cert.name} width={200} height={150} className="rounded-lg transition-transform hover:scale-105 object-contain" />
+                        </a>
+                    ))}
                 </div>
             </Section>
-            
+
             <Section title="Projects" icon={LayoutGrid}>
-                <p className="text-lg">
-                <Link
-                href="/"
-                className="group mt-2 inline-flex items-center rounded-md border border-transparent bg-zinc-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 dark:focus:ring-offset-zinc-800 no-underline"
-                >
-                View my work here
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                </p>
+                <div className="flex flex-row flex-wrap gap-4 items-center">
+                    {PROJECTS.map((project) => (
+                        <Link
+                            key={project.id}
+                            href={project.link}
+                            className={cn(
+                                "group relative block flex-shrink-0 transition-colors duration-300 rounded-lg overflow-hidden w-[171px] h-[150px]",
+                                !isItemRelated(project.name) ? "opacity-30" : "opacity-100"
+                            )}
+                        >
+                            <div className="w-full h-full flex items-center justify-center bg-white dark:bg-zinc-900">
+                                <Image
+                                    src="/placeholder.png"
+                                    alt={project.name}
+                                    width={171}
+                                    height={150}
+                                    className="rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 block w-full h-full"
+                                />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
             </Section>
         </motion.div>
     </motion.div>
