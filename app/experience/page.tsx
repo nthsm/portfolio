@@ -257,7 +257,7 @@ export default function ExperiencePage() {
                     duration="Aug. 2025 — Dec. 2026"
                     location="Tallahassee, FL"
                     classes={['Usability Analysis', 'Website Development and Administration', 'Design and Production of Networked Multimedia', 'Information Behavior', 'Information Architecture', 'Digital Media Production']}
-                    clubs={[{ name: 'The UX Collective @ FSU, Member', description: "Specializing in User-Centered Design to deepen my passion for creating intuitive and human-centered technology." }]}
+                    clubs={[{ name: 'The UX Collective @ FSU, Member', description: "Specializing in User-Centered Design to build my expertise in designing around users' needs." }]}
                     selectedSkill={selectedSkill}
                 />
                 <EducationItem
@@ -267,7 +267,7 @@ export default function ExperiencePage() {
                     duration="Aug. 2023 — May 2025"
                     location="Tallahassee, FL"
                     classes={['Introduction to Python', 'Organizational Behavior', 'Systems Analysis and Design', 'Big Data']}
-                    clubs={[{ name: 'WVFS Tallahassee, Development co-Director', description: "Obtained a minor in Computer Science to expand my knowledge of the technical and business sides of product development." }]}
+                    clubs={[{ name: 'WVFS Tallahassee, Development co-Director', description: "Obtained a minor in Computer Science to expand my knowledge of the technical side of product development." }]}
                     selectedSkill={selectedSkill}
                 />
             </Section>
