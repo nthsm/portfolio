@@ -2,13 +2,13 @@
 import Link from 'next/link'
 import { useState, useRef, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SOCIAL_LINKS } from '@/app/data' // Adjusted import path
+import { SOCIAL_LINKS } from '@/app/data'
 import { useTheme } from 'next-themes'
 import { SunIcon, MoonIcon, X } from 'lucide-react'
-import useClickOutside from '@/hooks/useClickOutside' // Adjusted import path
-import { ScrollProgress } from '@/components/ui/scroll-progress' // Adjusted import path
+import useClickOutside from '@/hooks/useClickOutside'
+import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils' // Adjusted import path
+import { cn } from '@/lib/utils'
 import { BackToTopButton } from './back-to-top-button'
 import Image from 'next/image'
 
@@ -48,7 +48,7 @@ const ThemeToggle = ({ variant = 'default' }: { variant?: 'default' | 'icon' }) 
   }
 
   const baseClasses = "relative flex items-center justify-center overflow-hidden transition-colors focus:outline-none";
-        
+
   const variantClasses = {
       default: "h-8 w-8 rounded-lg bg-zinc-200 text-zinc-600 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700",
       icon: "h-8 w-8 text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white"
@@ -99,7 +99,6 @@ const MobileNavMenu = ({ onClose }: { onClose?: () => void }) => (
       <nav className="flex flex-col space-y-4">
         <NavLink href="/" onClose={onClose}>Work</NavLink>
         <NavLink href="/about" onClose={onClose}>About</NavLink>
-        {/* Removed Resume Link */}
       </nav>
     </div>
 );
@@ -129,7 +128,6 @@ const Footer = () => (
     </footer>
 );
 
-
 const LogoComponent = ({ className, onClose }: { className?: string; onClose?: () => void }) => (
     <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
         <Image
@@ -142,7 +140,7 @@ const LogoComponent = ({ className, onClose }: { className?: string; onClose?: (
         />
     </Link>
 )
-  
+
 export default function SiteLayout({
   children,
   showProgressBar = false,
@@ -157,16 +155,17 @@ export default function SiteLayout({
     if (isMenuOpen) setIsMenuOpen(false)
   })
 
+  const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
+
   return (
     <div className="min-h-screen bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 flex flex-col">
       <div className="sticky top-0 z-30 bg-zinc-50 dark:bg-zinc-950">
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
           <LogoComponent className="h-6" />
-          
+
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/">Work</NavLink>
             <NavLink href="/about">About</NavLink>
-            {/* Removed Resume Link */}
             <ThemeToggle />
           </div>
 
@@ -176,7 +175,7 @@ export default function SiteLayout({
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="z-50 -mr-2 p-2 text-zinc-600 dark:text-zinc-400"
             >
-              <svg
+               <svg
                 className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
@@ -226,7 +225,10 @@ export default function SiteLayout({
         )}
       </AnimatePresence>
 
-      <main className="flex-1 p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto w-full"> {/* Added w-full */}
+      <main className={cn(
+          "flex-1 p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto w-full",
+          mainMinHeight
+        )}>
         {children}
       </main>
 
