@@ -31,7 +31,7 @@ export function BackToTopButton({ isMenuOpen }: { isMenuOpen?: boolean }) {
     <button
       onClick={scrollToTop}
       className={cn(
-        'fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex h-10 w-10 md:h-16 md:w-16 items-center justify-center rounded-full bg-zinc-200 text-zinc-700 shadow-md transition-opacity duration-200 dark:bg-zinc-800 dark:text-zinc-300',
+        'fixed bottom-14 right-7 md:bottom-10 md:right-16 z-50 flex h-10 w-10 md:h-16 md:w-16 items-center justify-center rounded-full bg-zinc-200 text-zinc-700 shadow-md transition-opacity duration-200 dark:bg-zinc-800 dark:text-zinc-300',
         isVisible && !isMenuOpen ? 'opacity-100' : 'opacity-0',
       )}
       aria-label="Go to top"
