@@ -2,13 +2,13 @@
 import Link from 'next/link'
 import { useState, useRef, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SOCIAL_LINKS } from '@/app/data'
+import { SOCIAL_LINKS } from '@/app/data' // Adjusted import path
 import { useTheme } from 'next-themes'
 import { SunIcon, MoonIcon, X } from 'lucide-react'
-import useClickOutside from '@/hooks/useClickOutside'
-import { ScrollProgress } from '@/components/ui/scroll-progress'
+import useClickOutside from '@/hooks/useClickOutside' // Adjusted import path
+import { ScrollProgress } from '@/components/ui/scroll-progress' // Adjusted import path
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils' // Adjusted import path
 import { BackToTopButton } from './back-to-top-button'
 import Image from 'next/image'
 
@@ -99,10 +99,34 @@ const MobileNavMenu = ({ onClose }: { onClose?: () => void }) => (
       <nav className="flex flex-col space-y-4">
         <NavLink href="/" onClose={onClose}>Work</NavLink>
         <NavLink href="/about" onClose={onClose}>About</NavLink>
-        <NavLink href="/experience" onClose={onClose}>Experience</NavLink>
-        <NavLink href="/contact" onClose={onClose}>Contact</NavLink>
+        {/* Removed Resume Link */}
       </nav>
     </div>
+);
+
+const Footer = () => (
+    <footer className="w-full bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="max-w-7xl mx-auto py-6 px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-zinc-500 dark:text-zinc-400">
+            <p>&copy; {new Date().getFullYear()} Nathan Smith</p>
+            <div className="flex items-center gap-4 mt-4 sm:mt-0">
+                <a href="mailto:nathan@nthsm.com" className="hover:text-zinc-900 dark:hover:text-zinc-100">nathan@nthsm.com</a>
+                <div className="flex items-center gap-4">
+                    {SOCIAL_LINKS.map((social) => (
+                        <a
+                            key={social.label}
+                            href={social.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={social.label}
+                            className="p-1 hover:text-zinc-900 dark:hover:text-zinc-100"
+                        >
+                            <social.icon size={18} />
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </footer>
 );
 
 
@@ -134,7 +158,7 @@ export default function SiteLayout({
   })
 
   return (
-    <div className="min-h-screen bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+    <div className="min-h-screen bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 flex flex-col">
       <div className="sticky top-0 z-30 bg-zinc-50 dark:bg-zinc-950">
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
           <LogoComponent className="h-6" />
@@ -142,8 +166,7 @@ export default function SiteLayout({
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/">Work</NavLink>
             <NavLink href="/about">About</NavLink>
-            <NavLink href="/experience">Experience</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            {/* Removed Resume Link */}
             <ThemeToggle />
           </div>
 
@@ -203,11 +226,12 @@ export default function SiteLayout({
         )}
       </AnimatePresence>
 
-      <main className="flex-1 p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto">
+      <main className="flex-1 p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto w-full"> {/* Added w-full */}
         {children}
       </main>
 
       <BackToTopButton isMenuOpen={isMenuOpen} />
+      <Footer />
     </div>
   )
 }
