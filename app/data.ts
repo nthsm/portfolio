@@ -1,4 +1,4 @@
-import { SiLinkedin, SiGithub, SiMedium } from 'react-icons/si';
+import { SiLinkedin, SiMedium } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 export type Project = {
@@ -47,11 +47,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/nthsm',
     icon: SiLinkedin,
-  },
-  {
-    label: 'GitHub',
-    link: 'https://github.com/nthsm',
-    icon: SiGithub,
   },
   {
     label: 'Medium',
