@@ -105,10 +105,14 @@ const MobileNavMenu = ({ onClose }: { onClose?: () => void }) => (
 
 const Footer = () => (
     <footer className="w-full bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800">
-        <div className="max-w-7xl mx-auto py-6 px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-zinc-500 dark:text-zinc-400">
-            <p>&copy; {new Date().getFullYear()} Nathan Smith</p>
-            <div className="flex items-center gap-4 mt-4 sm:mt-0">
-                <a href="mailto:nathan@nthsm.com" className="hover:text-zinc-900 dark:hover:text-zinc-100">nathan@nthsm.com</a>
+        <div className="max-w-7xl mx-auto py-6 px-4 flex flex-row justify-between items-center text-sm text-zinc-500 dark:text-zinc-400">
+            <p>
+                &copy; {new Date().getFullYear()} Nathan Smith
+            </p>
+            <div className="flex flex-row flex-wrap items-center justify-end gap-x-6 gap-y-2">
+                <a href="mailto:nathan@nthsm.com" className="hover:text-zinc-900 dark:hover:text-zinc-100 whitespace-nowrap">
+                    nathan@nthsm.com
+                </a>
                 <div className="flex items-center gap-4">
                     {SOCIAL_LINKS.map((social) => (
                         <a
@@ -127,6 +131,7 @@ const Footer = () => (
         </div>
     </footer>
 );
+
 
 const LogoComponent = ({ className, onClose }: { className?: string; onClose?: () => void }) => (
     <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
@@ -175,7 +180,7 @@ export default function SiteLayout({
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="z-50 -mr-2 p-2 text-zinc-600 dark:text-zinc-400"
             >
-               <svg
+              <svg
                 className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
