@@ -99,6 +99,7 @@ const MobileNavMenu = ({ onClose }: { onClose?: () => void }) => (
       <nav className="flex flex-col space-y-4">
         <NavLink href="/" onClose={onClose}>Work</NavLink>
         <NavLink href="/about" onClose={onClose}>About</NavLink>
+        <NavLink href="/blog" onClose={onClose}>Blog</NavLink>
       </nav>
     </div>
 );
@@ -171,6 +172,7 @@ export default function SiteLayout({
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/">Work</NavLink>
             <NavLink href="/about">About</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
             <ThemeToggle />
           </div>
 
