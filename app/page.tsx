@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { PROJECTS } from './data'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { cn } from '@/lib/utils'
-import { ArrowRight, PenTool, MapPin } from 'lucide-react'
+import { ArrowRight, Download, MapPin, UserCheck } from 'lucide-react' // Added MapPin and UserCheck (as a placeholder for 'role') icons
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,23 +38,35 @@ export default function HomePage() {
         variants={containerVariants}
         className="pb-24 md:pb-32"
       >
-        <motion.div className="mb-24 text-left" variants={itemVariants}>
-            <h1 className="text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block">
+        <motion.div className="mb-16 text-left" variants={itemVariants}>
+            {/* Name is the largest element */}
+            <h1 className="text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block mb-4">
                 Nathan Smith
             </h1>
-            <div className="mt-4 space-y-1 text-base text-zinc-600 dark:text-zinc-400 md:text-lg">
+            {/* Title and Location are smaller, below the name */}
+            <div className="space-y-1 text-base text-zinc-600 dark:text-zinc-400 md:text-lg mb-6">
                 <div className="flex items-center">
-                    <PenTool className="h-4 w-4 mr-2" />
-                    <span>Experience Designer</span>
-                </div>
-                <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    <span>Tallahassee, FL</span>
+                    <UserCheck className="h-4 w-4 mr-2 flex-shrink-0" />
+                    <span>User Researcher & Experience Strategist</span>
                 </div>
             </div>
+
+            {/* Summary Paragraph */}
+            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 md:text-xl max-w-2xl mb-6">
+                FSU graduate student specializing in User-Centered Design. Passionate about using mixed-methods research and data analysis to inform product strategy and create user-centric experiences.
+            </p>
+            {/* Download Resume Button */}
+            <a
+              href="/nathan_smith_resume.pdf" // Make sure your PDF is in the public folder
+              download
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 dark:focus:ring-offset-zinc-800 no-underline"
+            >
+              <Download className="h-5 w-5 mr-2" />
+              Download Resume
+            </a>
         </motion.div>
 
-        <div className="flex flex-col gap-24 md:gap-32">
+        <div className="flex flex-col gap-24 md:gap-32 mt-24 md:mt-32">
           {PROJECTS.map((project, index) => (
             <motion.div
               key={project.id}
