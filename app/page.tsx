@@ -47,7 +47,7 @@ export default function HomePage() {
         className="pb-24 md:pb-32"
       >
         <motion.div className="mb-16 text-left" variants={itemVariants}>
-            <h1 className="text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block mb-4">
+            <h1 className="text-6xl font-bold tracking-tight md:text-7xl inline-block mb-4">
                 Nathan Smith
             </h1>
             <div className="space-y-1 text-base text-zinc-600 dark:text-zinc-400 md:text-lg mb-6">
