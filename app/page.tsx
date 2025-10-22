@@ -29,6 +29,14 @@ const itemVariants = {
   },
 }
 
+const projectBlurbs: { [key: string]: string } = {
+  project1: 'UX Research | UX Design',
+  project2: 'Usability Study | Heuristic Evaluation',
+  project3: 'Quantitative Research | User Feedback',
+  project4: 'Data Analysis | Survey Data'
+};
+
+
 export default function HomePage() {
   return (
     <SiteLayout>
@@ -48,9 +56,8 @@ export default function HomePage() {
                     <span>User Researcher & Experience Strategist</span>
                 </div>
             </div>
-
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 md:text-xl max-w-2xl mb-6">
-                FSU graduate student specializing in User-Centered Design. Passionate about using user research methods and data analysis to inform product strategy and create user-centric experiences.
+                FSU graduate student specializing in User-Centered Design. Passionate about using mixed-methods research and data analysis to inform product strategy and create user-centric experiences.
             </p>
             <a
               href="/nathan_smith_resume.pdf"
@@ -95,6 +102,11 @@ export default function HomePage() {
                 <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-4xl">
                   {project.name}
                 </h2>
+                {projectBlurbs[project.id] && (
+                  <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 -mt-2 mb-0">
+                    {projectBlurbs[project.id]}
+                  </p>
+                )}
                 <p className="text-lg text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
