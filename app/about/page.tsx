@@ -47,22 +47,20 @@ export default function AboutPage() {
 
   return (
     <motion.div
-      // Removed prose classes from the main container
-      className="max-w-none" // Kept max-w-none just in case, can likely be removed if layout handles it
+      className="max-w-none"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
         <motion.div variants={itemVariants}>
-            <h1 className={cn("text-5xl md:text-6xl font-extrabold tracking-tight mb-12 gradient-text leading-normal inline-block")}>
+            <h1 className={cn("text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block mb-12")}>
                 About Me
             </h1>
         </motion.div>
-        
-        {/* Removed outer prose div, applying text styles directly */}
-        <div className="max-w-none space-y-8 text-xl text-zinc-700 dark:text-zinc-300"> {/* Added base text styles */}
+
+        <div className="max-w-none space-y-8 text-xl text-zinc-700 dark:text-zinc-300">
             <motion.div variants={itemVariants}>
-                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">My Philosophy</h2> {/* Explicit text color */}
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">My Philosophy</h2>
                 <p>
                     I'm a <span className="gradient-text font-bold">user researcher</span> driven by a deep curiosity about the "why" behind human-computer interaction. I believe the most successful products are built upon a rigorous <span className="gradient-text font-bold">foundation of research</span> and a genuine understanding of the people they serve.
                 </p>
@@ -99,10 +97,9 @@ export default function AboutPage() {
                 href={article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 bg-white dark:bg-zinc-800/50 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                className="block p-6 bg-white dark:bg-zinc-800/50 rounded-lg shadow-md hover:shadow-xl transition-shadow no-underline"
                 >
                 <h3 className="text-xl font-semibold mb-2 text-zinc-900 dark:text-zinc-100">{article.title}</h3>
-                {/* Apply prose here if the blog content needs it, otherwise use base text styles */}
                 <p className="text-zinc-600 dark:text-zinc-400 text-base line-clamp-3" dangerouslySetInnerHTML={{ __html: article.content }} />
                 </a>
             ))}
