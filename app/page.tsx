@@ -30,10 +30,10 @@ const itemVariants = {
 }
 
 const projectBlurbs: { [key: string]: string } = {
-  project1: 'UX Research | UX Design',
-  project2: 'Usability Study | Heuristic Evaluation',
+  project1: 'UX Research | Wireframes | Prototype',
+  project2: 'Usability Audit | User Testing',
   project3: 'Quantitative Research | User Feedback',
-  project4: 'Data Analysis | Survey Data'
+  project4: 'Data Analysis | Survey Insights | Data Visualization'
 };
 
 
