@@ -114,7 +114,7 @@ const ExperienceItem = ({ title, company, duration, location, children, id, sele
             onToggle={() => setIsOpen(!isOpen)}
             title={
                 <div>
-                    <h3 className="text-xl font-semibold gradient-text md:inline-block">{title}</h3>
+                    <h3 className="text-xl font-semibold md:inline-block">{title}</h3>
                     <p className="text-md text-zinc-600 dark:text-zinc-400">{company}</p>
                     <div className="flex items-center text-sm text-zinc-500 dark:text-zinc-500 mt-1">
                         <span>{duration}</span>
@@ -141,7 +141,7 @@ const EducationItem = ({ degree, university, duration, location, classes, clubs,
             onToggle={() => setIsOpen(!isOpen)}
              title={
                 <div>
-                    <h3 className="text-xl font-semibold gradient-text md:inline-block">{degree}</h3>
+                    <h3 className="text-xl font-semibold md:inline-block">{degree}</h3>
                     <p className="text-md text-zinc-600 dark:text-zinc-400">{university}</p>
                     <div className="flex items-center text-sm text-zinc-500 dark:text-zinc-500 mt-1">
                         <span>{duration}</span>
@@ -217,7 +217,7 @@ export default function ExperiencePage() {
         animate="visible"
     >
         <motion.div variants={itemVariants} className="text-left mb-12">
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-2 gradient-text leading-normal md:inline-block">{`For your convenience.`}</h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-2  leading-normal md:inline-block">{`For your convenience.`}</h1>
         </motion.div>
 
         <Section title="Skills" icon={Lightbulb}>
