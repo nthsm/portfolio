@@ -16,7 +16,7 @@ export default function NotFound() {
         >
           <h1
             className={cn(
-              'text-8xl md:text-9xl font-extrabold tracking-tighter mb-4 not-prose gradient-text leading-normal',
+              'text-8xl md:text-9xl font-extrabold tracking-tighter mb-4 not-prose leading-normal',
             )}
           >
             404
