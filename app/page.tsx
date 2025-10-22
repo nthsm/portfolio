@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
 
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 md:text-xl max-w-2xl mb-6">
-                FSU graduate student specializing in User-Centered Design. Passionate about using mixed-methods research and data analysis to inform product strategy and create user-centric experiences.
+                FSU graduate student specializing in User-Centered Design. Passionate about using user research methods and data analysis to inform product strategy and create user-centric experiences.
             </p>
             <a
               href="/nathan_smith_resume.pdf"
