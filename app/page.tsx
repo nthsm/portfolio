@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { PROJECTS } from './data'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { cn } from '@/lib/utils'
-import { ArrowRight, Download, MapPin, UserCheck } from 'lucide-react' // Added MapPin and UserCheck (as a placeholder for 'role') icons
+import { ArrowRight, Download, MapPin, UserCheck } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,11 +39,9 @@ export default function HomePage() {
         className="pb-24 md:pb-32"
       >
         <motion.div className="mb-16 text-left" variants={itemVariants}>
-            {/* Name is the largest element */}
             <h1 className="text-6xl font-bold tracking-tight md:text-7xl gradient-text inline-block mb-4">
                 Nathan Smith
             </h1>
-            {/* Title and Location are smaller, below the name */}
             <div className="space-y-1 text-base text-zinc-600 dark:text-zinc-400 md:text-lg mb-6">
                 <div className="flex items-center">
                     <UserCheck className="h-4 w-4 mr-2 flex-shrink-0" />
@@ -51,13 +49,11 @@ export default function HomePage() {
                 </div>
             </div>
 
-            {/* Summary Paragraph */}
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 md:text-xl max-w-2xl mb-6">
                 FSU graduate student specializing in User-Centered Design. Passionate about using mixed-methods research and data analysis to inform product strategy and create user-centric experiences.
             </p>
-            {/* Download Resume Button */}
             <a
-              href="/nathan_smith_resume.pdf" // Make sure your PDF is in the public folder
+              href="/nathan_smith_resume.pdf"
               download
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-zinc-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 dark:focus:ring-offset-zinc-800 no-underline"
             >
