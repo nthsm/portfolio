@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     description:
       "A formal usability audit applying Jakob Nielsen's heuristics to identify and prioritize actionable UX improvements for a local non-profit's website.",
     link: '/its-meow-or-never',
-    image: '/placeholder.png',
+    image: '/project2-prototype-hero.png',
     id: 'project2',
   },
   {
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     description:
       'A quantitative analysis project involving data cleaning and visualization of student survey data to identify correlations between sleep habits and reported stress levels.',
     link: '/student-wellness-study',
-    image: '/placeholder.png',
+    image: '/project4-lookerstudio.png',
     id: 'project4',
   },
 ]
