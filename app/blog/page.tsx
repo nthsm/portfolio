@@ -55,7 +55,7 @@ export default function BlogPage() {
             From the Blog
         </h1>
         <p>
-            The place that helps me continue to learn and stay curious.
+            My personal space that helps me continue to learn and stay curious.
         </p>
       </motion.div>
 
