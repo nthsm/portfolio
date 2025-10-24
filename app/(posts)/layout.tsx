@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { ProjectNavigation } from '@/components/ui/ProjectNavigation'
+import Script from 'next/script'
 
 export default function LayoutBlogPost({
   children,
@@ -24,6 +25,8 @@ export default function LayoutBlogPost({
 
         <ProjectNavigation />
       </main>
+      {/* Vimeo Script */}
+      <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload" />
     </SiteLayout>
   )
 }
