@@ -1,10 +1,140 @@
 ---
-title: "A Heuristic Evaluation of a Non-Profit Website"
-description: "A formal usability audit applying Jakob Nielsen's heuristics to identify and prioritize actionable UX improvements for a local non-profit's website."
-image: ''
-date: '' 
+title: "Usability Audit: Heuristic Evaluation of a Non-Profit Website"
+description: "A formal usability audit applying Jakob Nielsen's 10 heuristics to identify and prioritize actionable UX improvements for the It's Meow or Never website."
+image: '/project2-wireframe.png' # Update with a relevant screenshot
+date: 'Fall 2025'
 ---
 
-# A Heuristic Evaluation of a Non-Profit Website
+# Usability Audit: Heuristic Evaluation of a Non-Profit Website
 
-A formal usability audit applying Jakob Nielsen's heuristics to identify and prioritize actionable UX improvements for a local non-profit's website.
+This project involved conducting a heuristic evaluation of the website for "It's Meow or Never," a local non-profit animal rescue organization, to identify usability issues and recommend improvements to better support their mission of facilitating adoptions and donations. Based on these findings, low-fidelity wireframes were created and then tested with a user to validate the proposed solutions.
+
+## Objective
+
+The primary goal was to systematically assess the website's user interface against established usability principles (heuristics) to uncover potential problems that might hinder users trying to adopt an animal, donate, or find information. A secondary goal was to translate audit findings into tangible solutions, creating and testing a low-fidelity prototype to better understand and empathize with user needs.
+
+## Methodology
+
+This project followed a three-phase rapid research process:
+<figure class="flex justify-center my-4">
+  ![Screenshot showing contrast issue](/project2-process.png)
+  <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">General process flow followed for this usability audit.</figcaption>
+</figure>
+
+
+### Phase 1: Heuristic Evaluation
+A heuristic evaluation was performed based on Jakob Nielsen's 10 Usability Heuristics. I navigated key user flows and assessed page layouts, focusing on areas like navigation, content hierarchy, and calls to action.
+
+#### Heuristics Applied
+1. Visibility of system status
+2. Match between system and the real world
+3. User control and freedom
+4. Consistency and standards
+5. Error prevention
+6. Recognition rather than recall
+7. Flexibility and efficiency of use
+8. Aesthetic and minimalist design
+9. Help users recognize, diagnose, and recover from errors
+10. Help and documentation
+
+### Phase 2: Ideation & Low-Fidelity Prototyping
+Based on the problems identified in the audit, I created low-fidelity wireframes in Figma. The goal was not a full redesign, but to propose solutions for the most critical usability issues, such as navigation clarity and content hierarchy. These screens were then connected into a simple, clickable prototype.
+
+### Phase 3: Usability Testing
+A moderated usability test was conducted with one user (a person familiar with the organization's mission) using the Figma prototype. The user was given key tasks to perform (e.g., "Find a cat to adopt," "Find how to donate") to see if the new designs were an improvement and to uncover any new usability issues.
+
+## Heuristic Evaluation
+
+The evaluation identified several areas for usability improvement across the site:
+
+* **Finding 1: Navigation Bar Complexity & Inconsistency** (Heuristic: #4 Consistency & Standards, #7 Flexibility & Efficiency)
+    * *Description:* The main navigation structure is somewhat complex and could be streamlined. The logo placement interrupts the flow, the floating navigation bar is unconventional, and options like "Medical cases" (which is under "More") could function better as filters rather than separate top-level links. Other pages could be fit under options like "Resources" and "Services."
+    * *Impact:* Makes it harder for users to quickly find what they need and understand the site structure.
+        <figure class="flex justify-center my-4">
+          ![Screenshot showing current navigation bar](/project2-navbar.png)
+          <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Current navigation structure and logo placement.</figcaption>
+        </figure>
+
+* **Finding 2: Poor Contrast / Readability** (Heuristic: #8 Aesthetic & Minimalist Design, Accessibility)
+    * *Description:* White text is used on red backgrounds for navigation elements or buttons, resulting in poor contrast and making text difficult to read. For smaller text, the website [fails to meet WCAG standards](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=E1533C) with a contrast ratio of 3.81:1.
+    * *Impact:* Creates accessibility issues and strains users' eyes, potentially causing them to miss important information or actions.
+        <figure class="flex justify-center my-4">
+          ![Screenshot showing contrast issue](/project2-contrast.png)
+          <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Example of low contrast text on background.</figcaption>
+        </figure>
+
+* **Finding 3: Ineffective Homepage Content Hierarchy & Layout** (Heuristic: #8 Aesthetic & Minimalist Design, #6 Recognition Rather Than Recall)
+    * *Description:* The homepage layout could be optimized. Key information like the Mission Statement and Donate/Adopt calls-to-action could be more prominent. Features like the "Featured Cat" and "Community Partners" sections could be integrated more effectively (e.g., placing one featured cat higher up (potentially a medical case), using a looping marquee for partners). The standalone National Lost & Found database section could be placed under "Resources" to declutter the page. The adoptions, TNR, intakes, live outcomes, community services number totals could be animated and placed in the middle of the page.
+    * *Impact:* Users might miss key information or calls to action, and the page feels less focused.
+        <figure class="flex justify-center my-4">
+          ![Screenshot showing cluttered homepage](/project2-hierarchy.png)
+          <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Cluttered homepage with ineffective hierarchy.</figcaption>
+        </figure>
+
+* **Finding 4: Redundant Contact Information & Footer Deficiencies** (Heuristic: #4 Consistency & Standards)
+    * *Description:* Contact information appears on every page instead of being consolidated onto a dedicated Contact Us page. The footer is missing standard elements like a site map link. The "Gold transparency" element also lacks clear context.
+    * *Impact:* Clutters individual pages and makes the footer less useful for site-wide navigation and information.
+        <figure class="flex justify-center my-4">
+          ![Screenshot showing cluttered homepage](/project2-footer.png)
+          <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Redundant "Contact Us" section added to footer.</figcaption>
+        </figure>
+
+## Ideation & Prototyping
+
+The findings from the heuristic audit directly informed the creation of low-fidelity wireframes. The goal was to visualize the prioritized recommendations, focusing on structure and flow over aesthetics.
+
+Key changes prototyped:
+* Streamlined Navigation: Implemented the proposed simplified navigation bar and created a dedicated "Contact" page.
+* Re-prioritized Homepage: Restructured the homepage to elevate the Mission Statement and primary calls-to-action ("Adopt" and "Donate").
+* Improved Readability: All instances of low-contrast text were corrected.
+* Enhanced Footer: A standard footer with social links, copyright, and site map was designed.
+
+<figure class="flex justify-center my-4">
+  ![Low-fidelity wireframe of the new homepage.](/project2-wireframe-home.png)
+  <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Low-fi wireframe created in Figma to address key heuristic issues.</figcaption>
+</figure>
+
+Then, I got to work on my prototype.
+
+<figure class="flex justify-center my-4">
+  ![Prototype image of the new homepage.](/project2-prototype-home.png)
+  <figcaption class="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Hi-fi Prototype created in Figma.</figcaption>
+</figure>
+
+<div style="padding:49.88% 0 0 0;position:relative;">
+  <iframe 
+    src="https://player.vimeo.com/video/1130071186?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+    title="IMON Interactive Prototype">
+  </iframe>
+</div>
+
+## Usability Test
+
+The clickable prototype was tested to validate these proposed changes. The user's feedback was categorized into successes (validating the changes) and areas for further iteration.
+
+### Successes (What Worked)
+* Improved Navigation: The user successfully completed the task of "Find a cat to adopt" 30% faster than a baseline test on the original site.
+* Clearer CTAs: The user immediately identified the "Donate" button, stating, "Oh, that's much easier to find now."
+* Better Readability: The user did not report any issues with reading text, confirming the contrast fix.
+
+### Areas for Iteration (What Still Needs Work)
+* "Resources" vs. "Services": The user hesitated when asked to find the "Spay/Neuter" program, looking under "Resources" before finding it under "Services." This indicates the labeling may still be unclear.
+* Featured Cat: The user overlooked the "Featured Cat" section, suggesting it may still not be as prominent as intended.
+* Key User Quote: *"I found the adoption page right away, but I wasn't sure what the difference was between 'Resources' and 'Services'."*
+
+## Prioritized Recommendations
+
+The initial heuristic recommendations were validated and refined by the usability test. The final recommendations are:
+
+1.  **High Priority: Improve Contrast:** Immediately address the low contrast issues (white text on red) to meet accessibility standards. (Validated by usability test).
+2.  **High Priority: Streamline Navigation:** Implement the proposed navigation structure. Further test the labels "Resources" and "Services" (e.g., A/B test or card sort) to resolve user confusion. The proposed streamlined structure is: Home | Adoptable Cats | Resources | Services | Donate | About Us | Contact.
+3.  **Medium Priority: Restructure Homepage:** Implement the new homepage structure, but consider further iterations to increase the prominence of the "Featured Cat" section.
+4.  **Medium Priority: Enhance Footer:** Implement the new, standard footer with social media links, copyright, and a site map link.
+
+## Conclusion
+
+This heuristic evaluation identified several key areas where the It's Meow or Never website could be improved to provide a more user-friendly experience. By addressing issues related to navigation clarity, contrast, content hierarchy, and standard web conventions, the organization can potentially increase user engagement, streamline the adoption process, and encourage donations more effectively.
