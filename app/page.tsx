@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { PROJECTS } from './data'
+import { PROJECTS, projectBlurbs } from './data'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { cn } from '@/lib/utils'
 import { ArrowRight, Download, MapPin, UserCheck } from 'lucide-react'
@@ -28,14 +28,6 @@ const itemVariants = {
     },
   },
 }
-
-const projectBlurbs: { [key: string]: string } = {
-  project1: 'UX Research | Wireframes | Prototype',
-  project2: 'Usability Audit | User Testing',
-  project3: 'Quantitative Research | User Feedback',
-  project4: 'Data Analysis | Survey Insights | Data Visualization'
-};
-
 
 export default function HomePage() {
   return (
@@ -81,7 +73,8 @@ export default function HomePage() {
               <Link
                 href={project.link}
                 className={cn(
-                  'rounded-lg overflow-hidden group transition-shadow duration-300 shadow-xl hover:shadow-2xl',
+                  'rounded-lg overflow-hidden transition-all duration-300 shadow-xl',
+                  'hover:shadow-2xl hover:scale-105',
                   index % 2 !== 0 && 'md:order-2',
                 )}
               >
@@ -90,7 +83,7 @@ export default function HomePage() {
                   alt={project.name}
                   width={800}
                   height={600}
-                  className="h-full w-full object-cover rounded-lg transform-gpu transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-full object-cover rounded-lg transform-gpu transition-transform duration-300"
                 />
               </Link>
               <div
@@ -102,9 +95,9 @@ export default function HomePage() {
                 <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 md:text-4xl">
                   {project.name}
                 </h2>
-                {projectBlurbs[project.id] && (
+                {projectBlurbs[project.id as keyof typeof projectBlurbs] && (
                   <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 -mt-2 mb-0">
-                    {projectBlurbs[project.id]}
+                    {projectBlurbs[project.id as keyof typeof projectBlurbs]}
                   </p>
                 )}
                 <p className="text-lg text-zinc-600 dark:text-zinc-400">
