@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,13 +24,6 @@ const itemVariants = {
   },
 }
 
-interface MediumArticle {
-  title: string;
-  link: string;
-  thumbnail: string;
-  content: string;
-}
-
 export default function AboutPage() {
 
   return (
@@ -43,6 +37,17 @@ export default function AboutPage() {
             <h1 className={cn("text-6xl font-bold tracking-tight md:text-7xl inline-block mb-12")}>
                 About Me
             </h1>
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="flex justify-center mb-12">
+            <Image
+                src="/headshot.jpg"
+                alt="A headshot of Nathan Smith"
+                width={375}
+                height={375}
+                className="rounded-xl object-cover border-4 border-zinc-200 dark:border-zinc-800 shadow-lg"
+                priority
+            />
         </motion.div>
 
         <div className="max-w-none space-y-8 text-xl text-zinc-700 dark:text-zinc-300">
