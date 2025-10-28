@@ -4,152 +4,194 @@ description: "A comprehensive UX project involving heuristic evaluation, user re
 image: '/project2-prototype-hero.png'
 date: 'Fall 2025'
 ---
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
 
-<div className="imon-parallax-content">
+<div className="imon-parallax-container">
+    <div className="imon-parallax-header">
+        <h1>Redesigning "It's Meow or Never"</h1>
+    </div>
 
-# Redesigning "It's Meow or Never"
+    <div className="imon-content-wrapper">
+         {/* Section 0 (Intro) - Uses child(1) color */}
+         <div className="content-section">
+            {/* Apply prose styles to this inner container */}
+            <div className="imon-content-inner">
+                <p>This case study documents the end-to-end UX process—from initial problem discovery and research to iterative prototyping and testing—undertaken to redesign the website for "It's Meow or Never" (IMON), a local non-profit animal rescue. The goal was to enhance usability, address user pain points, and better align the site with the organization's mission of facilitating adoptions and donations.</p>
+            </div>
+        </div>
 
-<div className="content-section">
-This case study documents the end-to-end UX process—from initial problem discovery and research to iterative prototyping and testing—undertaken to redesign the website for "It's Meow or Never" (IMON), a local non-profit animal rescue. The goal was to enhance usability, address user pain points, and better align the site with the organization's mission of facilitating adoptions and donations.
-</div>
+        {/* Section 1 - Uses child(2) color */}
+        <div className="content-section">
+            <div className="imon-content-inner">
+                <h2>1. Understanding the Problem & Opportunity</h2>
 
-<div className="content-section">
-## 1. Understanding the Problem & Opportunity
+                <p>IMON, a non-profit animal rescue, relies heavily on its website to connect with potential adopters, donors, and volunteers. However, an initial assessment suggested the site might have usability issues hindering these key interactions. This project presented an opportunity to apply a user-centered design process to create a more effective and engaging online presence for the organization.</p>
 
-IMON, a non-profit animal rescue, relies heavily on its website to connect with potential adopters, donors, and volunteers. However, an initial assessment suggested the site might have usability issues hindering these key interactions. This project presented an opportunity to apply a user-centered design process to create a more effective and engaging online presence for the organization.
+                <p><strong>Project Goals:</strong></p>
+                <ul>
+                    <li>Identify key usability pain points on the current IMON website.</li>
+                    <li>Understand the primary goals and needs of IMON's website users.</li>
+                    <li>Design and validate solutions through iterative prototyping and user testing.</li>
+                    <li>Deliver a high-fidelity prototype with data-backed recommendations.</li>
+                </ul>
 
-**Project Goals:**
-* Identify key usability pain points on the current IMON website.
-* Understand the primary goals and needs of IMON's website users.
-* Design and validate solutions through iterative prototyping and user testing.
-* Deliver a high-fidelity prototype with data-backed recommendations.
+                <p><strong>My Role:</strong> UX Designer & Researcher (leading all phases of the project).</p>
+            </div>
+        </div>
 
-**My Role:** UX Designer & Researcher (leading all phases of the project).
-</div>
+        {/* Section 2 - Uses child(3) color */}
+        <div className="content-section">
+             <div className="imon-content-inner">
+                <h2>2. Research: Uncovering User Needs & Pain Points</h2>
 
-<div className="content-section">
-## 2. Research: Uncovering User Needs & Pain Points
+                <p>To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.</p>
 
-To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-process.png" alt="Process Flow: Heuristic Evaluation, User Research, Ideation & Prototyping, Usability Testing"/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">The UX process flow followed for this redesign.</figcaption>
+                </figure>
 
-<figure className="flex flex-col items-center my-4">
-    <img src="/project2-process.png" alt="Process Flow: Heuristic Evaluation, User Research, Ideation & Prototyping, Usability Testing"/>
-    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">The UX process flow followed for this redesign.</figcaption>
-</figure>
+                <h3>Heuristic Evaluation</h3>
+                <p>I began by conducting a heuristic evaluation based on Jakob Nielsen's 10 Usability Heuristics. This expert review helped identify foundational usability issues in the existing design.</p>
 
-### Heuristic Evaluation
-I began by conducting a heuristic evaluation based on Jakob Nielsen's 10 Usability Heuristics. This expert review helped identify foundational usability issues in the existing design.
+                <p><strong>Key Heuristic Findings:</strong></p>
+                <ul>
+                    <li><strong>(Finding 1) Navigation Complexity:</strong> The site's navigation was inconsistent and cluttered, making the information architecture unclear.</li>
+                    <li><strong>(Finding 2) Poor Contrast & Readability:</strong> Multiple instances of low text-to-background contrast failed WCAG AA standards.</li>
+                    <li><strong>(Finding 3) Ineffective Content Hierarchy:</strong> Key calls-to-action and mission-critical information lacked prominence on the homepage.</li>
+                    <li><strong>(Finding 4) Redundant Information:</strong> The footer contained a full contact form and lacked standard navigational elements.</li>
+                </ul>
 
-**Key Heuristic Findings:**
-* **(Finding 1) Navigation Complexity:** The site's navigation was inconsistent and cluttered, making the information architecture unclear.
-* **(Finding 2) Poor Contrast & Readability:** Multiple instances of low text-to-background contrast failed WCAG AA standards.
-* **(Finding 3) Ineffective Content Hierarchy:** Key calls-to-action and mission-critical information lacked prominence on the homepage.
-* **(Finding 4) Redundant Information:** The footer contained a full contact form and lacked standard navigational elements.
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-heuristic.png" alt="Heuristic findings noted on the home page."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Heuristic findings noted on the home page.</figcaption>
+                </figure>
 
-<figure className="flex flex-col items-center my-4">
-    <img src="/project2-heuristic.png" alt="Heuristic findings noted on the home page."/>
-    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Heuristic findings noted on the home page.</figcaption>
-</figure>
+                <h3>User Survey</h3>
+                <p>To gather quantitative data, a survey was distributed via my own and IMON's social media channels, receiving \[// Number] responses.</p>
 
-### User Survey
-To gather quantitative data, a survey was distributed via my own and IMON's social media channels, receiving \[// Number] responses.
+                <p><strong>Key Survey Insights:</strong></p>
+                <ul>
+                    <li>**[// Stat #1, e.g., 72% of respondents]** visit the site primarily to view adoptable cats.</li>
+                    <li>**[// Stat #2, e.g., 45% of users]** rated the ease of finding information as 'Difficult' or 'Very Difficult'.</li>
+                    <li>The most commonly cited frustration was **[// Mention the top theme from the open-ended question, e.g., "difficulty finding specific information like event dates."]**</li>
+                </ul>
 
-**Key Survey Insights:**
-* **\[// Stat #1, e.g., 72% of respondents]** visit the site primarily to view adoptable cats.
-* **\[// Stat #2, e.g., 45% of users]** rated the ease of finding information as 'Difficult' or 'Very Difficult'.
-* The most commonly cited frustration was **\[// Mention the top theme from the open-ended question, e.g., "difficulty finding specific information like event dates."]**
+                <h3>User Interviews</h3>
+                <p>To gain deeper qualitative insights, I conducted moderated interviews with users representing key personas: a recent adopter, a volunteer, and a potential donor.</p>
 
-### User Interviews
-To gain deeper qualitative insights, I conducted moderated interviews with users representing key personas: a recent adopter, a volunteer, and a potential donor.
+                <p><strong>Key Themes from Interviews:</strong></p>
+                 <ul>
+                    <li>**[// Theme #1, e.g., "Lack of Clarity in the Adoption Process." Users expressed confusion about the multi-step application and what to expect after applying.]**</li>
+                    <li>**[// Theme #2, e.g., "Desire for More Information on Events." Multiple users mentioned wanting to know about upcoming vaccine clinics and adoption events directly on the homepage.]**</li>
+                    <li>**[// Theme #3, e.g., "Uncertainty About Donation Impact." Donors wanted clearer information on where their financial contributions were being used.]**</li>
+                </ul>
 
-**Key Themes from Interviews:**
-* **\[// Theme #1, e.g., "Lack of Clarity in the Adoption Process." Users expressed confusion about the multi-step application and what to expect after applying.]**
-* **\[// Theme #2, e.g., "Desire for More Information on Events." Multiple users mentioned wanting to know about upcoming vaccine clinics and adoption events directly on the homepage.]**
-* **\[// Theme #3, e.g., "Uncertainty About Donation Impact." Donors wanted clearer information on where their financial contributions were being used.]**
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-quote.png" alt="Direct quotes."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Quote from an IMON board member and from a user.</figcaption>
+                </figure>
+            </div>
+        </div>
 
-<figure className="flex flex-col items-center my-4">
-    <img src="/project2-quote.png" alt="Direct quotes."/>
-    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Quote from an IMON board member and from a user.</figcaption>
-</figure>
-</div>
+        {/* Section 3 - Uses child(4) color */}
+        <div className="content-section">
+            <div className="imon-content-inner">
+                <h2>3. Define: Synthesizing the Research</h2>
 
-<div className="content-section">
-## 3. Define: Synthesizing the Research
+                <p>The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.</p>
 
-The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.
+                <p><strong>User Personas:</strong></p>
+                <p>Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."</p>
 
-**User Personas:**
-Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."
+                <p><strong>Problem Statements:</strong></p>
+                <ol>
+                    <li>**Hopeful Adopters** need a clear, centralized way to view available cats and understand the adoption steps because the current process is fragmented and causes confusion.</li>
+                    <li>**Donors** need easily accessible donation options with clear statements on impact because the current links are hard to find and lack motivating context.</li>
+                    <li>**Community Members** need a prominent way to find information about upcoming events (like vaccine clinics) because this information is currently difficult to locate.</li>
+                </ol>
+            </div>
+        </div>
 
-**Problem Statements:**
-1.  **Hopeful Adopters** need a clear, centralized way to view available cats and understand the adoption steps because the current process is fragmented and causes confusion.
-2.  **Donors** need easily accessible donation options with clear statements on impact because the current links are hard to find and lack motivating context.
-3.  **Community Members** need a prominent way to find information about upcoming events (like vaccine clinics) because this information is currently difficult to locate.
-</div>
+        {/* Section 4 - Uses child(5) color */}
+        <div className="content-section">
+            <div className="imon-content-inner">
+                <h2>4. Design & Prototype: From Wireframes to Hi-Fi</h2>
 
-<div className="content-section">
-## 4. Design & Prototype: From Wireframes to Hi-Fi
+                <p>Using the defined problems as a guide, I began developing solutions.</p>
 
-Using the defined problems as a guide, I began developing solutions.
+                <h3>Low-Fidelity Wireframes</h3>
+                <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
 
-### Low-Fidelity Wireframes
-Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Low-fi wireframe focusing on improved layout and navigation.</figcaption>
+                </figure>
 
-<figure className="flex flex-col items-center my-4">
-    <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
-    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Low-fi wireframe focusing on improved layout and navigation.</figcaption>
-</figure>
+                <h3>High-Fidelity Prototype</h3>
+                <p>The wireframes were then developed into a high-fidelity interactive prototype, incorporating IMON's branding while implementing the data-backed solutions.</p>
 
-### High-Fidelity Prototype
-The wireframes were then developed into a high-fidelity interactive prototype, incorporating IMON's branding while implementing the data-backed solutions.
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-prototype-home.png" alt="Prototype image of the new homepage."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">High-fidelity prototype created in Figma.</figcaption>
+                </figure>
 
-<figure className="flex flex-col items-center my-4">
-    <img src="/project2-prototype-home.png" alt="Prototype image of the new homepage."/>
-    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">High-fidelity prototype created in Figma.</figcaption>
-</figure>
+                <div style={{ padding: '49.88% 0 0 0', position: 'relative' }}>
+                    <iframe
+                      src="https://player.vimeo.com/video/1130071186?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                      title="IMON Interactive Prototype">
+                    </iframe>
+                </div>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-2">
+                    You can interact with the full prototype [here](https://citron-debug-93707674.figma.site/).
+                </p>
+            </div>
+        </div>
 
-<div style={{ padding: '49.88% 0 0 0', position: 'relative' }}>
-    <iframe
-      src="https://player.vimeo.com/video/1130071186?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1"
-      frameBorder="0"
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; web-share"
-      referrerPolicy="strict-origin-when-cross-origin"
-      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-      title="IMON Interactive Prototype">
-    </iframe>
-</div>
-<p className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-2">
-    You can interact with the full prototype [here](https://citron-debug-93707674.figma.site/).
-</p>
-</div>
+        {/* Section 5 - Uses child(6) color */}
+        <div className="content-section">
+             <div className="imon-content-inner">
+                <h2>5. Test & Iterate: Validating the Design</h2>
 
-<div className="content-section">
-## 5. Test & Iterate: Validating the Design
+                <p>The prototype was tested with users to validate the new design and identify areas for iteration.</p>
 
-The prototype was tested with users to validate the new design and identify areas for iteration.
+                <h3>Usability Testing</h3>
+                <p>Moderated usability tests were conducted where users were asked to complete key tasks.</p>
 
-### Usability Testing
-Moderated usability tests were conducted where users were asked to complete key tasks.
+                <p><strong>Successes (What Worked):</strong></p>
+                 <ul>
+                    <li>**Improved Navigation:** Users successfully completed the task of "Find a cat to adopt" **[// XX]% faster** than on the original site.</li>
+                    <li>**Clearer CTAs:** All users immediately identified the primary "Donate" and "Adopt" buttons.</li>
+                    <li>**Better Readability:** No users reported issues with text contrast.</li>
+                </ul>
 
-**Successes (What Worked):**
-* **Improved Navigation:** Users successfully completed the task of "Find a cat to adopt" **\[// XX]% faster** than on the original site.
-* **Clearer CTAs:** All users immediately identified the primary "Donate" and "Adopt" buttons.
-* **Better Readability:** No users reported issues with text contrast.
+                <p><strong>Areas for Iteration (What Still Needs Work):</strong></p>
+                 <ul>
+                    <li>**"Resources" vs. "Services":** Users hesitated when looking for the "Foster" program, indicating the information architecture could still be refined.</li>
+                    <li>**Featured Cat Prominence:** The "Featured Cat" section was overlooked by **[// e.g., "2 out of 3"]** users, suggesting it needs greater visual emphasis.</li>
+                </ul>
+            </div>
+        </div>
 
-**Areas for Iteration (What Still Needs Work):**
-* **"Resources" vs. "Services":** Users hesitated when looking for the "Foster" program, indicating the information architecture could still be refined.
-* **Featured Cat Prominence:** The "Featured Cat" section was overlooked by \[// e.g., "2 out of 3"] users, suggesting it needs greater visual emphasis.
-</div>
+         {/* Section 6 - Uses child(7) color */}
+        <div className="content-section">
+            <div className="imon-content-inner">
+                <h2>6. Conclusion & Next Steps</h2>
 
-<div className="content-section">
-## 6. Conclusion & Next Steps
+                <p>This redesign process successfully identified and addressed critical usability issues on the IMON website. The final prototype, validated through user testing, provides a clear path toward a more user-friendly and effective online presence.</p>
 
-This redesign process successfully identified and addressed critical usability issues on the IMON website. The final prototype, validated through user testing, provides a clear path toward a more user-friendly and effective online presence.
-
-**Prioritized Recommendations:**
-1.  **High Priority:** Implement the streamlined navigation and improve text contrast across the site.
-2.  **Medium Priority:** Restructure the homepage to give greater prominence to events and featured cats.
-3.  **Next Steps:** Conduct another round of usability testing on the refined prototype to validate the latest iterations. Recommend the implementation of Google Analytics to track key metrics and measure the redesign's success post-launch.
-</div>
-
+                <p><strong>Prioritized Recommendations:</strong></p>
+                <ol>
+                    <li>**High Priority:** Implement the streamlined navigation and improve text contrast across the site.</li>
+                    <li>**Medium Priority:** Restructure the homepage to give greater prominence to events and featured cats.</li>
+                    <li>**Next Steps:** Conduct another round of usability testing on the refined prototype to validate the latest iterations. Recommend the implementation of Google Analytics to track key metrics and measure the redesign's success post-launch.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </div>
