@@ -84,6 +84,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 .imon-parallax-header h1 {
     color: #B30F11 !important; /* Force color override */
     font-size: clamp(2.5rem, 6vw, 4rem) !important; /* Force size override */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 0 !important;
