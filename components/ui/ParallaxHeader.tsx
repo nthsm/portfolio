@@ -55,7 +55,10 @@ export function ParallaxHeader({
       ref={headerRef}
       className={cn('imon-parallax-header-js', className)} // Use a new base class name
     >
-      {children}
+      {/* This inner div constrains the content width AND centers it */}
+      <div className="w-full max-w-7xl mx-auto">
+        {children}
+      </div>
     </div>
   );
 }
