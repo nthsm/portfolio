@@ -71,10 +71,9 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     color: white;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
     box-sizing: border-box;
     font-size: initial;
     line-height: initial;
@@ -84,23 +83,22 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 .imon-parallax-header-js h1 {
-    color: #B30F11 !important;
-    font-size: clamp(2.5rem, 6vw, 4rem) !important;
+    font-size: 3.75rem !important; /* text-6xl */
+    line-height: 1 !important;
     margin-top: 2rem;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     border-bottom: none !important;
-    max-width: 80%;
 }
 
 .imon-parallax-header-js .subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    color: #2f3030; /* Consistent light gray */
+    font-size: 1.5rem; /* text-2xl */
+    color: #2f3030;
     margin-top: 0.5rem;
     font-weight: normal;
     text-shadow: none;
-    max-width: 80%;
 }
+
 
 /* Mobile specific styles */
 @media (max-width: 768px) {
@@ -141,22 +139,29 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     background-color: #09090b; /* Tailwind zinc-950 */
 }
 
-/* Apply prose styles to inner div */
+/* Apply prose styles to inner div and control width */
 .imon-content-inner {
-    @apply prose prose-zinc dark:prose-invert max-w-5xl mx-auto;
+     /* You can change the max-w- value here (e.g., max-w-5xl, max-w-6xl, max-w-full) */
+    @apply prose prose-zinc dark:prose-invert max-w-7xl mx-auto;
 }
 
-/* Center ONLY headings within the inner div */
+/* Hide captions specifically within the IMON content */
+.imon-content-inner figcaption {
+    @apply hidden;
+}
+
+/* Center headings (now H1s & H2s) and prevent them from wrapping around floated elements */
+.imon-content-inner h1,
 .imon-content-inner h2,
-.imon-content-inner h3,
-.imon-content-inner h4 {
-  @apply text-center prose-headings:text-inherit dark:prose-headings:text-inherit;
+.imon-content-inner h3, /* Keep H3 centering just in case */
+.imon-content-inner h4 { /* Keep H4 centering just in case */
+  @apply text-center prose-headings:text-inherit dark:prose-headings:text-inherit clear-both;
 }
 
-/* Keep lists left-aligned */
+/* Keep lists left-aligned and ensure they behave as block elements */
 .imon-content-inner ul,
 .imon-content-inner ol {
-    @apply text-left inline-block;
+    @apply text-left;
 }
 
 /* Image wrapping styles */
@@ -183,4 +188,30 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
   content: "";
   clear: both;
   display: table;
+}
+
+/* IMON Page Specific Header Font and Color Styles */
+
+/* Apply Crimson Text and Red color to all H1s (parallax and content) */
+.imon-parallax-header-js h1,
+.imon-content-inner h1 {
+    font-family: var(--font-crimson-text), serif !important;
+    color: #B30F11 !important;
+    font-weight: 400 !important;
+}
+
+/* Make content H1s larger and set font weight */
+.imon-content-inner h1 {
+    font-size: 3rem !important; /* Equivalent to text-5xl */
+    line-height: 1.1 !important;
+    font-weight: 600 !important; /* semibold */
+}
+
+/* Apply Crimson Text to H2s, make them larger, set semibold weight, and use the default prose color */
+.imon-content-inner h2 {
+    font-family: var(--font-crimson-text), serif !important;
+    font-size: 1.875rem !important; /* Equivalent to text-3xl */
+    line-height: 1.25 !important;
+    font-weight: 400 !important; /* semibold */
+    color: inherit !important; /* This will use the default color from .prose */
 }
