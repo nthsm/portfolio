@@ -25,7 +25,7 @@ export const projectBlurbs: { [key: string]: string } = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Redesigning "It\'s Meow or Never"',
+    name: 'Redesign: It\'s Meow or Never',
     description:
       "A comprehensive UX project involving heuristic evaluation, user research, prototyping, and usability testing to improve a non-profit's website and better support their mission.",
     link: '/its-meow-or-never',
