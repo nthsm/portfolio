@@ -1,5 +1,5 @@
 ---
-title: "Redesigning \"It's Meow or Never\""
+title: "Redesign: It's Meow or Never"
 description: "A comprehensive UX project involving heuristic evaluation, user research, prototyping, and usability testing to improve a non-profit's website and better support their mission."
 image: '/project2-prototype-hero.png'
 date: 'Fall 2025'
@@ -10,7 +10,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 <div className="imon-parallax-container">
     <ParallaxHeader speedFactor={0.4}>
-        <h1>Redesigning "It's Meow or Never"</h1>
+        <h1>Redesign: It's Meow or Never</h1>
         {/* Added subtitle */}
         <p className="subtitle">An End-to-End UX Case Study</p>
     </ParallaxHeader>
@@ -27,7 +27,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 1 */}
         <div className="content-section">
             <div className="imon-content-inner">
-                <h2>1. Understanding the Problem & Opportunity</h2>
+                <h1>The Challenge</h1>
                 <p>IMON, a non-profit animal rescue, relies heavily on its website to connect with potential adopters, donors, and volunteers. However, an initial assessment suggested the site might have usability issues hindering these key interactions. This project presented an opportunity to apply a user-centered design process to create a more effective and engaging online presence for the organization.</p>
                 <p><strong>Project Goals:</strong></p>
                 <ul>
@@ -43,20 +43,22 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 2 */}
         <div className="content-section">
              <div className="imon-content-inner">
-                <h2>2. Research: Uncovering User Needs & Pain Points</h2>
+                <h1>Research</h1>
 
                 <figure className="float-right flex flex-col items-center my-4">
-                    <img src="/project2-process.png" alt="Process Flow: Heuristic Evaluation, User Research, Ideation & Prototyping, Usability Testing"/>
+                    <img src="/project2-process.png" alt="Process Flow: Understand, Research, Define, Design, Test"/>
+                    {/* Caption hidden via CSS */}
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">The UX process flow followed for this redesign.</figcaption>
                 </figure>
 
                 <p>To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.</p>
 
-                <h3>Heuristic Evaluation</h3>
+                <h2>Heuristic Evaluation</h2>
                 <p>I began by conducting a heuristic evaluation based on Jakob Nielsen's 10 Usability Heuristics. This expert review helped identify foundational usability issues in the existing design.</p>
 
                 <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-heuristic.png" alt="Heuristic findings noted on the home page."/>
+                     {/* Caption hidden via CSS */}
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Heuristic findings noted on the home page.</figcaption>
                 </figure>
 
@@ -69,7 +71,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
                 </ul>
 
 
-                <h3>User Survey</h3>
+                <h2>User Survey</h2>
                 <p>To gather quantitative data, a survey was distributed via my own and IMON's social media channels, receiving \[// Number] responses.</p>
                 <p><strong>Key Survey Insights:</strong></p>
                 <ul>
@@ -78,10 +80,11 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
                     <li>The most commonly cited frustration was **[// Mention the top theme from the open-ended question, e.g., "difficulty finding specific information like event dates."]**</li>
                 </ul>
 
-                <h3>User Interviews</h3>
+                <h2>User Interviews</h2>
 
                  <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-quote.png" alt="Direct quotes."/>
+                     {/* Caption hidden via CSS */}
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Quote from an IMON board member and from a user.</figcaption>
                 </figure>
 
@@ -99,7 +102,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 3 */}
         <div className="content-section">
             <div className="imon-content-inner">
-                <h2>3. Define: Synthesizing the Research</h2>
+                <h1>Synthesizing the Research</h1>
                 <p>The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.</p>
                 <p><strong>User Personas:</strong></p>
                 <p>Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."</p>
@@ -115,26 +118,28 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 4 */}
         <div className="content-section">
             <div className="imon-content-inner">
-                <h2>4. Design & Prototype: From Wireframes to Hi-Fi</h2>
+                <h1>Prototyping</h1>
                 <p>Using the defined problems as a guide, I began developing solutions.</p>
 
                  <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
+                     {/* Caption hidden via CSS */}
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Low-fi wireframe focusing on improved layout and navigation.</figcaption>
                 </figure>
 
-                <h3>Low-Fidelity Wireframes</h3>
+                <h2>Low-Fidelity Wireframes</h2>
                 <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
 
-                <h3>High-Fidelity Prototype</h3>
+                <h2>High-Fidelity Prototype</h2>
                 <p>The wireframes were then developed into a high-fidelity interactive prototype, incorporating IMON's branding while implementing the data-backed solutions.</p>
 
-                <figure className="float-right flex flex-col items-center my-4">
+                <figure className="flex flex-col items-center my-4">
                     <img src="/project2-prototype-home.png" alt="Prototype image of the new homepage."/>
+                     {/* Caption hidden via CSS */}
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">High-fidelity prototype created in Figma.</figcaption>
                 </figure>
 
-                <div style={{ padding: '49.88% 0 0 0', position: 'relative' }}>
+                <div style={{ padding: '49.88% 0 0 0', position: 'relative', marginTop: '2rem' }}>
                     <iframe
                       src="https://player.vimeo.com/video/1130071186?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1"
                       frameBorder="0"
@@ -153,9 +158,9 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 5 */}
         <div className="content-section">
              <div className="imon-content-inner">
-                <h2>5. Test & Iterate: Validating the Design</h2>
+                <h1>Testing</h1>
                 <p>The prototype was tested with users to validate the new design and identify areas for iteration.</p>
-                <h3>Usability Testing</h3>
+                <h2>Usability Testing</h2>
                 <p>Moderated usability tests were conducted where users were asked to complete key tasks.</p>
                 <p><strong>Successes (What Worked):</strong></p>
                  <ul>
@@ -174,7 +179,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
          {/* Section 6 */}
         <div className="content-section">
             <div className="imon-content-inner">
-                <h2>6. Conclusion & Next Steps</h2>
+                <h1>Reflection</h1>
                 <p>This redesign process successfully identified and addressed critical usability issues on the IMON website. The final prototype, validated through user testing, provides a clear path toward a more user-friendly and effective online presence.</p>
                 <p><strong>Prioritized Recommendations:</strong></p>
                 <ol>
