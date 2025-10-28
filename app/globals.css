@@ -24,7 +24,7 @@ body {
   font-family: var(--font-figtree), sans-serif;
 }
 
-/* Keep standard prose overrides */
+/* Standard prose overrides */
 .prose p {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -51,7 +51,7 @@ body {
   height: auto;
 }
 
-/* Keep border styles */
+/* Border styles */
 img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -62,96 +62,125 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 /* IMON Specific Styles */
-.imon-parallax-header {
+.imon-parallax-header-js {
     background-image: url('/project2-bg.png');
-    background-attachment: fixed;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 65vh; /* Increased height */
+    min-height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     color: white;
-    padding: 2rem;
+    padding: 2rem 4rem;
     box-sizing: border-box;
-    /* Ensure no prose styles leak here */
     font-size: initial;
     line-height: initial;
+    position: relative;
+    z-index: 0;
+    transform: translateZ(0);
 }
 
-.imon-parallax-header h1 {
-    color: #B30F11 !important; /* Force color override */
-    font-size: clamp(2.5rem, 6vw, 4rem) !important; /* Force size override */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    text-align: center;
+.imon-parallax-header-js h1 {
+    color: #B30F11 !important;
+    font-size: clamp(2.5rem, 6vw, 4rem) !important;
     margin-top: 2rem;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     border-bottom: none !important;
+    max-width: 80%;
 }
 
-/* Mobile specific styles for the header */
-@media (max-width: 768px) { /* Apply styles for screens md and smaller */
-  .imon-parallax-header {
-    background-image: url('/project2-bg-mobile.png'); /* Use the mobile-specific image */
-    background-attachment: scroll; /* Disable fixed attachment */
-    background-size: cover; /* Cover the area with the mobile image */
-    min-height: 50vh; /* Adjust height for mobile if needed */
+.imon-parallax-header-js .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: #2f3030; /* Consistent light gray */
+    margin-top: 0.5rem;
+    font-weight: normal;
+    text-shadow: none;
+    max-width: 80%;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .imon-parallax-header-js {
+    background-image: url('/project2-bg-mobile.png');
+    background-attachment: scroll;
+    background-position: center;
+    min-height: 50vh;
+    padding: 2rem;
+    align-items: center;
   }
+   .imon-parallax-header-js h1,
+   .imon-parallax-header-js .subtitle {
+       text-align: center;
+       max-width: 100%;
+   }
 }
 
 .imon-content-wrapper .content-section {
-    padding: 3rem 1rem; /* Adjust padding as needed */
-    width: 100%; /* Ensure section spans full width */
-    box-sizing: border-box; /* Include padding in width */
+    padding: 3rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
-/* ---- Light Mode Section Colors (Greyscale) ---- */
+/* Light Mode Section Colors */
 .imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; /* gray-50 */ }
 .imon-content-wrapper .content-section:nth-child(2) { background-color: #f3f4f6; /* gray-100 */ }
-.imon-content-wrapper .content-section:nth-child(3) { background-color: #fee2e2; /* red-200 - Highlight */ }
+.imon-content-wrapper .content-section:nth-child(3) { background-color: #fee2e2; /* red-100 */ }
 .imon-content-wrapper .content-section:nth-child(4) { background-color: #f3f4f6; /* gray-100 */ }
 .imon-content-wrapper .content-section:nth-child(5) { background-color: #f9fafb; /* gray-50 */ }
 .imon-content-wrapper .content-section:nth-child(6) { background-color: #f3f4f6; /* gray-100 */ }
 .imon-content-wrapper .content-section:nth-child(7) { background-color: #f9fafb; /* gray-50 */ }
 
-/* ---- Dark Mode Section Colors (Greyscale) ---- */
-.dark .imon-content-wrapper .content-section:nth-child(1) { background-color: #1f2937; /* gray-800 */ }
-.dark .imon-content-wrapper .content-section:nth-child(2) { background-color: #111827; /* gray-900 */ }
-.dark .imon-content-wrapper .content-section:nth-child(3) { background-color: #4b0b0b; /* red-800 - Highlight */ }
-.dark .imon-content-wrapper .content-section:nth-child(4) { background-color: #111827; /* gray-900 */ }
-.dark .imon-content-wrapper .content-section:nth-child(5) { background-color: #1f2937; /* gray-800 */ }
-.dark .imon-content-wrapper .content-section:nth-child(6) { background-color: #111827; /* gray-900 */ }
-.dark .imon-content-wrapper .content-section:nth-child(7) { background-color: #1f2937; /* gray-800 */ }
+/* Dark Mode Section Color Override */
+.dark .imon-content-wrapper .content-section {
+    background-color: #09090b; /* Tailwind zinc-950 */
+}
 
-
-/* Re-apply prose styles ONLY to the constrained inner div AND center text */
+/* Apply prose styles to inner div */
 .imon-content-inner {
-    @apply prose prose-zinc dark:prose-invert max-w-5xl mx-auto text-center; /* Added text-center */
+    @apply prose prose-zinc dark:prose-invert max-w-5xl mx-auto;
 }
 
-/* Reset text alignment for lists within the centered block */
-.imon-content-inner ul,
-.imon-content-inner ol {
-    @apply text-left inline-block; /* Make lists left-aligned and only as wide as needed */
-}
-
-/* Ensure headings inside constrained area get prose styles */
+/* Center ONLY headings within the inner div */
 .imon-content-inner h2,
 .imon-content-inner h3,
 .imon-content-inner h4 {
-  @apply prose-headings:text-inherit dark:prose-headings:text-inherit;
+  @apply text-center prose-headings:text-inherit dark:prose-headings:text-inherit;
 }
 
-/* Ensure links inside constrained area get prose styles */
+/* Keep lists left-aligned */
+.imon-content-inner ul,
+.imon-content-inner ol {
+    @apply text-left inline-block;
+}
+
+/* Image wrapping styles */
+.imon-content-inner figure.float-right {
+    @apply float-right ml-6 mb-4 max-w-sm;
+}
+
+.imon-content-inner figure.float-left {
+    @apply float-left mr-6 mb-4 max-w-sm;
+}
+
+/* Ensure links get prose styles */
 .imon-content-inner a {
     @apply prose-a:text-inherit dark:prose-a:text-inherit;
 }
 
-/* Ensure lists inside constrained area get prose styles */
-/* Removed specific list style application here as it's handled above */
+/* Ensure list items get prose styles */
 .imon-content-inner li {
      @apply prose-li:my-1 dark:prose-li:my-1;
+}
+
+/* Optional clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
