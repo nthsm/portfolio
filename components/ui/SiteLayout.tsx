@@ -150,9 +150,11 @@ const LogoComponent = ({ className, onClose }: { className?: string; onClose?: (
 export default function SiteLayout({
   children,
   showProgressBar = false,
+  fullWidth = false, // Add fullWidth prop
 }: {
   children: React.ReactNode
   showProgressBar?: boolean
+  fullWidth?: boolean // Define prop type
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -232,9 +234,11 @@ export default function SiteLayout({
         )}
       </AnimatePresence>
 
+      {/* Conditionally apply max-width and padding */}
       <main className={cn(
-          "flex-1 p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto w-full",
-          mainMinHeight
+          "flex-1 w-full",
+          mainMinHeight,
+          fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto" // Apply standard constraints if not fullWidth
         )}>
         {children}
       </main>
