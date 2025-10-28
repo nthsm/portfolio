@@ -50,11 +50,11 @@ body {
   height: auto;
 }
 
-img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]) {
+img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
 }
 
-.dark img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]) {
+.dark img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
   border-color: #3f3f46;
 }
