@@ -54,9 +54,6 @@ export default function BlogPage() {
         <h1 className={cn("text-6xl font-bold tracking-tight md:text-7xl inline-block mb-0")}>
             From the Blog
         </h1>
-        <p>
-            My personal space for writing about things that interest me; helps me continue to learn and stay curious.
-        </p>
       </motion.div>
 
         {articles.length > 0 && (
