@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Figtree } from 'next/font/google'
+import { Figtree, Crimson_Text } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from "@vercel/analytics/next"
@@ -38,6 +38,12 @@ const figtree = Figtree({
   subsets: ['latin'],
 })
 
+const crimsonText = Crimson_Text({
+  variable: '--font-crimson-text',
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} bg-zinc-50 tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${figtree.variable} ${crimsonText.variable} bg-zinc-50 tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ThemeProvider
           enableSystem={true}
