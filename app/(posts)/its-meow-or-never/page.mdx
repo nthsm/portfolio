@@ -6,28 +6,29 @@ date: 'Fall 2025'
 ---
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 <div className="imon-parallax-container">
-    <div className="imon-parallax-header">
+    <ParallaxHeader speedFactor={0.4}>
         <h1>Redesigning "It's Meow or Never"</h1>
-    </div>
+        {/* Added subtitle */}
+        <p className="subtitle">An End-to-End UX Case Study</p>
+    </ParallaxHeader>
 
     <div className="imon-content-wrapper">
-         {/* Section 0 (Intro) - Uses child(1) color */}
+         {/* Section 0 (Intro) */}
          <div className="content-section">
-            {/* Apply prose styles to this inner container */}
             <div className="imon-content-inner">
-                <p>This case study documents the end-to-end UX process—from initial problem discovery and research to iterative prototyping and testing—undertaken to redesign the website for "It's Meow or Never" (IMON), a local non-profit animal rescue. The goal was to enhance usability, address user pain points, and better align the site with the organization's mission of facilitating adoptions and donations.</p>
+                <p>This case study documents the end-to-end UX process—from initial problem discovery and research to iterative prototyping and testing—undertaken to redesign the website for "It's Meow or Never" (IMON), a local non-profit animal rescue.</p>
+                <p>The goal was to enhance usability, address user pain points, and better align the site with the organization's mission of facilitating adoptions and donations.</p>
             </div>
         </div>
 
-        {/* Section 1 - Uses child(2) color */}
+        {/* Section 1 */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h2>1. Understanding the Problem & Opportunity</h2>
-
                 <p>IMON, a non-profit animal rescue, relies heavily on its website to connect with potential adopters, donors, and volunteers. However, an initial assessment suggested the site might have usability issues hindering these key interactions. This project presented an opportunity to apply a user-centered design process to create a more effective and engaging online presence for the organization.</p>
-
                 <p><strong>Project Goals:</strong></p>
                 <ul>
                     <li>Identify key usability pain points on the current IMON website.</li>
@@ -35,25 +36,29 @@ import { ArrowLeft } from 'lucide-react'
                     <li>Design and validate solutions through iterative prototyping and user testing.</li>
                     <li>Deliver a high-fidelity prototype with data-backed recommendations.</li>
                 </ul>
-
                 <p><strong>My Role:</strong> UX Designer & Researcher (leading all phases of the project).</p>
             </div>
         </div>
 
-        {/* Section 2 - Uses child(3) color */}
+        {/* Section 2 */}
         <div className="content-section">
              <div className="imon-content-inner">
                 <h2>2. Research: Uncovering User Needs & Pain Points</h2>
 
-                <p>To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.</p>
-
-                <figure className="flex flex-col items-center my-4">
+                <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-process.png" alt="Process Flow: Heuristic Evaluation, User Research, Ideation & Prototyping, Usability Testing"/>
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">The UX process flow followed for this redesign.</figcaption>
                 </figure>
 
+                <p>To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.</p>
+
                 <h3>Heuristic Evaluation</h3>
                 <p>I began by conducting a heuristic evaluation based on Jakob Nielsen's 10 Usability Heuristics. This expert review helped identify foundational usability issues in the existing design.</p>
+
+                <figure className="float-right flex flex-col items-center my-4">
+                    <img src="/project2-heuristic.png" alt="Heuristic findings noted on the home page."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Heuristic findings noted on the home page.</figcaption>
+                </figure>
 
                 <p><strong>Key Heuristic Findings:</strong></p>
                 <ul>
@@ -63,14 +68,9 @@ import { ArrowLeft } from 'lucide-react'
                     <li><strong>(Finding 4) Redundant Information:</strong> The footer contained a full contact form and lacked standard navigational elements.</li>
                 </ul>
 
-                <figure className="flex flex-col items-center my-4">
-                    <img src="/project2-heuristic.png" alt="Heuristic findings noted on the home page."/>
-                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Heuristic findings noted on the home page.</figcaption>
-                </figure>
 
                 <h3>User Survey</h3>
                 <p>To gather quantitative data, a survey was distributed via my own and IMON's social media channels, receiving \[// Number] responses.</p>
-
                 <p><strong>Key Survey Insights:</strong></p>
                 <ul>
                     <li>**[// Stat #1, e.g., 72% of respondents]** visit the site primarily to view adoptable cats.</li>
@@ -79,32 +79,30 @@ import { ArrowLeft } from 'lucide-react'
                 </ul>
 
                 <h3>User Interviews</h3>
-                <p>To gain deeper qualitative insights, I conducted moderated interviews with users representing key personas: a recent adopter, a volunteer, and a potential donor.</p>
 
+                 <figure className="float-right flex flex-col items-center my-4">
+                    <img src="/project2-quote.png" alt="Direct quotes."/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Quote from an IMON board member and from a user.</figcaption>
+                </figure>
+
+                <p>To gain deeper qualitative insights, I conducted moderated interviews with users representing key personas: a recent adopter, a volunteer, and a potential donor.</p>
                 <p><strong>Key Themes from Interviews:</strong></p>
-                 <ul>
+                <ul>
                     <li>**[// Theme #1, e.g., "Lack of Clarity in the Adoption Process." Users expressed confusion about the multi-step application and what to expect after applying.]**</li>
                     <li>**[// Theme #2, e.g., "Desire for More Information on Events." Multiple users mentioned wanting to know about upcoming vaccine clinics and adoption events directly on the homepage.]**</li>
                     <li>**[// Theme #3, e.g., "Uncertainty About Donation Impact." Donors wanted clearer information on where their financial contributions were being used.]**</li>
                 </ul>
 
-                <figure className="flex flex-col items-center my-4">
-                    <img src="/project2-quote.png" alt="Direct quotes."/>
-                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Quote from an IMON board member and from a user.</figcaption>
-                </figure>
             </div>
         </div>
 
-        {/* Section 3 - Uses child(4) color */}
+        {/* Section 3 */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h2>3. Define: Synthesizing the Research</h2>
-
                 <p>The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.</p>
-
                 <p><strong>User Personas:</strong></p>
                 <p>Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."</p>
-
                 <p><strong>Problem Statements:</strong></p>
                 <ol>
                     <li>**Hopeful Adopters** need a clear, centralized way to view available cats and understand the adoption steps because the current process is fragmented and causes confusion.</li>
@@ -114,25 +112,24 @@ import { ArrowLeft } from 'lucide-react'
             </div>
         </div>
 
-        {/* Section 4 - Uses child(5) color */}
+        {/* Section 4 */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h2>4. Design & Prototype: From Wireframes to Hi-Fi</h2>
-
                 <p>Using the defined problems as a guide, I began developing solutions.</p>
 
-                <h3>Low-Fidelity Wireframes</h3>
-                <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
-
-                <figure className="flex flex-col items-center my-4">
+                 <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">Low-fi wireframe focusing on improved layout and navigation.</figcaption>
                 </figure>
 
+                <h3>Low-Fidelity Wireframes</h3>
+                <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
+
                 <h3>High-Fidelity Prototype</h3>
                 <p>The wireframes were then developed into a high-fidelity interactive prototype, incorporating IMON's branding while implementing the data-backed solutions.</p>
 
-                <figure className="flex flex-col items-center my-4">
+                <figure className="float-right flex flex-col items-center my-4">
                     <img src="/project2-prototype-home.png" alt="Prototype image of the new homepage."/>
                     <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">High-fidelity prototype created in Figma.</figcaption>
                 </figure>
@@ -153,23 +150,19 @@ import { ArrowLeft } from 'lucide-react'
             </div>
         </div>
 
-        {/* Section 5 - Uses child(6) color */}
+        {/* Section 5 */}
         <div className="content-section">
              <div className="imon-content-inner">
                 <h2>5. Test & Iterate: Validating the Design</h2>
-
                 <p>The prototype was tested with users to validate the new design and identify areas for iteration.</p>
-
                 <h3>Usability Testing</h3>
                 <p>Moderated usability tests were conducted where users were asked to complete key tasks.</p>
-
                 <p><strong>Successes (What Worked):</strong></p>
                  <ul>
                     <li>**Improved Navigation:** Users successfully completed the task of "Find a cat to adopt" **[// XX]% faster** than on the original site.</li>
                     <li>**Clearer CTAs:** All users immediately identified the primary "Donate" and "Adopt" buttons.</li>
                     <li>**Better Readability:** No users reported issues with text contrast.</li>
                 </ul>
-
                 <p><strong>Areas for Iteration (What Still Needs Work):</strong></p>
                  <ul>
                     <li>**"Resources" vs. "Services":** Users hesitated when looking for the "Foster" program, indicating the information architecture could still be refined.</li>
@@ -178,13 +171,11 @@ import { ArrowLeft } from 'lucide-react'
             </div>
         </div>
 
-         {/* Section 6 - Uses child(7) color */}
+         {/* Section 6 */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h2>6. Conclusion & Next Steps</h2>
-
                 <p>This redesign process successfully identified and addressed critical usability issues on the IMON website. The final prototype, validated through user testing, provides a clear path toward a more user-friendly and effective online presence.</p>
-
                 <p><strong>Prioritized Recommendations:</strong></p>
                 <ol>
                     <li>**High Priority:** Implement the streamlined navigation and improve text contrast across the site.</li>
