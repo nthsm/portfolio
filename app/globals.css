@@ -24,6 +24,7 @@ body {
   font-family: var(--font-figtree), sans-serif;
 }
 
+/* Keep standard prose overrides */
 .prose p {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -50,6 +51,7 @@ body {
   height: auto;
 }
 
+/* Keep border styles */
 img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -57,4 +59,98 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 
 .dark img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
   border-color: #3f3f46;
+}
+
+/* IMON Specific Styles */
+.imon-parallax-header {
+    background-image: url('/project2-bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 65vh; /* Increased height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+    /* Ensure no prose styles leak here */
+    font-size: initial;
+    line-height: initial;
+}
+
+.imon-parallax-header h1 {
+    color: #B30F11 !important; /* Force color override */
+    font-size: clamp(2.5rem, 6vw, 4rem) !important; /* Force size override */
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Mobile specific styles for the header */
+@media (max-width: 768px) { /* Apply styles for screens md and smaller */
+  .imon-parallax-header {
+    background-image: url('/project2-bg-mobile.png'); /* Use the mobile-specific image */
+    background-attachment: scroll; /* Disable fixed attachment */
+    background-size: cover; /* Cover the area with the mobile image */
+    min-height: 50vh; /* Adjust height for mobile if needed */
+  }
+}
+
+.imon-content-wrapper .content-section {
+    padding: 3rem 1rem; /* Adjust padding as needed */
+    width: 100%; /* Ensure section spans full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* ---- Light Mode Section Colors (Greyscale) ---- */
+.imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; /* gray-50 */ }
+.imon-content-wrapper .content-section:nth-child(2) { background-color: #f3f4f6; /* gray-100 */ }
+.imon-content-wrapper .content-section:nth-child(3) { background-color: #fee2e2; /* red-200 - Highlight */ }
+.imon-content-wrapper .content-section:nth-child(4) { background-color: #f3f4f6; /* gray-100 */ }
+.imon-content-wrapper .content-section:nth-child(5) { background-color: #f9fafb; /* gray-50 */ }
+.imon-content-wrapper .content-section:nth-child(6) { background-color: #f3f4f6; /* gray-100 */ }
+.imon-content-wrapper .content-section:nth-child(7) { background-color: #f9fafb; /* gray-50 */ }
+
+/* ---- Dark Mode Section Colors (Greyscale) ---- */
+.dark .imon-content-wrapper .content-section:nth-child(1) { background-color: #1f2937; /* gray-800 */ }
+.dark .imon-content-wrapper .content-section:nth-child(2) { background-color: #111827; /* gray-900 */ }
+.dark .imon-content-wrapper .content-section:nth-child(3) { background-color: #4b0b0b; /* red-800 - Highlight */ }
+.dark .imon-content-wrapper .content-section:nth-child(4) { background-color: #111827; /* gray-900 */ }
+.dark .imon-content-wrapper .content-section:nth-child(5) { background-color: #1f2937; /* gray-800 */ }
+.dark .imon-content-wrapper .content-section:nth-child(6) { background-color: #111827; /* gray-900 */ }
+.dark .imon-content-wrapper .content-section:nth-child(7) { background-color: #1f2937; /* gray-800 */ }
+
+
+/* Re-apply prose styles ONLY to the constrained inner div AND center text */
+.imon-content-inner {
+    @apply prose prose-zinc dark:prose-invert max-w-5xl mx-auto text-center; /* Added text-center */
+}
+
+/* Reset text alignment for lists within the centered block */
+.imon-content-inner ul,
+.imon-content-inner ol {
+    @apply text-left inline-block; /* Make lists left-aligned and only as wide as needed */
+}
+
+/* Ensure headings inside constrained area get prose styles */
+.imon-content-inner h2,
+.imon-content-inner h3,
+.imon-content-inner h4 {
+  @apply prose-headings:text-inherit dark:prose-headings:text-inherit;
+}
+
+/* Ensure links inside constrained area get prose styles */
+.imon-content-inner a {
+    @apply prose-a:text-inherit dark:prose-a:text-inherit;
+}
+
+/* Ensure lists inside constrained area get prose styles */
+/* Removed specific list style application here as it's handled above */
+.imon-content-inner li {
+     @apply prose-li:my-1 dark:prose-li:my-1;
 }
