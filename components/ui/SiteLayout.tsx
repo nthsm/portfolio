@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState, useRef, ReactNode } from 'react'
+import { useState, useRef, ReactNode, useId } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SOCIAL_LINKS } from '@/app/data'
 import { useTheme } from 'next-themes'
@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { BackToTopButton } from './back-to-top-button'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 const NavLink = ({
   href,
@@ -22,18 +23,41 @@ const NavLink = ({
   onClose?: () => void
 }) => {
   const pathname = usePathname()
-  const isActive = pathname === href
+  const router = useRouter();
+  const isHomePage = pathname === '/';
+  const isWorkLinkOnHomePage = href === '/' && isHomePage;
+  const isAnchorLink = href.startsWith('/#');
+  const isActive = !isAnchorLink && !isWorkLinkOnHomePage && pathname === href
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isWorkLinkOnHomePage) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    else if (isAnchorLink && isHomePage) {
+      e.preventDefault()
+      const targetId = href.substring(2)
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' })
+         history.pushState(null, '', href);
+      }
+    }
+    if (onClose) {
+      onClose()
+    }
+  }
 
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className={cn(
         'transition-colors duration-200 hover:text-zinc-900 dark:hover:text-zinc-100',
         isActive
           ? 'font-semibold text-zinc-900 dark:text-zinc-100'
           : 'text-zinc-600 dark:text-zinc-400',
       )}
-      onClick={onClose}
     >
       {children}
     </Link>
@@ -98,8 +122,8 @@ const MobileNavMenu = ({ onClose }: { onClose?: () => void }) => (
     <div className="bg-zinc-100/80 dark:bg-zinc-900/80 backdrop-blur-md p-6 rounded-xl shadow-lg border border-zinc-200 dark:border-zinc-800">
       <nav className="flex flex-col space-y-4">
         <NavLink href="/" onClose={onClose}>Work</NavLink>
-        <NavLink href="/about" onClose={onClose}>About</NavLink>
-        <NavLink href="/blog" onClose={onClose}>Blog</NavLink>
+        <NavLink href="/#about-section" onClose={onClose}>About</NavLink>
+        <NavLink href="/#blog-section" onClose={onClose}>Blog</NavLink>
       </nav>
     </div>
 );
@@ -150,11 +174,11 @@ const LogoComponent = ({ className, onClose }: { className?: string; onClose?: (
 export default function SiteLayout({
   children,
   showProgressBar = false,
-  fullWidth = false, // Add fullWidth prop
+  fullWidth = false,
 }: {
   children: React.ReactNode
   showProgressBar?: boolean
-  fullWidth?: boolean // Define prop type
+  fullWidth?: boolean
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -171,10 +195,12 @@ export default function SiteLayout({
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
           <LogoComponent className="h-6" />
 
+          {/* Updated Desktop NavLinks */}
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/">Work</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/#about-section">About</NavLink>
+            <NavLink href="/#blog-section">Blog</NavLink>
+            {/* Removed Experience and Contact */}
             <ThemeToggle />
           </div>
 
@@ -183,21 +209,27 @@ export default function SiteLayout({
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="z-50 -mr-2 p-2 text-zinc-600 dark:text-zinc-400"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {isMenuOpen ? (
+                 <X className="h-6 w-6" />
+              ) : (
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </header>
@@ -234,11 +266,10 @@ export default function SiteLayout({
         )}
       </AnimatePresence>
 
-      {/* Conditionally apply max-width and padding */}
       <main className={cn(
           "flex-1 w-full",
           mainMinHeight,
-          fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto" // Apply standard constraints if not fullWidth
+          fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto"
         )}>
         {children}
       </main>
