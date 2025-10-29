@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     id: 'project2',
   },
   {
-    name: 'Analyzing Student Wellness Data: Sleep Strategies and Stress Levels',
+    name: 'Student Wellness Data: Sleep Strategies and Stress Levels',
     description:
       'A quantitative analysis project involving data cleaning and visualization of student survey data to identify correlations between sleep habits and reported stress levels.',
     link: '/student-wellness-study',
