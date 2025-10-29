@@ -16,12 +16,10 @@ export default function LayoutBlogPost({
   const isImonPage = pathname === '/its-meow-or-never'
 
   return (
-    // Pass fullWidth prop based on the route
     <SiteLayout showProgressBar fullWidth={isImonPage}>
-      {/* Removed prose classes entirely from this main element */}
       <main className={cn(
-        "pb-20", // Basic padding only
-        !isImonPage && "prose prose-zinc dark:prose-invert mx-auto max-w-5xl" // Apply prose and constraints ONLY if NOT IMON page
+        "pb-20",
+        !isImonPage && "prose prose-zinc dark:prose-invert mx-auto max-w-5xl"
       )}>
         {!isImonPage && (
           <Link
@@ -35,8 +33,9 @@ export default function LayoutBlogPost({
 
         {children}
 
-        {/* Navigation needs to be inside a constrained container */}
-        <div className={cn(!isImonPage ? "mt-20 pt-8 border-t border-zinc-200 dark:border-zinc-800" : "max-w-5xl mx-auto px-4 lg:px-8")}>
+        <div className={cn(
+            !isImonPage ? "" : "max-w-5xl mx-auto px-4 lg:px-8"
+        )}>
             <ProjectNavigation />
         </div>
       </main>
