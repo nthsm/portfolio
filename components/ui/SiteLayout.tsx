@@ -213,10 +213,8 @@ export default function SiteLayout({
     }
 
     const handleScroll = () => {
-      // --- SCROLL THRESHOLD FOR NAV BAR FILL ---
-      // Remains window.innerHeight to trigger after scrolling past the initial view
-      const threshold = window.innerHeight;
-      // --- END OF SCROLL THRESHOLD ---
+      // Use full viewport height for desktop (> 768px), fixed small threshold for mobile
+      const threshold = window.innerWidth > 768 ? window.innerHeight : 0; // Use 50px threshold for mobile
       if (window.scrollY > threshold) {
         setIsHeaderTransparent(false);
       } else {
@@ -229,7 +227,7 @@ export default function SiteLayout({
     return () => { // Cleanup listener
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [pathname, isImonPage]); // Re-run effect if path changes
+  }, [pathname, isImonPage]); // Re-run effect if path changes or page context changes
 
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
 
