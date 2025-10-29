@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState, useRef, ReactNode, useId } from 'react'
+import { useState, useRef, ReactNode, useId, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SOCIAL_LINKS } from '@/app/data'
 import { useTheme } from 'next-themes'
@@ -17,17 +17,19 @@ const NavLink = ({
   href,
   children,
   onClose,
+  isHeaderTransparent,
 }: {
   href: string
   children: React.ReactNode
   onClose?: () => void
+  isHeaderTransparent?: boolean
 }) => {
   const pathname = usePathname()
   const router = useRouter();
   const isHomePage = pathname === '/';
   const isWorkLinkOnHomePage = href === '/' && isHomePage;
   const isAnchorLink = href.startsWith('/#');
-  const isActive = !isAnchorLink && !isWorkLinkOnHomePage && pathname === href
+  const isActive = !isAnchorLink && !isWorkLinkOnHomePage && pathname === href && !isHeaderTransparent
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (isWorkLinkOnHomePage) {
@@ -43,6 +45,7 @@ const NavLink = ({
          history.pushState(null, '', href);
       }
     }
+
     if (onClose) {
       onClose()
     }
@@ -53,10 +56,15 @@ const NavLink = ({
       href={href}
       onClick={handleClick}
       className={cn(
-        'transition-colors duration-200 hover:text-zinc-900 dark:hover:text-zinc-100',
+        'transition-colors duration-200',
+        isHeaderTransparent
+          ? 'text-zinc-900 hover:text-zinc-700'
+          : 'hover:text-zinc-900 dark:hover:text-zinc-100',
         isActive
           ? 'font-semibold text-zinc-900 dark:text-zinc-100'
-          : 'text-zinc-600 dark:text-zinc-400',
+          : isHeaderTransparent
+            ? 'font-medium'
+            : 'text-zinc-600 dark:text-zinc-400',
       )}
     >
       {children}
@@ -64,19 +72,27 @@ const NavLink = ({
   )
 }
 
-const ThemeToggle = ({ variant = 'default' }: { variant?: 'default' | 'icon' }) => {
+const ThemeToggle = ({ variant = 'default', isHeaderTransparent }: { variant?: 'default' | 'icon', isHeaderTransparent?: boolean }) => {
   const { theme, setTheme } = useTheme()
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
-  const baseClasses = "relative flex items-center justify-center overflow-hidden transition-colors focus:outline-none";
+  const baseClasses = "relative flex items-center justify-center overflow-hidden transition-colors duration-200 focus:outline-none";
 
-  const variantClasses = {
-      default: "h-8 w-8 rounded-lg bg-zinc-200 text-zinc-600 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700",
-      icon: "h-8 w-8 text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white"
+  const solidBgClasses = {
+      default: "bg-zinc-200 text-zinc-600 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700",
+      icon: "text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white"
   };
+
+  const transparentBgClasses = {
+      default: "rounded-lg bg-black/10 text-zinc-900 hover:bg-black/20 hover:text-zinc-700",
+      icon: "text-zinc-900 hover:text-zinc-700"
+  };
+
+  const currentClasses = isHeaderTransparent ? transparentBgClasses[variant] : solidBgClasses[variant];
+  const sizeClasses = variant === 'default' ? "h-8 w-8 rounded-lg" : "h-8 w-8";
 
   const buttonContent = (
       <AnimatePresence initial={false} mode="wait">
@@ -109,7 +125,7 @@ const ThemeToggle = ({ variant = 'default' }: { variant?: 'default' | 'icon' }) 
   return (
       <button
         onClick={toggleTheme}
-        className={cn(baseClasses, variantClasses[variant])}
+        className={cn(baseClasses, sizeClasses, currentClasses)}
         aria-label="Toggle theme"
         suppressHydrationWarning
       >
@@ -157,7 +173,6 @@ const Footer = () => (
     </footer>
 );
 
-
 const LogoComponent = ({ className, onClose }: { className?: string; onClose?: () => void }) => (
     <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
         <Image
@@ -182,33 +197,69 @@ export default function SiteLayout({
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname();
+  const isImonPage = pathname === '/its-meow-or-never';
+
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(isImonPage);
 
   useClickOutside(menuRef, () => {
     if (isMenuOpen) setIsMenuOpen(false)
   })
 
+  useEffect(() => {
+    if (!isImonPage) {
+        setIsHeaderTransparent(false);
+        return;
+    }
+
+    const handleScroll = () => {
+      // --- SCROLL THRESHOLD FOR NAV BAR FILL ---
+      // Remains window.innerHeight to trigger after scrolling past the initial view
+      const threshold = window.innerHeight;
+      // --- END OF SCROLL THRESHOLD ---
+      if (window.scrollY > threshold) {
+        setIsHeaderTransparent(false);
+      } else {
+        setIsHeaderTransparent(true);
+      }
+    };
+
+    handleScroll(); // Check initial position on load
+    window.addEventListener('scroll', handleScroll);
+    return () => { // Cleanup listener
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [pathname, isImonPage]); // Re-run effect if path changes
+
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
 
   return (
     <div className="min-h-screen bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 flex flex-col">
-      <div className="sticky top-0 z-30 bg-zinc-50 dark:bg-zinc-950">
+      <div className={cn(
+          "sticky top-0 z-30 transition-colors duration-300 ease-in-out",
+          isHeaderTransparent
+            ? "bg-transparent"
+            : "bg-zinc-50 dark:bg-zinc-950 shadow-sm dark:shadow-zinc-800/50"
+      )}>
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
           <LogoComponent className="h-6" />
-
-          {/* Updated Desktop NavLinks */}
           <div className="hidden lg:flex items-center gap-6">
-            <NavLink href="/">Work</NavLink>
-            <NavLink href="/#about-section">About</NavLink>
-            <NavLink href="/#blog-section">Blog</NavLink>
-            {/* Removed Experience and Contact */}
-            <ThemeToggle />
+            <NavLink href="/" isHeaderTransparent={isHeaderTransparent}>Work</NavLink>
+            <NavLink href="/#about-section" isHeaderTransparent={isHeaderTransparent}>About</NavLink>
+            <NavLink href="/#blog-section" isHeaderTransparent={isHeaderTransparent}>Blog</NavLink>
+            <ThemeToggle isHeaderTransparent={isHeaderTransparent} />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <ThemeToggle variant="icon" />
+            <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="z-50 -mr-2 p-2 text-zinc-600 dark:text-zinc-400"
+              className={cn(
+                  "z-50 -mr-2 p-2 transition-colors duration-200",
+                  isHeaderTransparent
+                    ? "text-zinc-900 hover:text-zinc-700"
+                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100",
+              )}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
             >
@@ -219,7 +270,7 @@ export default function SiteLayout({
                   className="h-6 w-6"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -235,7 +286,12 @@ export default function SiteLayout({
         </header>
         {showProgressBar && (
           <ScrollProgress
-            className="h-0.5 bg-zinc-800 dark:bg-zinc-600"
+            className={cn(
+              "h-0.5",
+              isImonPage
+                ? "bg-red-500 dark:bg-red-400"
+                : "bg-zinc-800 dark:bg-zinc-600"
+            )}
             springOptions={{ bounce: 0 }}
           />
         )}
@@ -268,8 +324,9 @@ export default function SiteLayout({
 
       <main className={cn(
           "flex-1 w-full",
-          mainMinHeight,
-          fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24 max-w-7xl mx-auto"
+          !isImonPage && (fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24"),
+          isImonPage && "pt-0",
+          !fullWidth && "max-w-7xl mx-auto"
         )}>
         {children}
       </main>
