@@ -173,17 +173,25 @@ const Footer = () => (
     </footer>
 );
 
-const LogoComponent = ({ className, onClose }: { className?: string; onClose?: () => void }) => (
-    <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
-        <Image
-            src="/ns.svg"
-            alt="Nathan Smith Logo"
-            width={28}
-            height={28}
-            priority={true}
-            className="w-7 h-7"
-        />
-    </Link>
+const LogoComponent = ({
+  className,
+  onClose,
+  isImonPage,
+}: {
+  className?: string
+  onClose?: () => void
+  isImonPage?: boolean
+}) => (
+  <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
+    <Image
+      src={isImonPage ? '/ns-red.svg' : '/ns.svg'}
+      alt="Nathan Smith Logo"
+      width={28}
+      height={28}
+      priority={true}
+      className="w-7 h-7"
+    />
+  </Link>
 )
 
 export default function SiteLayout({
@@ -244,7 +252,7 @@ export default function SiteLayout({
             : "bg-zinc-50 dark:bg-zinc-950 shadow-sm dark:shadow-zinc-800/50"
       )}>
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
-          <LogoComponent className="h-6" />
+          <LogoComponent className="h-7" onClose={() => setIsMenuOpen(false)} isImonPage={isImonPage} />
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/" isHeaderTransparent={isHeaderTransparent}>Work</NavLink>
             <NavLink href="/#about-section" isHeaderTransparent={isHeaderTransparent}>About</NavLink>
