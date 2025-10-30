@@ -24,15 +24,13 @@ body {
   font-family: var(--font-figtree), sans-serif;
 }
 
-/* ... (Standard prose overrides and other styles remain the same) ... */
-
 /* Border styles */
-img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
+img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]):not([src="/project2-findings.png"]) {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
 }
 
-.dark img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]) {
+.dark img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]):not([src="/project2-findings.png"]) {
   border-color: #3f3f46;
 }
 
@@ -123,8 +121,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     z-index: 1;
 }
 
-/* ... (Rest of globals.css remains unchanged) ... */
-
 /* Light Mode Section Colors */
 .imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; }
 .imon-content-wrapper .content-section:nth-child(2) { background-color: #f3f4f6; }
@@ -160,11 +156,11 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 .imon-content-inner figure.float-right {
-    @apply float-right ml-6 mb-4 max-w-sm;
+    @apply float-right ml-6 mb-4 max-w-2/3 w-2/3;
 }
 
 .imon-content-inner figure.float-left {
-    @apply float-left mr-6 mb-4 max-w-sm;
+    @apply float-left mr-6 mb-4 max-w-2/3 w-2/3;
 }
 
 .imon-content-inner a {
@@ -185,7 +181,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 .imon-content-inner h1 {
     font-family: var(--font-crimson-text), serif !important;
     color: #B30F11 !important;
-    font-weight: 400 !important;
+    font-weight: 600 !important;
 }
 
 .imon-content-inner h1 {
