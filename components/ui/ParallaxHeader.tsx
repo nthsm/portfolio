@@ -25,28 +25,15 @@ export function ParallaxHeader({
       }
     };
 
-    // Only apply effect if not on a touch device or if screen is wide enough
-    // background-attachment: fixed has issues on some mobile browsers
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const screenWidth = window.innerWidth;
-
-    if (!isTouchDevice && screenWidth > 768) { // Matches your CSS media query breakpoint
-        window.addEventListener('scroll', handleScroll);
-        // Initial call to set position correctly on load
-        handleScroll();
-    } else {
-        // Ensure default behavior if effect is disabled
-         if (headerRef.current) {
-             headerRef.current.style.backgroundPositionY = 'center'; // Or your default
-         }
-    }
+    // Apply effect on all devices
+    window.addEventListener('scroll', handleScroll);
+    // Initial call to set position correctly on load
+    handleScroll();
 
 
     // Cleanup listener on component unmount
     return () => {
-       if (!isTouchDevice && screenWidth > 768) {
-           window.removeEventListener('scroll', handleScroll);
-       }
+       window.removeEventListener('scroll', handleScroll);
     };
   }, [speedFactor]); // Re-run effect if speedFactor changes
 
