@@ -208,26 +208,30 @@ export default function SiteLayout({
 
   useEffect(() => {
     if (!isImonPage) {
-        setIsHeaderTransparent(false);
+        setIsHeaderTransparent(false); // Ensure it's not transparent on other pages
         return;
     }
 
     const handleScroll = () => {
-      // Use full viewport height for desktop (> 768px), fixed small threshold for mobile
-      const threshold = window.innerWidth > 768 ? window.innerHeight : 0; // Use 50px threshold for mobile
-      if (window.scrollY > threshold) {
-        setIsHeaderTransparent(false);
+      let makeOpaque = false;
+      if (window.innerWidth > 768) {
+        // Desktop: Use full viewport height threshold
+        makeOpaque = window.scrollY > window.innerHeight;
       } else {
-        setIsHeaderTransparent(true);
+        // Mobile: Use 50vh threshold (matching CSS min-height)
+        makeOpaque = window.scrollY > (window.innerHeight * 0.5);
       }
+
+      setIsHeaderTransparent(!makeOpaque); // Set transparent if NOT opaque
     };
 
-    handleScroll(); // Check initial position on load
+    handleScroll(); // Check initial position on load/navigation
     window.addEventListener('scroll', handleScroll);
     return () => { // Cleanup listener
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [pathname, isImonPage]); // Re-run effect if path changes or page context changes
+    // Depend on pathname and isImonPage to re-evaluate when navigating
+  }, [pathname, isImonPage]);
 
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
 
