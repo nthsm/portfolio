@@ -40,7 +40,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 
 .imon-parallax-container {
     position: relative;
-    top: -4.125rem;
+    top: -4.6rem;
     margin-bottom: -4.125rem;
 }
 
