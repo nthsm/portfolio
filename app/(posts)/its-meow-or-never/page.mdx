@@ -18,34 +18,42 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
         {/* Section 0 (Intro) */}
         <div className="content-section">
             <div className="imon-content-inner" style={{ maxWidth: '1000px' }}>
+        
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', padding: '1.5rem 0', marginTop: '1rem' }}>
                         {/* Objective */}
+                    
                         <div style={{ paddingRight: '3rem' }}>
                             <p className="font-semibold text-base mb-1 text-zinc-900 dark:text-zinc-100">Objective</p>
                             <p className="text-sm text-zinc-700 dark:text-zinc-300">Redesign the Meow or Never website by researching user needs and implementing changes that improve the user experience of the site.</p>
+        
                         </div>
                         {/* My Role */}
                         <div>
                             <p className="font-semibold text-base mb-1 text-zinc-900 dark:text-zinc-100">My Role</p>
+
                             <p className="text-sm text-zinc-700 dark:text-zinc-300">Research<br />Design<br />Prototyping<br />Testing</p>
                         </div>
                         {/* Tools */}
+                
                         <div>
                             <p className="font-semibold text-base mb-1 text-zinc-900 dark:text-zinc-100">Tools</p>
-                            <p className="text-sm text-zinc-700 dark:text-zinc-300">Figma Design<br />Figma Make<br />Webflow<br />Google Forms<br />Google Sheets</p>
+                            <p className="text-sm text-zinc-700 dark:text-zinc-300">Figma Design<br />Figma Make<br />Wix<br />Google Forms<br />Google Sheets</p>
+                    
                         </div>
                         {/* Duration */}
                         <div>
                             <p className="font-semibold text-base mb-1 text-zinc-900 dark:text-zinc-100">Duration</p>
+            
                             <p className="text-sm text-zinc-700 dark:text-zinc-300">3 Weeks<br />Solo Project</p>
                         </div>
                     </div>
                 </div>
             </div>
+        
         </div>
 
-        {/* Section 1 */}
+        {/* Section 1: The Challenge */}
         <div className="content-section">
             <div className="imon-content-inner clearfix">
                 <h1>The Challenge</h1>
@@ -59,72 +67,25 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
                 <figure className="flex flex-col items-center my-4">
                     <img src="/project2-findings.png" alt="The findings of my heuristic evaluation."/>
                 </figure>
+
+                <div className="hmw-container not-prose">
+                    <div className="hmw-line"></div>
+                    <h2 className="hmw-text">
+                        How might we restructure the It's Meow or Never website to create a more intuitive, trustworthy, and engaging experience?
+                    </h2>
+                    <div className="hmw-line"></div>
+                    <a href="#research-section" className="hmw-jump-link mt-6 inline-block">
+                        JUMP PAST SOLUTION TO RESEARCH
+                    </a>
+                </div>
             </div>
         </div>
-
-        {/* Section 2 */}
-        <div className="content-section">
-             <div className="imon-content-inner clearfix">
-                <h1>Research</h1>
-                <figure className="flex flex-col items-center my-4">
-                    <img src="/project2-process.png" alt="Process Flow: Understand, Research, Define, Design, Test"/>
-                </figure>
-                <p>To ground the redesign in real user needs, I employed a mixed-methods research approach to gather both expert-based and user-centered insights.</p>
-
-                <h2>User Survey</h2>
-                <p>To gather quantitative data, a survey was distributed via my own and IMON's social media channels, receiving \[// Number] responses.</p>
-                <p>Key Survey Insights:</p>
-                <ul>
-                    <li>Stat1</li>
-                    <li>Stat2</li>
-                    <li>The most commonly cited frustration was...</li>
-                </ul>
-
-                <h2>User Interviews</h2>
-                <figure className="float-right flex flex-col items-center my-4">
-                    <img src="/project2-quote.png" alt="Direct quotes."/>
-                </figure>
-                <p>To gain deeper qualitative insights, I conducted moderated interviews with users representing key personas: a recent adopter, a volunteer, and a potential donor.</p>
-                <p>Key Themes from Interviews:</p>
-                <ul>
-                    <li>Theme1</li>
-                    <li>Theme2</li>
-                    <li>Theme3</li>
-                </ul>
-            </div>
-        </div>
-
-        {/* Section 3 */}
-        <div className="content-section">
-            <div className="imon-content-inner">
-                <h1>Synthesizing the Research</h1>
-                <p>The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.</p>
-                <p>User Personas:</p>
-                <p>Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."</p>
-                <p>Problem Statements:</p>
-                <ol>
-                    <li>**Hopeful Adopters** need a clear, centralized way to view available cats and understand the adoption steps because the current process is fragmented and causes confusion.</li>
-                    <li>**Donors** need easily accessible donation options with clear statements on impact because the current links are hard to find and lack motivating context.</li>
-                    <li>**Community Members** need a prominent way to find information about upcoming events (like vaccine clinics) because this information is currently difficult to locate.</li>
-                </ol>
-            </div>
-        </div>
-
-        {/* Section 4 */}
+        
+        {/* Section 2: The Solution */}
         <div className="content-section">
             <div className="imon-content-inner clearfix">
-                <h1>Prototyping</h1>
-                <p>Using the defined problems as a guide, I began developing solutions.</p>
-                
-                <figure className="flex flex-col items-center my-4">
-                    <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
-                </figure>
-
-                <h2>Low-Fidelity Wireframes</h2>
-                <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
-
-                <h2>High-Fidelity Prototype</h2>
-                <p>The wireframes were then developed into a high-fidelity interactive prototype, incorporating IMON's branding while implementing the data-backed solutions.</p>
+                <h1>The Solution</h1>
+                <p>After a comprehensive research and design process, the solution is a high-fidelity interactive prototype that directly addresses the core usability issues. The new design introduces a clear visual hierarchy, simplifies navigation, and prominently features key calls-to-action for adoption and donations.</p>
 
                 <figure className="flex flex-col items-center my-4">
                     <img src="/project2-prototype-home.png" alt="Prototype image of the new homepage."/>
@@ -145,8 +106,59 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
                 </figcaption>
             </div>
         </div>
+
+        {/* Section 3: Research */}
+        <div className="content-section">
+             <div className="imon-content-inner clearfix" id="research-section">
+                <h1>Research</h1>
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-process.png" alt="Process Flow: Understand, Research, Define, Design, Test"/>
+                    <figcaption className="text-sm text-zinc-600 dark:text-zinc-400 text-center mt-1 mb-4">The process I followed for this redesign.</figcaption>
+                </figure>
+
+                <h2>User Survey</h2>
+                <p>To gather quantitative data, a survey was distributed via my own and IMON's social media channels. The key insights helped confirm the problems identified in the heuristic evaluation.</p>
+                <p>Key Survey Insights:</p>
+                <ul>
+                    <li>**Primary Goal:** The vast majority of users visit the site with the primary goal of adopting a cat.</li>
+                    <li>**Discovery:** A significant number of users discover "It's Meow or Never" through social media and Petfinder.</li>
+                    <li>**Pain Points:** A recurring theme in the responses was the difficulty in finding information, with the website's design often described as "outdated" and "cluttered."</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* Section 4: Synthesis (Original Section 3) */}
+        <div className="content-section">
+            <div className="imon-content-inner">
+                <h1>Synthesizing the Research</h1>
+                <p>The combined findings were synthesized using an affinity map to identify core user needs and formulate clear problem statements.</p>
+                <p>User Personas:</p>
+                <p>Based on the research, three primary personas were identified: "The Hopeful Adopter," "The Compassionate Donor," and "The Dedicated Volunteer."</p>
+                <p>Problem Statements:</p>
+                <ol>
+                    <li>**Hopeful Adopters** need a clear, centralized way to view available cats and understand the adoption steps because the current process is fragmented and causes confusion.</li>
+                    <li>**Donors** need easily accessible donation options with clear statements on impact because the current links are hard to find and lack motivating context.</li>
+                    <li>**Community Members** need a prominent way to find information about upcoming events (like vaccine clinics) because this information is currently difficult to locate.</li>
+                </ol>
+            </div>
+        </div>
+
+        {/* Section 5: Wireframing (Original Section 4, split) */}
+        <div className="content-section">
+            <div className="imon-content-inner clearfix">
+                <h1>Wireframing</h1>
+                <p>Using the defined problems as a guide, I began developing solutions, starting with low-fidelity wireframes.</p>
+                
+                <figure className="flex flex-col items-center my-4">
+                    <img src="/project2-wireframe-home.png" alt="Low-fidelity wireframe of the new homepage."/>
+                </figure>
+
+                <h2>Low-Fidelity Wireframes</h2>
+                <p>Initial concepts were created in Figma to address the core structural issues related to navigation and content hierarchy.</p>
+            </div>
+        </div>
  
-        {/* Section 5 */}
+        {/* Section 6: Testing (Original Section 5) */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h1>Testing</h1>
@@ -164,7 +176,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
             </div>
         </div>
 
-        {/* Section 6 */}
+        {/* Section 7: Reflection (Original Section 6) */}
         <div className="content-section">
             <div className="imon-content-inner">
                 <h1>Reflection</h1>
