@@ -216,29 +216,26 @@ export default function SiteLayout({
 
   useEffect(() => {
     if (!isImonPage) {
-        setIsHeaderTransparent(false); // Ensure it's not transparent on other pages
+        setIsHeaderTransparent(false);
         return;
     }
 
     const handleScroll = () => {
       let makeOpaque = false;
       if (window.innerWidth > 768) {
-        // Desktop: Use full viewport height threshold
         makeOpaque = window.scrollY > window.innerHeight;
       } else {
-        // Mobile: Use 50vh threshold (matching CSS min-height)
         makeOpaque = window.scrollY > (window.innerHeight * 0.5);
       }
 
-      setIsHeaderTransparent(!makeOpaque); // Set transparent if NOT opaque
+      setIsHeaderTransparent(!makeOpaque);
     };
 
-    handleScroll(); // Check initial position on load/navigation
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
-    return () => { // Cleanup listener
+    return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-    // Depend on pathname and isImonPage to re-evaluate when navigating
   }, [pathname, isImonPage]);
 
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
@@ -257,11 +254,11 @@ export default function SiteLayout({
             <NavLink href="/" isHeaderTransparent={isHeaderTransparent}>Work</NavLink>
             <NavLink href="/#about-section" isHeaderTransparent={isHeaderTransparent}>About</NavLink>
             <NavLink href="/#blog-section" isHeaderTransparent={isHeaderTransparent}>Blog</NavLink>
-            <ThemeToggle isHeaderTransparent={isHeaderTransparent} />
+            {!isImonPage && <ThemeToggle isHeaderTransparent={isHeaderTransparent} />}
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />
+            {!isImonPage && <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(
