@@ -122,13 +122,13 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 /* Light Mode Section Colors */
-.imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; }
-.imon-content-wrapper .content-section:nth-child(2) { background-color: #f9fafb; }
-.imon-content-wrapper .content-section:nth-child(3) { background-color: #f3f4f6; }
-.imon-content-wrapper .content-section:nth-child(4) { background-color: #fee2e2; }
-.imon-content-wrapper .content-section:nth-child(5) { background-color: #f9fafb; }
-.imon-content-wrapper .content-section:nth-child(6) { background-color: #f3f4f6; }
-.imon-content-wrapper .content-section:nth-child(7) { background-color: #f3f4f6; }
+.imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; } /* Challenge */
+.imon-content-wrapper .content-section:nth-child(2) { background-color: #f3f4f6; } /* Solution */
+.imon-content-wrapper .content-section:nth-child(3) { background-color: #f9fafb; } /* Research */
+.imon-content-wrapper .content-section:nth-child(4) { background-color: #f3f4f6; } /* Synthesis */
+.imon-content-wrapper .content-section:nth-child(5) { background-color: #fee2e2; } /* Wireframing */
+.imon-content-wrapper .content-section:nth-child(6) { background-color: #f9fafb; } /* Testing */
+.imon-content-wrapper .content-section:nth-child(7) { background-color: #f3f4f6; } /* Reflection */
 
 /* Dark Mode Section Color Override */
 .dark .imon-content-wrapper .content-section {
@@ -140,7 +140,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 .imon-content-inner figcaption {
-    @apply hidden;
+    @apply text-sm text-zinc-600 dark:text-zinc-400 text-center mt-2;
 }
 
 .imon-content-inner h1,
@@ -196,4 +196,23 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     line-height: 1.25 !important;
     font-weight: 400 !important;
     color: inherit !important;
+}
+
+.hmw-container {
+    @apply w-full max-w-4xl mx-auto text-center py-12 my-12;
+}
+
+.hmw-line {
+    @apply w-full h-px bg-zinc-300 dark:bg-zinc-700;
+}
+
+.hmw-text {
+    @apply text-3xl font-semibold text-zinc-800 dark:text-zinc-200 py-12 px-4;
+    font-family: var(--font-crimson-text), serif !important;
+    line-height: 1.4 !important;
+}
+
+.hmw-jump-link {
+    @apply text-sm font-semibold tracking-wider no-underline hover:underline;
+    color: #cf1619;
 }
