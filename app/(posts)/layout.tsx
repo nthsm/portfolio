@@ -6,6 +6,8 @@ import { ProjectNavigation } from '@/components/ui/ProjectNavigation'
 import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 export default function LayoutBlogPost({
   children,
@@ -14,6 +16,29 @@ export default function LayoutBlogPost({
 }) {
   const pathname = usePathname()
   const isImonPage = pathname === '/its-meow-or-never'
+
+  // --- Theme override logic ---
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [originalTheme, setOriginalTheme] = useState<string | undefined>(undefined)
+
+  useEffect(() => {
+    if (isImonPage) {
+      if (originalTheme === undefined) {
+        setOriginalTheme(theme)
+      }
+      
+      if (resolvedTheme !== 'light') {
+        setTheme('light')
+      }
+    }
+
+    return () => {
+      if (isImonPage && originalTheme) {
+        setTheme(originalTheme)
+      }
+    }
+  }, [isImonPage, theme, resolvedTheme, setTheme, originalTheme])
+  // --- End of theme override logic ---
 
   return (
     <SiteLayout showProgressBar fullWidth={isImonPage}>
