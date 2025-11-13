@@ -3,9 +3,9 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Pivoting for Paws: A UX Research Case Study — Nathan Smith"
+    absolute: "Pivoting for Paws — Nathan Smith"
   },
-  description: "A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.",
+  description: "How user data corrected heuristics for a non-profit.",
 }
 
 export default function ItsMeowOrNeverPage() {
@@ -16,8 +16,8 @@ export default function ItsMeowOrNeverPage() {
           style={{ backgroundImage: "url('/project2-bg.png')" }}
           className="project-color-red"
         >
-            <h1>Pivoting for Paws: A UX Research Case Study</h1>
-            <p className="subtitle">A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.</p>
+            <h1>Pivoting for Paws</h1>
+            <p className="subtitle">How user data corrected heuristics for a non-profit.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
