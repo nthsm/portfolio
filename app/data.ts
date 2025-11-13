@@ -16,37 +16,45 @@ type SocialLink = {
 }
 
 export const projectBlurbs: { [key: string]: string } = {
-  project1: 'UX Research | Data Analysis | Feature Prioritization',
-  project2: 'UX Design | Heuristics | User Testing | Prototyping',
-  project3: 'Data Analysis | Sentiment Analysis | Python',
-  project4: 'Data Analysis | Survey Insights | Data Visualization'
+  project1: 'UX Research | Survey Design | Feature Strategy',
+  project2: 'UX Research | Heuristic Evaluation | Usability Testing',
+  project3: 'Data Analysis | Python | Sentiment Analysis',
+  project4: 'Data Analysis | Data Visualization | Looker Studio'
 };
 
 
 export const PROJECTS: Project[] = [
   {
-    name: 'FSU P2P Tech Marketplace: A User Research Deep Dive',
+    name: 'FSU Tech Connect: A P2P Marketplace Study',
     description:
-      'A mixed-methods research study analyzing FSU student behaviors, needs, and pain points regarding peer-to-peer tech marketplaces, culminating in data-driven feature recommendations.',
+      'A mixed-methods study to uncover student needs for a peer-to-peer tech marketplace, translating research insights into actionable feature recommendations.',
     link: '/p2p-marketplace-research',
-    image: '/placeholder.png',
+    image: '/project1-tn.png',
     id: 'project1',
   },
   {
-    name: 'Redesign: It\'s Meow or Never',
+    name: 'Pivoting for Paws: A UX Research Case Study',
     description:
-      "A comprehensive UX project involving heuristic evaluation, user research, prototyping, and usability testing to improve a non-profit's website and better support their mission.",
+      "A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.",
     link: '/its-meow-or-never',
-    image: '/project2-prototype-hero.png',
+    image: '/project2-tn.png',
     id: 'project2',
   },
   {
-    name: 'Student Wellness Data: Sleep Strategies and Stress Levels',
+    name: 'The Wellness Report: Sleep vs. Stress',
     description:
-      'A quantitative analysis project involving data cleaning and visualization of student survey data to identify correlations between sleep habits and reported stress levels.',
+      'A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.',
     link: '/student-wellness-study',
-    image: '/project4-lookerstudio.png',
+    image: '/project4-tn.png',
     id: 'project4',
+  },
+  {
+    name: "The Gamer's Voice: A Reddit Data Analysis",
+    description:
+      'A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.',
+    link: '/handheld-analysis',
+    image: '/project3-tn.png',
+    id: 'project3',
   },
 ]
 
