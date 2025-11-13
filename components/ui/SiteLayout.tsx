@@ -1,3 +1,4 @@
+/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/components/ui/SiteLayout.tsx */
 'use client'
 import Link from 'next/link'
 import { useState, useRef, ReactNode, useId, useEffect } from 'react'
@@ -176,15 +177,13 @@ const Footer = () => (
 const LogoComponent = ({
   className,
   onClose,
-  isImonPage,
 }: {
   className?: string
   onClose?: () => void
-  isImonPage?: boolean
 }) => (
   <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
     <Image
-      src={isImonPage ? '/ns-red.svg' : '/ns.svg'}
+      src={'/ns.svg'} // Always use the default logo
       alt="Nathan Smith Logo"
       width={28}
       height={28}
@@ -206,20 +205,24 @@ export default function SiteLayout({
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname();
-  const isImonPage = pathname === '/its-meow-or-never';
+  
+  // Use the `fullWidth` prop to determine if this is a post page
+  const isPostPage = fullWidth;
 
-  const [isHeaderTransparent, setIsHeaderTransparent] = useState(isImonPage);
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(isPostPage);
 
   useClickOutside(menuRef, () => {
     if (isMenuOpen) setIsMenuOpen(false)
   })
 
   useEffect(() => {
-    if (!isImonPage) {
+    // If it's not a post page, just set transparency to false and exit
+    if (!isPostPage) {
         setIsHeaderTransparent(false);
         return;
     }
 
+    // This effect now runs for all post pages (where fullWidth is true)
     const handleScroll = () => {
       let makeOpaque = false;
       if (window.innerWidth > 768) {
@@ -236,7 +239,7 @@ export default function SiteLayout({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [pathname, isImonPage]);
+  }, [pathname, isPostPage]); // Depends on pathname and isPostPage
 
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
 
@@ -249,16 +252,18 @@ export default function SiteLayout({
             : "bg-zinc-50 dark:bg-zinc-950 shadow-sm dark:shadow-zinc-800/50"
       )}>
         <header className="flex items-center justify-between p-4 max-w-7xl mx-auto">
-          <LogoComponent className="h-7" onClose={() => setIsMenuOpen(false)} isImonPage={isImonPage} />
+          <LogoComponent className="h-7" onClose={() => setIsMenuOpen(false)} />
           <div className="hidden lg:flex items-center gap-6">
             <NavLink href="/" isHeaderTransparent={isHeaderTransparent}>Work</NavLink>
             <NavLink href="/#about-section" isHeaderTransparent={isHeaderTransparent}>About</NavLink>
             <NavLink href="/#blog-section" isHeaderTransparent={isHeaderTransparent}>Blog</NavLink>
-            {!isImonPage && <ThemeToggle isHeaderTransparent={isHeaderTransparent} />}
+            {/* Always show the theme toggle */}
+            <ThemeToggle isHeaderTransparent={isHeaderTransparent} />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            {!isImonPage && <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />}
+            {/* Always show the theme toggle */}
+            <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(
@@ -295,9 +300,8 @@ export default function SiteLayout({
           <ScrollProgress
             className={cn(
               "h-0.5",
-              isImonPage
-                ? "bg-red-500 dark:bg-red-400"
-                : "bg-zinc-800 dark:bg-zinc-600"
+              // Use default colors, removed the custom logic
+              "bg-zinc-800 dark:bg-zinc-600"
             )}
             springOptions={{ bounce: 0 }}
           />
@@ -331,8 +335,9 @@ export default function SiteLayout({
 
       <main className={cn(
           "flex-1 w-full",
-          !isImonPage && (fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24"),
-          isImonPage && "pt-0",
+          // Use isPostPage (derived from fullWidth) to set padding
+          !isPostPage && (fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24"),
+          isPostPage && "pt-0",
           !fullWidth && "max-w-7xl mx-auto"
         )}>
         {children}
