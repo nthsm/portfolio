@@ -1,12 +1,11 @@
-/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/(posts)/handheld-analysis/page.tsx */
 import type { Metadata } from 'next'
 import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Voice of the User: A Handheld Gaming Analysis — Nathan Smith"
+    absolute: "The Gamer's Voice: A Reddit Data Analysis — Nathan Smith"
   },
-  description: "Using Python and sentiment analysis to identify user pain points and product opportunities from r/Handhelds community discussions.",
+  description: "A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.",
 }
 
 export default function HandheldAnalysisPage() {
@@ -14,16 +13,17 @@ export default function HandheldAnalysisPage() {
     <div className="imon-parallax-container">
         <ParallaxHeader 
           speedFactor={0.4} 
-          style={{ backgroundImage: "url('/placeholder.png')" }}
+          style={{ backgroundImage: "url('/project3-bg.png')" }}
+          className="project-color-purple"
         >
-            <h1>Voice of the User: A Handheld Gaming Analysis</h1>
-            <p className="subtitle">Using Python and sentiment analysis to identify user pain points and product opportunities from r/Handhelds community discussions.</p>
+            <h1>The Gamer's Voice: A Reddit Data Analysis</h1>
+            <p className="subtitle">A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
             <div className="content-section">
                 <div className="imon-content-inner clearfix">
-                    <p>A data analysis project involving the collection, categorization, and visualization of public Reddit data to identify recurring usability issues and feature requests within the handheld gaming community.</p>
+                    <p>A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.</p>
                 </div>
             </div>
         </div>
