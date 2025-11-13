@@ -25,6 +25,14 @@ export const projectBlurbs: { [key: string]: string } = {
 
 export const PROJECTS: Project[] = [
   {
+    name: 'FSU P2P Tech Marketplace: A User Research Deep Dive',
+    description:
+      'A mixed-methods research study analyzing FSU student behaviors, needs, and pain points regarding peer-to-peer tech marketplaces, culminating in data-driven feature recommendations.',
+    link: '/p2p-marketplace-research',
+    image: '/placeholder.png',
+    id: 'project1',
+  },
+  {
     name: 'Redesign: It\'s Meow or Never',
     description:
       "A comprehensive UX project involving heuristic evaluation, user research, prototyping, and usability testing to improve a non-profit's website and better support their mission.",
@@ -39,22 +47,6 @@ export const PROJECTS: Project[] = [
     link: '/student-wellness-study',
     image: '/project4-lookerstudio.png',
     id: 'project4',
-  },
-  {
-    name: 'FSU P2P Tech Marketplace: A User Research Deep Dive',
-    description:
-      'A mixed-methods research study analyzing FSU student behaviors, needs, and pain points regarding peer-to-peer tech marketplaces, culminating in data-driven feature recommendations.',
-    link: '/p2p-marketplace-research',
-    image: '/placeholder.png',
-    id: 'project1',
-  },
-  {
-    name: 'Voice of the User: A Handheld Gaming Analysis',
-    description:
-      'Using Python and sentiment analysis to identify user pain points and product opportunities from r/Handhelds community discussions.',
-    link: '/handheld-analysis',
-    image: '/placeholder.png',
-    id: 'project3',
   },
 ]
 
