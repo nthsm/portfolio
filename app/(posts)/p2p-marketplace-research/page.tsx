@@ -3,9 +3,9 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "FSU Tech Connect: A P2P Marketplace Study — Nathan Smith"
+    absolute: "FSU Tech Connect — Nathan Smith"
   },
-  description: "A mixed-methods study to uncover student needs for a peer-to-peer tech marketplace, translating research insights into actionable feature recommendations.",
+  description: "Researching student needs for a P2P tech marketplace.",
 }
 
 export default function P2PMarketplacePage() {
@@ -16,14 +16,14 @@ export default function P2PMarketplacePage() {
           style={{ backgroundImage: "url('/project1-bg.png')" }}
           className="project-color-blue"
         >
-            <h1>FSU Tech Connect: A P2P Marketplace Study</h1>
-            <p className="subtitle">A mixed-methods study to uncover student needs for a peer-to-peer tech marketplace, translating research insights into actionable feature recommendations.</p>
+            <h1>FSU Tech Connect</h1>
+            <p className="subtitle">Researching student needs for a P2P tech marketplace.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
             <div className="content-section">
                 <div className="imon-content-inner clearfix">
-                    <p>A mixed-methods study to uncover student needs for a peer-to-peer tech marketplace, translating research insights into actionable feature recommendations.</p>
+                    <p>Now in progress...</p>
                 </div>
             </div>
         </div>
