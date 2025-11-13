@@ -9,15 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.2.13",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/mdx": "^2.0.13",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
-    "gray-matter": "^4.0.3",
     "lucide-react": "^0.468.0",
     "motion": "^11.15.0",
     "next": "15.1.1",
@@ -25,8 +20,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "remark-frontmatter": "^5.0.0",
-    "remark-mdx-frontmatter": "^5.2.0",
     "sharp": "^0.34.4",
     "sugar-high": "^0.9.3",
     "tailwind-merge": "^2.5.5"
