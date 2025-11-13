@@ -3,9 +3,9 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "The Gamer's Voice: A Reddit Data Analysis — Nathan Smith"
+    absolute: "The Handheld Gamer's Voice — Nathan Smith"
   },
-  description: "A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.",
+  description: "Analyzing Reddit discussions for handheld gaming pain points.",
 }
 
 export default function HandheldAnalysisPage() {
@@ -16,8 +16,8 @@ export default function HandheldAnalysisPage() {
           style={{ backgroundImage: "url('/project3-bg.png')" }}
           className="project-color-purple"
         >
-            <h1>The Gamer's Voice: A Reddit Data Analysis</h1>
-            <p className="subtitle">A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.</p>
+            <h1>The Handheld Gamer's Voice</h1>
+            <p className="subtitle">Analyzing Reddit discussions for handheld gaming pain points.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
