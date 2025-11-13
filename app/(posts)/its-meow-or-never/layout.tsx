@@ -1,23 +1,13 @@
+/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/(posts)/its-meow-or-never/layout.tsx */
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
-import path from 'path'
-import { promises as fs } from 'fs'
-import matter from 'gray-matter'
+
+import { title, description } from './page.mdx'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const relativePath = 'app/(posts)/its-meow-or-never/page.mdx'
-  const fullPath = path.join(process.cwd(), relativePath)
-
-  let data: { title?: string; description?: string } = {}
-  try {
-    const fileContent = await fs.readFile(fullPath, 'utf8')
-    data = matter(fileContent).data
-  } catch (error) {
-    
-  }
-
-  const projectTitle = (data.title ?? 'Untitled Project')
-  const projectDescription = data.description
+  
+  const projectTitle = (title ?? 'Untitled Project')
+  const projectDescription = description
 
   return {
     title: {
