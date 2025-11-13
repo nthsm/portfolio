@@ -1,3 +1,4 @@
+/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/(posts)/layout.tsx */
 'use client'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
@@ -6,8 +7,7 @@ import { ProjectNavigation } from '@/components/ui/ProjectNavigation'
 import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+// Removed useTheme, useEffect, useState as they are no longer needed here
 
 export default function LayoutBlogPost({
   children,
@@ -15,38 +15,28 @@ export default function LayoutBlogPost({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const isImonPage = pathname === '/its-meow-or-never'
+  
+  // A new array to check if the current page is one of the case studies
+  const caseStudyPaths = [
+    '/its-meow-or-never',
+    '/student-wellness-study',
+    '/p2p-marketplace-research',
+    '/handheld-analysis'
+  ]
+  
+  const isCaseStudyPage = caseStudyPaths.includes(pathname)
 
-  // --- Theme override logic ---
-  const { theme, setTheme, resolvedTheme } = useTheme()
-  const [originalTheme, setOriginalTheme] = useState<string | undefined>(undefined)
-
-  useEffect(() => {
-    if (isImonPage) {
-      if (originalTheme === undefined) {
-        setOriginalTheme(theme)
-      }
-      
-      if (resolvedTheme !== 'light') {
-        setTheme('light')
-      }
-    }
-
-    return () => {
-      if (isImonPage && originalTheme) {
-        setTheme(originalTheme)
-      }
-    }
-  }, [isImonPage, theme, resolvedTheme, setTheme, originalTheme])
-  // --- End of theme override logic ---
+  // --- Theme override logic has been REMOVED ---
 
   return (
-    <SiteLayout showProgressBar fullWidth={isImonPage}>
+    <SiteLayout showProgressBar fullWidth={isCaseStudyPage}>
       <main className={cn(
         "pb-20",
-        !isImonPage && "prose prose-zinc dark:prose-invert mx-auto max-w-5xl"
+        // This conditional logic is now restored:
+        !isCaseStudyPage && "prose prose-zinc dark:prose-invert mx-auto max-w-5xl" 
       )}>
-        {!isImonPage && (
+        {/* This conditional logic is also restored: */}
+        {!isCaseStudyPage && (
           <Link
             href="/"
             className="no-underline mb-12 inline-flex items-center gap-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
@@ -58,8 +48,9 @@ export default function LayoutBlogPost({
 
         {children}
 
+        {/* The project navigation is now correctly wrapped in the conditional styles */}
         <div className={cn(
-            !isImonPage ? "" : "max-w-5xl mx-auto px-4 lg:px-8"
+            !isCaseStudyPage ? "" : "max-w-5xl mx-auto px-4 lg:px-8"
         )}>
             <ProjectNavigation />
         </div>
