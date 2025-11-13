@@ -1,4 +1,3 @@
-/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/components/ui/SiteLayout.tsx */
 'use client'
 import Link from 'next/link'
 import { useState, useRef, ReactNode, useId, useEffect } from 'react'
@@ -183,7 +182,7 @@ const LogoComponent = ({
 }) => (
   <Link href="/" className={cn('block h-7', className)} onClick={onClose}>
     <Image
-      src={'/ns.svg'} // Always use the default logo
+      src={'/ns.svg'}
       alt="Nathan Smith Logo"
       width={28}
       height={28}
@@ -206,7 +205,6 @@ export default function SiteLayout({
   const menuRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname();
   
-  // Use the `fullWidth` prop to determine if this is a post page
   const isPostPage = fullWidth;
 
   const [isHeaderTransparent, setIsHeaderTransparent] = useState(isPostPage);
@@ -216,13 +214,11 @@ export default function SiteLayout({
   })
 
   useEffect(() => {
-    // If it's not a post page, just set transparency to false and exit
     if (!isPostPage) {
         setIsHeaderTransparent(false);
         return;
     }
 
-    // This effect now runs for all post pages (where fullWidth is true)
     const handleScroll = () => {
       let makeOpaque = false;
       if (window.innerWidth > 768) {
@@ -239,7 +235,7 @@ export default function SiteLayout({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [pathname, isPostPage]); // Depends on pathname and isPostPage
+  }, [pathname, isPostPage]);
 
   const mainMinHeight = 'min-h-[calc(100vh_-_4rem)]'
 
@@ -257,12 +253,10 @@ export default function SiteLayout({
             <NavLink href="/" isHeaderTransparent={isHeaderTransparent}>Work</NavLink>
             <NavLink href="/#about-section" isHeaderTransparent={isHeaderTransparent}>About</NavLink>
             <NavLink href="/#blog-section" isHeaderTransparent={isHeaderTransparent}>Blog</NavLink>
-            {/* Always show the theme toggle */}
             <ThemeToggle isHeaderTransparent={isHeaderTransparent} />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            {/* Always show the theme toggle */}
             <ThemeToggle variant="icon" isHeaderTransparent={isHeaderTransparent} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -300,7 +294,6 @@ export default function SiteLayout({
           <ScrollProgress
             className={cn(
               "h-0.5",
-              // Use default colors, removed the custom logic
               "bg-zinc-800 dark:bg-zinc-600"
             )}
             springOptions={{ bounce: 0 }}
@@ -335,7 +328,6 @@ export default function SiteLayout({
 
       <main className={cn(
           "flex-1 w-full",
-          // Use isPostPage (derived from fullWidth) to set padding
           !isPostPage && (fullWidth ? "pt-0" : "p-4 pt-16 lg:p-8 lg:pt-24"),
           isPostPage && "pt-0",
           !fullWidth && "max-w-7xl mx-auto"
