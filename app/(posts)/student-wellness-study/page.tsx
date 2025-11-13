@@ -1,12 +1,11 @@
-/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/(posts)/student-wellness-study/page.tsx */
 import type { Metadata } from 'next'
 import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Student Wellness Data: Sleep Strategies and Stress Levels — Nathan Smith"
+    absolute: "The Wellness Report: Sleep vs. Stress — Nathan Smith"
   },
-  description: "A quantitative analysis project involving data cleaning and visualization of student survey data to identify correlations between sleep habits and reported stress levels.",
+  description: "A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.",
 }
 
 export default function StudentWellnessPage() {
@@ -15,9 +14,10 @@ export default function StudentWellnessPage() {
         <ParallaxHeader 
           speedFactor={0.4} 
           style={{ backgroundImage: "url('/project4-bg.png')" }}
+          className="project-color-green"
         >
-            <h1>Student Wellness Data: Sleep Strategies and Stress Levels</h1>
-            <p className="subtitle">A quantitative analysis project involving data cleaning and visualization of student survey data to identify correlations between sleep habits and reported stress levels.</p>
+            <h1>The Wellness Report: Sleep vs. Stress</h1>
+            <p className="subtitle">A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
