@@ -3,9 +3,9 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "The Wellness Report: Sleep vs. Stress — Nathan Smith"
+    absolute: "Student Wellness Report — Nathan Smith"
   },
-  description: "A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.",
+  description: "Analyzing student survey data on sleep and stress.",
 }
 
 export default function StudentWellnessPage() {
@@ -16,8 +16,8 @@ export default function StudentWellnessPage() {
           style={{ backgroundImage: "url('/project4-bg.png')" }}
           className="project-color-green"
         >
-            <h1>The Wellness Report: Sleep vs. Stress</h1>
-            <p className="subtitle">A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.</p>
+            <h1>Student Wellness Report</h1>
+            <p className="subtitle">Analyzing student survey data on sleep and stress.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
