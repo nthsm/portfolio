@@ -1,3 +1,4 @@
+/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/globals.css */
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
@@ -34,7 +35,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
   border-color: #3f3f46;
 }
 
-/* IMON Specific Styles */
+/* IMON Specific Styles (now used for all case studies) */
 
 .imon-parallax-container {
     position: relative;
@@ -43,7 +44,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 .imon-parallax-header-js {
-    background-image: url('/project2-bg.png');
+    /* background-image: url('/project2-bg.png'); */ /* REMOVED - This is now set via inline style in the MDX file */
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,6 +74,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     border-bottom: none !important;
+    /* Custom color removed */
 }
 
 .imon-parallax-header-js .subtitle {
@@ -87,7 +89,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 /* --- MOBILE STYLES MODIFIED --- */
 @media (max-width: 768px) {
   .imon-parallax-header-js {
-    background-image: url('/project2-bg-mobile.png');
+    /* background-image: url('/project2-bg-mobile.png'); */ /* REMOVED - Handled by inline style */
     background-attachment: scroll;
     background-position: center top;
     min-height: 50vh;
@@ -180,7 +182,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 .imon-parallax-header-js h1,
 .imon-content-inner h1 {
     font-family: var(--font-crimson-text), serif !important;
-    color: #B30F11 !important;
+    /* color: #B30F11 !important; */ /* REMOVED - No longer forcing red */
     font-weight: 600 !important;
 }
 
@@ -214,5 +216,5 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 
 .hmw-jump-link {
     @apply text-sm font-semibold tracking-wider no-underline hover:underline;
-    color: #cf1619;
+    /* color: #cf1619; */ /* REMOVED - Will now use default prose link color */
 }
