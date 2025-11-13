@@ -38,7 +38,7 @@ export function ParallaxHeader({
   return (
     <div
       ref={headerRef}
-      className={cn('post-parallax-header-js', className)}
+      className={cn('imon-parallax-header-js', className)}
       style={style}
     >
       <div className="w-full max-w-7xl mx-auto">
