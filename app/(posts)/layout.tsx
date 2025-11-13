@@ -18,7 +18,8 @@ export default function LayoutBlogPost({
     '/its-meow-or-never',
     '/student-wellness-study',
     '/p2p-marketplace-research',
-    '/handheld-analysis'
+    '/handheld-analysis',
+    '/sleeper-research'
   ]
   
   const isCaseStudyPage = caseStudyPaths.includes(pathname)
