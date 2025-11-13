@@ -16,15 +16,23 @@ type SocialLink = {
 }
 
 export const projectBlurbs: { [key: string]: string } = {
-  project1: 'UX Research | Survey Design | Feature Strategy',
-  project2: 'UX Research | Heuristic Evaluation | Usability Testing',
-  project3: 'Data Analysis | Python | Sentiment Analysis',
-  project4: 'Data Analysis | Data Visualization | Looker Studio',
-  project5: 'Comparative Usability Study | Benchmarking | UX Research',
+  project1: 'Survey Design | Feature Strategy',
+  project2: 'Heuristic Evaluation | Usability Testing',
+  project3: 'PRAW Web Scraping | Sentiment Analysis | Web Design | Product Design',
+  project4: 'Data Analysis | Data Visualization | Data Cleaning',
+  project5: 'Usability Study | Benchmarking | Market Comparison',
 };
 
 
 export const PROJECTS: Project[] = [
+  {
+    name: 'Sleeper vs. Competitors',
+    description:
+      'A comparative usability study analyzing how Sleeper’s core social features (chat, media sharing) perform against key competitors. This project identifies key friction points and strategic opportunities to enhance user engagement and solidify Sleeper’s mission to connect friends over sports.',
+    link: '/sleeper-research',
+    image: '/project5-tn.png',
+    id: 'project5',
+  },
   {
     name: 'FSU Tech Connect',
     description:
@@ -42,14 +50,6 @@ export const PROJECTS: Project[] = [
     id: 'project2',
   },
   {
-    name: "The Handheld Gamer's Voice",
-    description:
-      'A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.',
-    link: '/handheld-analysis',
-    image: '/project3-tn.png',
-    id: 'project3',
-  },
-  {
     name: 'Student Wellness Report',
     description:
       'A quantitative analysis of student survey data to find correlations between sleep habits and stress. Cleaned, visualized, and presented findings using Excel and Looker Studio.',
@@ -58,12 +58,12 @@ export const PROJECTS: Project[] = [
     id: 'project4',
   },
   {
-    name: 'Sleeper vs. Competitors',
+    name: "The Handheld Gamer's Voice",
     description:
-      'A comparative usability study analyzing how Sleeper’s core social features (chat, media sharing) perform against key competitors. This project identifies key friction points and strategic opportunities to enhance user engagement and solidify Sleeper’s mission to connect friends over sports.',
-    link: '/sleeper-research',
-    image: '/project5-tn.png',
-    id: 'project5',
+      'A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.',
+    link: '/handheld-analysis',
+    image: '/project3-tn.png',
+    id: 'project3',
   },
 ]
 
