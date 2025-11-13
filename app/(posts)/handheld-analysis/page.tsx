@@ -23,7 +23,7 @@ export default function HandheldAnalysisPage() {
         <div className="imon-content-wrapper">
             <div className="content-section">
                 <div className="imon-content-inner clearfix">
-                    <p>A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.</p>
+                    <p>Now in progress...</p>
                 </div>
             </div>
         </div>
