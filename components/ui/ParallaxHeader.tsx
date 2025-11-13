@@ -7,12 +7,14 @@ interface ParallaxHeaderProps {
   children: ReactNode;
   className?: string;
   speedFactor?: number;
+  style?: React.CSSProperties;
 }
 
 export function ParallaxHeader({
   children,
   className,
   speedFactor = 0.5,
+  style,
 }: ParallaxHeaderProps) {
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -36,9 +38,9 @@ export function ParallaxHeader({
   return (
     <div
       ref={headerRef}
-      className={cn('imon-parallax-header-js', className)}
+      className={cn('post-parallax-header-js', className)}
+      style={style}
     >
-      {/* This inner div constrains the content width AND centers it */}
       <div className="w-full max-w-7xl mx-auto">
         {children}
       </div>
