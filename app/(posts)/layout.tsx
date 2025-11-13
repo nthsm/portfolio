@@ -13,28 +13,30 @@ export default function LayoutBlogPost({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  
+
   const caseStudyPaths = [
     '/its-meow-or-never',
     '/student-wellness-study',
     '/p2p-marketplace-research',
     '/handheld-analysis',
-    '/sleeper-research'
+    '/sleeper-research',
   ]
-  
-  const isCaseStudyPage = caseStudyPaths.includes(pathname)
 
+  const isCaseStudyPage = caseStudyPaths.includes(pathname)
 
   return (
     <SiteLayout showProgressBar fullWidth={isCaseStudyPage}>
-      <main className={cn(
-        "pb-20",
-        !isCaseStudyPage && "prose prose-zinc dark:prose-invert mx-auto max-w-5xl" 
-      )}>
+      <main
+        className={cn(
+          'pb-20',
+          !isCaseStudyPage &&
+            'prose prose-zinc dark:prose-invert mx-auto max-w-5xl',
+        )}
+      >
         {!isCaseStudyPage && (
           <Link
             href="/"
-            className="no-underline mb-12 inline-flex items-center gap-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+            className="mb-12 inline-flex items-center gap-2 text-sm text-zinc-600 no-underline transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>Back to Home</span>
@@ -43,13 +45,18 @@ export default function LayoutBlogPost({
 
         {children}
 
-        <div className={cn(
-            !isCaseStudyPage ? "" : "max-w-5xl mx-auto px-4 lg:px-8"
-        )}>
-            <ProjectNavigation />
+        <div
+          className={cn(
+            !isCaseStudyPage ? '' : 'mx-auto max-w-5xl px-4 lg:px-8',
+          )}
+        >
+          <ProjectNavigation />
         </div>
       </main>
-      <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload" />
+      <Script
+        src="https://player.vimeo.com/api/player.js"
+        strategy="lazyOnload"
+      />
     </SiteLayout>
   )
 }

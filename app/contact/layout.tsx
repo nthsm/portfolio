@@ -12,7 +12,7 @@ export default function LayoutContactPage({
 }) {
   return (
     <SiteLayout>
-      <main className="prose prose-xl prose-zinc mx-auto max-w-none pb-20 dark:prose-invert">
+      <main className="prose prose-xl prose-zinc dark:prose-invert mx-auto max-w-none pb-20">
         {children}
       </main>
     </SiteLayout>

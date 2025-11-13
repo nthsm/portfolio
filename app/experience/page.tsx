@@ -1,55 +1,195 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Briefcase, GraduationCap, Award, Lightbulb, LayoutGrid, ChevronDown } from 'lucide-react'
+import {
+  Briefcase,
+  GraduationCap,
+  Award,
+  Lightbulb,
+  LayoutGrid,
+  ChevronDown,
+} from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { PROJECTS } from '@/app/data'
 
 const skillsData = {
-    "Figma": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Prototyping": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Wireframing": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "User Research": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Usability Testing": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source"],
-    "Journey Mapping": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Empathy Mapping": ["Freelance UX Designer", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Data Visualization": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "B.S. in Management Information Systems", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Accessibility (WCAG)": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "Personas": ["Freelance UX Designer", "M.S. in Information Technology (User-Centered Design)", "Google UX Design Professional Certificate", "Circuit Source", "Ludos"],
-    "HTML": ["M.S. in Information Technology (User-Centered Design)"],
-    "CSS": ["M.S. in Information Technology (User-Centered Design)"],
-    "JavaScript": ["M.S. in Information Technology (User-Centered Design)"],
-    "React": ["Portfolio Website"],
-    "Next.js": ["Portfolio Website"],
-    "Tailwind CSS": ["Portfolio Website"],
-    "Python": ["B.S. in Management Information Systems"],
-    "SQL": ["B.S. in Management Information Systems"],
-    "Obsidian": ["M.S. in Information Technology (User-Centered Design)", "Freelance UX Designer", "Google UX Design Professional Certificate"],
-    "Jira": ["B.S. in Management Information Systems"],
-    "Tableau": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
-    "Tableau Prep": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer", "B.S. in Management Information Systems"],
-    "IBM SPSS": ["B.S. in Management Information Systems"],
-    "Google Suite": ["Google UX Design Professional Certificate", "Circuit Source", "Freelance UX Designer"],
-    "Microsoft Suite": ["B.S. in Management Information Systems", "Microsoft Office Specialist: Excel Associate"],
-    "VSCode": ["Portfolio Website", "B.S. in Management Information Systems", "M.S. in Information Technology (User-Centered Design)"],
-    "Microsoft Office Specialist: Excel Associate": ["Microsoft Suite"],
-    "Google UX Design Professional Certificate": ["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas", "Tableau", "Tableau Prep", "Google Suite"],
-    "Circuit Source": ["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas", "Tableau", "Tableau Prep", "Google Suite"],
-    "Ludos": ["Figma", "Prototyping", "Wireframing", "User Research", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas"],
-    "Portfolio Website": ["React", "Next.js", "Tailwind CSS", "VSCode"],
-};
+  Figma: [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  Prototyping: [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  Wireframing: [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  'User Research': [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  'Usability Testing': [
+    'Freelance UX Designer',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+  ],
+  'Journey Mapping': [
+    'Freelance UX Designer',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  'Empathy Mapping': [
+    'Freelance UX Designer',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  'Data Visualization': [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'B.S. in Management Information Systems',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  'Accessibility (WCAG)': [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  Personas: [
+    'Freelance UX Designer',
+    'M.S. in Information Technology (User-Centered Design)',
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Ludos',
+  ],
+  HTML: ['M.S. in Information Technology (User-Centered Design)'],
+  CSS: ['M.S. in Information Technology (User-Centered Design)'],
+  JavaScript: ['M.S. in Information Technology (User-Centered Design)'],
+  React: ['Portfolio Website'],
+  'Next.js': ['Portfolio Website'],
+  'Tailwind CSS': ['Portfolio Website'],
+  Python: ['B.S. in Management Information Systems'],
+  SQL: ['B.S. in Management Information Systems'],
+  Obsidian: [
+    'M.S. in Information Technology (User-Centered Design)',
+    'Freelance UX Designer',
+    'Google UX Design Professional Certificate',
+  ],
+  Jira: ['B.S. in Management Information Systems'],
+  Tableau: [
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Freelance UX Designer',
+    'B.S. in Management Information Systems',
+  ],
+  'Tableau Prep': [
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Freelance UX Designer',
+    'B.S. in Management Information Systems',
+  ],
+  'IBM SPSS': ['B.S. in Management Information Systems'],
+  'Google Suite': [
+    'Google UX Design Professional Certificate',
+    'Circuit Source',
+    'Freelance UX Designer',
+  ],
+  'Microsoft Suite': [
+    'B.S. in Management Information Systems',
+    'Microsoft Office Specialist: Excel Associate',
+  ],
+  VSCode: [
+    'Portfolio Website',
+    'B.S. in Management Information Systems',
+    'M.S. in Information Technology (User-Centered Design)',
+  ],
+  'Microsoft Office Specialist: Excel Associate': ['Microsoft Suite'],
+  'Google UX Design Professional Certificate': [
+    'Figma',
+    'Prototyping',
+    'Wireframing',
+    'User Research',
+    'Usability Testing',
+    'Journey Mapping',
+    'Empathy Mapping',
+    'Data Visualization',
+    'Accessibility (WCAG)',
+    'Personas',
+    'Tableau',
+    'Tableau Prep',
+    'Google Suite',
+  ],
+  'Circuit Source': [
+    'Figma',
+    'Prototyping',
+    'Wireframing',
+    'User Research',
+    'Usability Testing',
+    'Journey Mapping',
+    'Empathy Mapping',
+    'Data Visualization',
+    'Accessibility (WCAG)',
+    'Personas',
+    'Tableau',
+    'Tableau Prep',
+    'Google Suite',
+  ],
+  Ludos: [
+    'Figma',
+    'Prototyping',
+    'Wireframing',
+    'User Research',
+    'Journey Mapping',
+    'Empathy Mapping',
+    'Data Visualization',
+    'Accessibility (WCAG)',
+    'Personas',
+  ],
+  'Portfolio Website': ['React', 'Next.js', 'Tailwind CSS', 'VSCode'],
+}
 
-const Expandable = ({ title, children, isOpen, onToggle }: { title: React.ReactNode; children: React.ReactNode; isOpen: boolean; onToggle: () => void; }) => {
+const Expandable = ({
+  title,
+  children,
+  isOpen,
+  onToggle,
+}: {
+  title: React.ReactNode
+  children: React.ReactNode
+  isOpen: boolean
+  onToggle: () => void
+}) => {
   return (
     <div>
       <div
         onClick={onToggle}
-        className="w-full text-left flex items-start cursor-pointer"
+        className="flex w-full cursor-pointer items-start text-left"
       >
         <ChevronDown
-            className={cn("transition-transform duration-300 mr-4 mt-1.5 flex-shrink-0", isOpen && "rotate-180")}
+          className={cn(
+            'mt-1.5 mr-4 flex-shrink-0 transition-transform duration-300',
+            isOpen && 'rotate-180',
+          )}
         />
         <div className="flex-grow">{title}</div>
       </div>
@@ -61,16 +201,13 @@ const Expandable = ({ title, children, isOpen, onToggle }: { title: React.ReactN
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="pt-2 pl-10">
-              {children}
-            </div>
+            <div className="pt-2 pl-10">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
-
+  )
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -93,257 +230,438 @@ const itemVariants = {
   },
 }
 
-const Section = ({ title, icon: Icon, children }: { title: string; icon: React.ElementType; children: React.ReactNode }) => (
-    <motion.section variants={itemVariants} className="mb-12">
-        <h2 className="flex items-center text-3xl font-bold mb-6 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-            <Icon className="h-7 w-7 mr-3 text-zinc-500" />
-            <span>{title}</span>
-        </h2>
-        {children}
-    </motion.section>
-);
+const Section = ({
+  title,
+  icon: Icon,
+  children,
+}: {
+  title: string
+  icon: React.ElementType
+  children: React.ReactNode
+}) => (
+  <motion.section variants={itemVariants} className="mb-12">
+    <h2 className="mb-6 flex items-center border-b border-zinc-200 pb-3 text-3xl font-bold dark:border-zinc-800">
+      <Icon className="mr-3 h-7 w-7 text-zinc-500" />
+      <span>{title}</span>
+    </h2>
+    {children}
+  </motion.section>
+)
 
-const ExperienceItem = ({ title, company, duration, location, children, id, selectedSkill }: { title: string; company: string; duration: string; location: string; children?: React.ReactNode; id: string; selectedSkill: string | null; }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isRelated = selectedSkill ? (skillsData[selectedSkill as keyof typeof skillsData] || []).includes(id) : true;
+const ExperienceItem = ({
+  title,
+  company,
+  duration,
+  location,
+  children,
+  id,
+  selectedSkill,
+}: {
+  title: string
+  company: string
+  duration: string
+  location: string
+  children?: React.ReactNode
+  id: string
+  selectedSkill: string | null
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const isRelated = selectedSkill
+    ? (skillsData[selectedSkill as keyof typeof skillsData] || []).includes(id)
+    : true
   return (
-    <div className={cn("relative pl-8 mb-8 last:mb-0 transition-opacity duration-300", selectedSkill && !isRelated ? "opacity-30" : "opacity-100")}>
-        <div className="absolute left-[15px] top-1 h-full w-px bg-zinc-200 dark:bg-zinc-800"></div>
-         <Expandable
-            isOpen={isOpen}
-            onToggle={() => setIsOpen(!isOpen)}
-            title={
-                <div>
-                    <h3 className="text-xl font-semibold md:inline-block">{title}</h3>
-                    <p className="text-md text-zinc-600 dark:text-zinc-400">{company}</p>
-                    <div className="flex items-center text-sm text-zinc-500 dark:text-zinc-500 mt-1">
-                        <span>{duration}</span>
-                        <span className="mx-2">•</span>
-                        <span>{location}</span>
-                    </div>
-                </div>
-            }
-        >
-                {children && <div className="prose prose-zinc dark:prose-invert mt-2">{children}</div>}
-        </Expandable>
-    </div>
-  );
-};
-
-const EducationItem = ({ degree, university, duration, location, classes, clubs, id, selectedSkill }: { degree: string; university: string; duration: string; location: string, classes: string[]; clubs?: { name: string; description: string }[]; id: string; selectedSkill: string | null; }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isRelated = selectedSkill ? (skillsData[selectedSkill as keyof typeof skillsData] || []).includes(id) : true;
-  return (
-     <div className={cn("relative pl-8 mb-8 last:mb-0 transition-opacity duration-300", selectedSkill && !isRelated ? "opacity-30" : "opacity-100")}>
-        <div className="absolute left-[15px] top-1 h-full w-px bg-zinc-200 dark:bg-zinc-800"></div>
-        <Expandable
-            isOpen={isOpen}
-            onToggle={() => setIsOpen(!isOpen)}
-             title={
-                <div>
-                    <h3 className="text-xl font-semibold md:inline-block">{degree}</h3>
-                    <p className="text-md text-zinc-600 dark:text-zinc-400">{university}</p>
-                    <div className="flex items-center text-sm text-zinc-500 dark:text-zinc-500 mt-1">
-                        <span>{duration}</span>
-                        <span className="mx-2">•</span>
-                        <span>{location}</span>
-                    </div>
-                </div>
-            }
-        >
-            <div className="prose prose-zinc dark:prose-invert mt-2">
-                <p className="font-semibold">Notable Coursework:</p>
-                <ul className='list-disc pl-5 prose-li:my-1'>
-                    {classes.map(course => <li key={course}>{course}</li>)}
-                </ul>
-                {clubs && (
-                  <>
-                    <p className="font-semibold mt-4">Clubs & Extracurriculars:</p>
-                    <ul className='list-disc pl-5 prose-li:my-1'>
-                        {clubs.map(club => <li key={club.name}>{club.name}</li>)}
-                    </ul>
-                    {clubs.map(club => <p key={club.name} className="mt-2 text-sm italic">{club.description}</p>)}
-                  </>
-                )}
+    <div
+      className={cn(
+        'relative mb-8 pl-8 transition-opacity duration-300 last:mb-0',
+        selectedSkill && !isRelated ? 'opacity-30' : 'opacity-100',
+      )}
+    >
+      <div className="absolute top-1 left-[15px] h-full w-px bg-zinc-200 dark:bg-zinc-800"></div>
+      <Expandable
+        isOpen={isOpen}
+        onToggle={() => setIsOpen(!isOpen)}
+        title={
+          <div>
+            <h3 className="text-xl font-semibold md:inline-block">{title}</h3>
+            <p className="text-md text-zinc-600 dark:text-zinc-400">
+              {company}
+            </p>
+            <div className="mt-1 flex items-center text-sm text-zinc-500 dark:text-zinc-500">
+              <span>{duration}</span>
+              <span className="mx-2">•</span>
+              <span>{location}</span>
             </div>
-        </Expandable>
+          </div>
+        }
+      >
+        {children && (
+          <div className="prose prose-zinc dark:prose-invert mt-2">
+            {children}
+          </div>
+        )}
+      </Expandable>
     </div>
-  );
-};
+  )
+}
 
-const SkillPill = ({ skill, onClick, isSelected }: { skill: string; onClick: () => void; isSelected: boolean }) => {
-    return (
-        <button
-            onClick={onClick}
-            className={cn(
-                "px-3 py-1 rounded-full text-sm font-medium transition-colors cursor-pointer",
-                isSelected
-                    ? "bg-zinc-800 text-white dark:bg-zinc-50 dark:text-zinc-900"
-                    : "bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-700"
-            )}
-        >
-            {skill}
-        </button>
-    );
-};
+const EducationItem = ({
+  degree,
+  university,
+  duration,
+  location,
+  classes,
+  clubs,
+  id,
+  selectedSkill,
+}: {
+  degree: string
+  university: string
+  duration: string
+  location: string
+  classes: string[]
+  clubs?: { name: string; description: string }[]
+  id: string
+  selectedSkill: string | null
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const isRelated = selectedSkill
+    ? (skillsData[selectedSkill as keyof typeof skillsData] || []).includes(id)
+    : true
+  return (
+    <div
+      className={cn(
+        'relative mb-8 pl-8 transition-opacity duration-300 last:mb-0',
+        selectedSkill && !isRelated ? 'opacity-30' : 'opacity-100',
+      )}
+    >
+      <div className="absolute top-1 left-[15px] h-full w-px bg-zinc-200 dark:bg-zinc-800"></div>
+      <Expandable
+        isOpen={isOpen}
+        onToggle={() => setIsOpen(!isOpen)}
+        title={
+          <div>
+            <h3 className="text-xl font-semibold md:inline-block">{degree}</h3>
+            <p className="text-md text-zinc-600 dark:text-zinc-400">
+              {university}
+            </p>
+            <div className="mt-1 flex items-center text-sm text-zinc-500 dark:text-zinc-500">
+              <span>{duration}</span>
+              <span className="mx-2">•</span>
+              <span>{location}</span>
+            </div>
+          </div>
+        }
+      >
+        <div className="prose prose-zinc dark:prose-invert mt-2">
+          <p className="font-semibold">Notable Coursework:</p>
+          <ul className="prose-li:my-1 list-disc pl-5">
+            {classes.map((course) => (
+              <li key={course}>{course}</li>
+            ))}
+          </ul>
+          {clubs && (
+            <>
+              <p className="mt-4 font-semibold">Clubs & Extracurriculars:</p>
+              <ul className="prose-li:my-1 list-disc pl-5">
+                {clubs.map((club) => (
+                  <li key={club.name}>{club.name}</li>
+                ))}
+              </ul>
+              {clubs.map((club) => (
+                <p key={club.name} className="mt-2 text-sm italic">
+                  {club.description}
+                </p>
+              ))}
+            </>
+          )}
+        </div>
+      </Expandable>
+    </div>
+  )
+}
+
+const SkillPill = ({
+  skill,
+  onClick,
+  isSelected,
+}: {
+  skill: string
+  onClick: () => void
+  isSelected: boolean
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={cn(
+        'cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-colors',
+        isSelected
+          ? 'bg-zinc-800 text-white dark:bg-zinc-50 dark:text-zinc-900'
+          : 'bg-zinc-200 text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700',
+      )}
+    >
+      {skill}
+    </button>
+  )
+}
 
 const certifications = [
-  { id: "Google UX Design Professional Certificate", name: "Google UX Certificate", href: "https://coursera.org/share/8d94bef718bcd12eb437bb7357e24e19", imgSrc: "/googleux.png" },
-  { id: "Microsoft Office Specialist: Excel Associate", name: "Microsoft Excel Certificate", href: "https://www.credly.com/badges/7db8b30e-9e5b-4f0e-b38b-e81f8ccc23c5/public_url", imgSrc: "/microsoftexcel.png" }
-];
+  {
+    id: 'Google UX Design Professional Certificate',
+    name: 'Google UX Certificate',
+    href: 'https://coursera.org/share/8d94bef718bcd12eb437bb7357e24e19',
+    imgSrc: '/googleux.png',
+  },
+  {
+    id: 'Microsoft Office Specialist: Excel Associate',
+    name: 'Microsoft Excel Certificate',
+    href: 'https://www.credly.com/badges/7db8b30e-9e5b-4f0e-b38b-e81f8ccc23c5/public_url',
+    imgSrc: '/microsoftexcel.png',
+  },
+]
 
 export default function ExperiencePage() {
-    const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+  const [selectedSkill, setSelectedSkill] = useState<string | null>(null)
 
-    const handleSkillClick = (skill: string) => {
-      setSelectedSkill(prevSkill => (prevSkill === skill ? null : skill));
-    };
+  const handleSkillClick = (skill: string) => {
+    setSelectedSkill((prevSkill) => (prevSkill === skill ? null : skill))
+  }
 
-    const isItemRelated = (itemId: string): boolean => {
-      if (!selectedSkill) return true;
-      const relatedItemsForSkill = skillsData[selectedSkill as keyof typeof skillsData] || [];
-      if (relatedItemsForSkill.includes(itemId)) {
-          return true;
-      }
-      const skillsForItem = skillsData[itemId as keyof typeof skillsData] || [];
-      return skillsForItem.includes(selectedSkill);
-    };
-
+  const isItemRelated = (itemId: string): boolean => {
+    if (!selectedSkill) return true
+    const relatedItemsForSkill =
+      skillsData[selectedSkill as keyof typeof skillsData] || []
+    if (relatedItemsForSkill.includes(itemId)) {
+      return true
+    }
+    const skillsForItem = skillsData[itemId as keyof typeof skillsData] || []
+    return skillsForItem.includes(selectedSkill)
+  }
 
   return (
-    <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-    >
-        <motion.div variants={itemVariants} className="text-left mb-12">
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-2  leading-normal md:inline-block">{`For your convenience.`}</h1>
-        </motion.div>
+    <motion.div variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div variants={itemVariants} className="mb-12 text-left">
+        <h1 className="mb-2 text-5xl leading-normal font-extrabold tracking-tighter md:inline-block md:text-6xl">{`For your convenience.`}</h1>
+      </motion.div>
 
-        <Section title="Skills" icon={Lightbulb}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 className="font-semibold text-lg mb-2">Design</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {["Figma", "Prototyping", "Wireframing", "User Research", "Usability Testing", "Journey Mapping", "Empathy Mapping", "Data Visualization", "Accessibility (WCAG)", "Personas"].map(skill => (
-                            <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg mb-2">Development</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "Python", "SQL"].map(skill => (
-                            <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg mb-2">Tools</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {["Obsidian", "Jira", "Google Suite", "Microsoft Suite", "Tableau", "Tableau Prep", "IBM SPSS", "VSCode"].map(skill => (
-                            <SkillPill key={skill} skill={skill} onClick={() => handleSkillClick(skill)} isSelected={selectedSkill === skill} />
-                        ))}
-                    </div>
-                </div>
+      <Section title="Skills" icon={Lightbulb}>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold">Design</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'Figma',
+                'Prototyping',
+                'Wireframing',
+                'User Research',
+                'Usability Testing',
+                'Journey Mapping',
+                'Empathy Mapping',
+                'Data Visualization',
+                'Accessibility (WCAG)',
+                'Personas',
+              ].map((skill) => (
+                <SkillPill
+                  key={skill}
+                  skill={skill}
+                  onClick={() => handleSkillClick(skill)}
+                  isSelected={selectedSkill === skill}
+                />
+              ))}
             </div>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold">Development</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'React',
+                'Next.js',
+                'Tailwind CSS',
+                'Python',
+                'SQL',
+              ].map((skill) => (
+                <SkillPill
+                  key={skill}
+                  skill={skill}
+                  onClick={() => handleSkillClick(skill)}
+                  isSelected={selectedSkill === skill}
+                />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold">Tools</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'Obsidian',
+                'Jira',
+                'Google Suite',
+                'Microsoft Suite',
+                'Tableau',
+                'Tableau Prep',
+                'IBM SPSS',
+                'VSCode',
+              ].map((skill) => (
+                <SkillPill
+                  key={skill}
+                  skill={skill}
+                  onClick={() => handleSkillClick(skill)}
+                  isSelected={selectedSkill === skill}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+      <motion.div variants={itemVariants}>
+        <Section title="Experience" icon={Briefcase}>
+          <ExperienceItem
+            id="Freelance UX Designer"
+            title="Freelance UX Designer"
+            company="Self-Employed"
+            duration="2025 — Present"
+            location="Remote"
+            selectedSkill={selectedSkill}
+          >
+            <ul className="list-disc pl-5">
+              <li>
+                Conduct user research to uncover insights and validate design
+                decisions.
+              </li>
+              <li>
+                Create wireframes and interactive prototypes to visualize and
+                test user flows.
+              </li>
+              <li>
+                Perform usability testing to identify pain points and refine the
+                user experience.
+              </li>
+            </ul>
+          </ExperienceItem>
+          <ExperienceItem
+            id="Guest Experience Associate"
+            title="Guest Experience Associate"
+            company="Target Corporation"
+            duration="2022 — Present"
+            location="Tallahassee, FL"
+            selectedSkill={selectedSkill}
+          >
+            <ul className="list-disc pl-5">
+              <li>
+                Address guest needs and resolve issues to ensure a positive
+                in-store experience.
+              </li>
+              <li>
+                Gather and relay customer feedback to management for process
+                improvements.
+              </li>
+              <li>
+                Develop a deep understanding of customer behavior and
+                satisfaction in a fast-paced retail environment.
+              </li>
+            </ul>
+          </ExperienceItem>
         </Section>
-        <motion.div variants={itemVariants}>
-            <Section title="Experience" icon={Briefcase}>
-                <ExperienceItem
-                    id="Freelance UX Designer"
-                    title="Freelance UX Designer"
-                    company="Self-Employed"
-                    duration="2025 — Present"
-                    location="Remote"
-                    selectedSkill={selectedSkill}
-                >
-                    <ul className='list-disc pl-5'>
-                      <li>Conduct user research to uncover insights and validate design decisions.</li>
-                      <li>Create wireframes and interactive prototypes to visualize and test user flows.</li>
-                      <li>Perform usability testing to identify pain points and refine the user experience.</li>
-                    </ul>
-                </ExperienceItem>
-                <ExperienceItem
-                    id="Guest Experience Associate"
-                    title="Guest Experience Associate"
-                    company="Target Corporation"
-                    duration="2022 — Present"
-                    location="Tallahassee, FL"
-                    selectedSkill={selectedSkill}
-                >
-                    <ul className='list-disc pl-5'>
-                        <li>Address guest needs and resolve issues to ensure a positive in-store experience.</li>
-                        <li>Gather and relay customer feedback to management for process improvements.</li>
-                        <li>Develop a deep understanding of customer behavior and satisfaction in a fast-paced retail environment.</li>
-                    </ul>
-                </ExperienceItem>
-            </Section>
 
-            <Section title="Education" icon={GraduationCap}>
-                <EducationItem
-                    id="M.S. in Information Technology (User-Centered Design)"
-                    degree="M.S. in Information Technology (User-Centered Design)"
-                    university="Florida State University"
-                    duration="Aug. 2025 — Dec. 2026"
-                    location="Tallahassee, FL"
-                    classes={['Usability Analysis', 'Website Development and Administration', 'Design and Production of Networked Multimedia', 'Information Behavior', 'Information Architecture', 'Digital Media Production']}
-                    clubs={[{ name: 'The UX Collective @ FSU, Member', description: "Specializing in User-Centered Design to build my expertise in designing around users' needs." }]}
-                    selectedSkill={selectedSkill}
+        <Section title="Education" icon={GraduationCap}>
+          <EducationItem
+            id="M.S. in Information Technology (User-Centered Design)"
+            degree="M.S. in Information Technology (User-Centered Design)"
+            university="Florida State University"
+            duration="Aug. 2025 — Dec. 2026"
+            location="Tallahassee, FL"
+            classes={[
+              'Usability Analysis',
+              'Website Development and Administration',
+              'Design and Production of Networked Multimedia',
+              'Information Behavior',
+              'Information Architecture',
+              'Digital Media Production',
+            ]}
+            clubs={[
+              {
+                name: 'The UX Collective @ FSU, Member',
+                description:
+                  "Specializing in User-Centered Design to build my expertise in designing around users' needs.",
+              },
+            ]}
+            selectedSkill={selectedSkill}
+          />
+          <EducationItem
+            id="B.S. in Management Information Systems"
+            degree="B.S. in Management Information Systems"
+            university="Florida State University"
+            duration="Aug. 2023 — May 2025"
+            location="Tallahassee, FL"
+            classes={[
+              'Introduction to Python',
+              'Organizational Behavior',
+              'Systems Analysis and Design',
+              'Big Data',
+            ]}
+            clubs={[
+              {
+                name: 'WVFS Tallahassee, Development co-Director',
+                description:
+                  'Obtained a minor in Computer Science to expand my knowledge of the technical side of product development.',
+              },
+            ]}
+            selectedSkill={selectedSkill}
+          />
+        </Section>
+
+        <Section title="Certifications" icon={Award}>
+          <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-row">
+            {certifications.map((cert) => (
+              <a
+                key={cert.id}
+                href={cert.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  'transition-opacity duration-300',
+                  !isItemRelated(cert.id) ? 'opacity-30' : 'opacity-100',
+                )}
+              >
+                <Image
+                  src={cert.imgSrc}
+                  alt={cert.name}
+                  width={200}
+                  height={150}
+                  className="rounded-lg object-contain transition-transform hover:scale-105"
                 />
-                <EducationItem
-                    id="B.S. in Management Information Systems"
-                    degree="B.S. in Management Information Systems"
-                    university="Florida State University"
-                    duration="Aug. 2023 — May 2025"
-                    location="Tallahassee, FL"
-                    classes={['Introduction to Python', 'Organizational Behavior', 'Systems Analysis and Design', 'Big Data']}
-                    clubs={[{ name: 'WVFS Tallahassee, Development co-Director', description: "Obtained a minor in Computer Science to expand my knowledge of the technical side of product development." }]}
-                    selectedSkill={selectedSkill}
-                />
-            </Section>
+              </a>
+            ))}
+          </div>
+        </Section>
 
-            <Section title="Certifications" icon={Award}>
-                <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4">
-                    {certifications.map((cert) => (
-                        <a
-                            key={cert.id}
-                            href={cert.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={cn("transition-opacity duration-300", !isItemRelated(cert.id) ? "opacity-30" : "opacity-100")}
-                        >
-                            <Image src={cert.imgSrc} alt={cert.name} width={200} height={150} className="rounded-lg transition-transform hover:scale-105 object-contain" />
-                        </a>
-                    ))}
+        <Section title="Projects" icon={LayoutGrid}>
+          <div className="flex flex-row flex-wrap items-center gap-4">
+            {PROJECTS.map((project) => (
+              <Link
+                key={project.id}
+                href={project.link}
+                className={cn(
+                  'group relative block h-[150px] w-[171px] flex-shrink-0 overflow-hidden rounded-lg transition-colors duration-300',
+                  !isItemRelated(project.name) ? 'opacity-30' : 'opacity-100',
+                )}
+              >
+                <div className="flex h-full w-full items-center justify-center bg-white dark:bg-zinc-900">
+                  <Image
+                    src="/placeholder.png"
+                    alt={project.name}
+                    width={171}
+                    height={150}
+                    className="block h-full w-full rounded-lg object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-            </Section>
-
-            <Section title="Projects" icon={LayoutGrid}>
-                <div className="flex flex-row flex-wrap gap-4 items-center">
-                    {PROJECTS.map((project) => (
-                        <Link
-                            key={project.id}
-                            href={project.link}
-                            className={cn(
-                                "group relative block flex-shrink-0 transition-colors duration-300 rounded-lg overflow-hidden w-[171px] h-[150px]",
-                                !isItemRelated(project.name) ? "opacity-30" : "opacity-100"
-                            )}
-                        >
-                            <div className="w-full h-full flex items-center justify-center bg-white dark:bg-zinc-900">
-                                <Image
-                                    src="/placeholder.png"
-                                    alt={project.name}
-                                    width={171}
-                                    height={150}
-                                    className="rounded-lg object-contain transition-transform duration-300 group-hover:scale-105 block w-full h-full"
-                                />
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </Section>
-        </motion.div>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      </motion.div>
     </motion.div>
   )
 }

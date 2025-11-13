@@ -1,5 +1,5 @@
-import { SiLinkedin, SiMedium } from 'react-icons/si';
-import { IconType } from 'react-icons';
+import { SiLinkedin, SiMedium } from 'react-icons/si'
+import { IconType } from 'react-icons'
 
 export type Project = {
   name: string
@@ -18,11 +18,11 @@ type SocialLink = {
 export const projectBlurbs: { [key: string]: string } = {
   project1: 'Survey Design | Feature Strategy',
   project2: 'Heuristic Evaluation | Usability Testing',
-  project3: 'PRAW Web Scraping | Sentiment Analysis | Web Design | Product Design',
+  project3:
+    'PRAW Web Scraping | Sentiment Analysis | Web Design | Product Design',
   project4: 'Data Analysis | Data Visualization | Data Cleaning',
   project5: 'Usability Study | Benchmarking | Market Comparison',
-};
-
+}
 
 export const PROJECTS: Project[] = [
   {
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Pivoting for Paws',
     description:
-      "A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.",
+      'A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.',
     link: '/its-meow-or-never',
     image: '/project2-tn.png',
     id: 'project2',
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
-    {
+  {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/nthsm',
     icon: SiLinkedin,

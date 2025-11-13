@@ -12,9 +12,7 @@ export default function LayoutExperiencePage({
 }) {
   return (
     <SiteLayout>
-      <main className="mx-auto max-w-none pb-20">
-        {children}
-      </main>
+      <main className="mx-auto max-w-none pb-20">{children}</main>
     </SiteLayout>
   )
 }

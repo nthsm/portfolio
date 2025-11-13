@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import { Figtree, Crimson_Text } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from 'next-themes'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Script from 'next/script'
 
 export const viewport: Viewport = {
@@ -18,20 +18,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://nthsm.com/'),
   alternates: {
-    canonical: '/'
+    canonical: '/',
   },
   title: {
     default: 'Nathan Smith',
-    template: '%s — Nathan Smith'
+    template: '%s — Nathan Smith',
   },
-  description: 'Personal website and living portfolio for Nathan Smith, a FSU graduate student and Product Designer.',
+  description:
+    'Personal website and living portfolio for Nathan Smith, a FSU graduate student and Product Designer.',
   manifest: '/manifest.json',
   icons: {
     icon: '/icon.png?v=2',
     shortcut: '/favicon.ico?v=2',
     apple: '/apple-touch-icon.png?v=2',
   },
-};
+}
 
 const figtree = Figtree({
   variable: '--font-figtree',
@@ -64,16 +65,13 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
-        
+
         {/* Google Analytics Tag */}
-        <Script 
-          strategy="afterInteractive" 
+        <Script
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-C8NQQPYW96"
         />
-        <Script 
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
