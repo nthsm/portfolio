@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   title: {
-    default: 'Work — Nathan Smith',
+    default: 'Nathan Smith',
     template: '%s — Nathan Smith'
   },
   description: 'Personal website and living portfolio for Nathan Smith, a FSU graduate student and Product Designer.',
