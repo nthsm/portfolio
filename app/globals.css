@@ -115,20 +115,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     z-index: 1;
 }
 
-/* Light Mode Section Colors */
-.imon-content-wrapper .content-section:nth-child(1) { background-color: #f9fafb; } /* Challenge */
-.imon-content-wrapper .content-section:nth-child(2) { background-color: #f3f4f6; } /* Solution */
-.imon-content-wrapper .content-section:nth-child(3) { background-color: #f9fafb; } /* Research */
-.imon-content-wrapper .content-section:nth-child(4) { background-color: #f3f4f6; } /* Synthesis */
-.imon-content-wrapper .content-section:nth-child(5) { background-color: #fee2e2; } /* Wireframing */
-.imon-content-wrapper .content-section:nth-child(6) { background-color: #f9fafb; } /* Testing */
-.imon-content-wrapper .content-section:nth-child(7) { background-color: #f3f4f6; } /* Reflection */
-
-/* Dark Mode Section Color Override */
-.dark .imon-content-wrapper .content-section {
-    background-color: #09090b;
-}
-
 .imon-content-inner {
     @apply prose prose-zinc dark:prose-invert max-w-7xl mx-auto;
 }
