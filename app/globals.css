@@ -1,4 +1,3 @@
-/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/globals.css */
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
@@ -25,7 +24,6 @@ body {
   font-family: var(--font-figtree), sans-serif;
 }
 
-/* Border styles */
 img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-process.png"]):not([src="/project4-business-question.png"]):not([src="/project2-quote.png"]):not([src="/project2-heuristic.png"]):not([src="/project2-findings.png"]) {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -35,8 +33,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
   border-color: #3f3f46;
 }
 
-/* IMON Specific Styles (now used for all case studies) */
-
 .imon-parallax-container {
     position: relative;
     top: -4.6rem;
@@ -44,7 +40,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 }
 
 .imon-parallax-header-js {
-    /* background-image: url('/project2-bg.png'); */ /* REMOVED - This is now set via inline style in the MDX file */
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +50,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 2rem;
@@ -74,7 +68,7 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     border-bottom: none !important;
-    /* Custom color removed */
+    font-weight: 600 !important;
 }
 
 .imon-parallax-header-js .subtitle {
@@ -89,13 +83,11 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 /* --- MOBILE STYLES MODIFIED --- */
 @media (max-width: 768px) {
   .imon-parallax-header-js {
-    /* background-image: url('/project2-bg-mobile.png'); */ /* REMOVED - Handled by inline style */
     background-attachment: scroll;
     background-position: center top;
     min-height: 50vh;
-    /* 1. CHANGED: Vertically align content to the TOP */
     justify-content: flex-start;
-    padding-top: calc(2rem + 4.125rem); /* Keep padding to push content below nav bar */
+    padding-top: calc(2rem + 4.125rem);
     align-items: flex-start;
   }
    .imon-parallax-header-js h1,
@@ -106,11 +98,11 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
    }
 
    .imon-parallax-header-js h1 {
-       font-size: 2.25rem !important; /* text-4xl */
+       font-size: 2.25rem !important;
        line-height: 1.1 !important;
    }
    .imon-parallax-header-js .subtitle {
-       font-size: 1.125rem !important; /* text-lg */
+       font-size: 1.125rem !important;
    }
 }
 /* --- END OF MOBILE STYLE MODIFICATIONS --- */
@@ -182,7 +174,6 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 .imon-parallax-header-js h1,
 .imon-content-inner h1 {
     font-family: var(--font-crimson-text), serif !important;
-    /* color: #B30F11 !important; */ /* REMOVED - No longer forcing red */
     font-weight: 600 !important;
 }
 
@@ -216,5 +207,21 @@ img[src^="/project"]:not([src="/project4-process.png"]):not([src="/project2-proc
 
 .hmw-jump-link {
     @apply text-sm font-semibold tracking-wider no-underline hover:underline;
-    /* color: #cf1619; */ /* REMOVED - Will now use default prose link color */
+}
+
+/* Project-specific Colors */
+.project-color-blue h1 {
+    color: #25A0EA;
+}
+
+.project-color-red h1 {
+    color: #E4504C;
+}
+
+.project-color-purple h1 {
+    color: #9B6CC9;
+}
+
+.project-color-green h1 {
+    color: #52AF54;
 }
