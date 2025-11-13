@@ -1,14 +1,11 @@
-/* nthsm/portfolio/portfolio-1704bb279c5646eb9cac39f25da923cc404ed185/app/(posts)/its-meow-or-never/page.tsx */
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
 import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Redesign: It's Meow or Never — Nathan Smith"
+    absolute: "Pivoting for Paws: A UX Research Case Study — Nathan Smith"
   },
-  description: "A UX research case study on challenging initial assumptions and using user data to drive targeted, effective recommendations for a non-profit's website.",
+  description: "A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.",
 }
 
 export default function ItsMeowOrNeverPage() {
@@ -17,9 +14,10 @@ export default function ItsMeowOrNeverPage() {
         <ParallaxHeader 
           speedFactor={0.4} 
           style={{ backgroundImage: "url('/project2-bg.png')" }}
+          className="project-color-red"
         >
-            <h1>It's Meow or Never: A UX Research Deep Dive</h1>
-            <p className="subtitle">How user data corrected my assumptions and led to targeted recommendations.</p>
+            <h1>Pivoting for Paws: A UX Research Case Study</h1>
+            <p className="subtitle">A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.</p>
         </ParallaxHeader>
 
         <div className="imon-content-wrapper">
