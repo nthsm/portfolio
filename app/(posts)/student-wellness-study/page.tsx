@@ -25,49 +25,74 @@ export default function StudentWellnessPage() {
       <div className="imon-content-wrapper">
         <div className="content-section">
           <div className="imon-content-inner clearfix">
+            <h1>Project Overview</h1>
             <p>
-              This project explored potential relationships between FSU
-              students' sleep habits, particularly the use of a sleep strategy,
-              and their self-reported stress levels and daily performance during
-              a two-week period coinciding with midterms.
+              This project originated in an undergraduate Data Science course
+              and served as my first deep dive into the full data analysis
+              lifecycle. The goal was to analyze survey data collected from
+              ~90 FSU students to find potential correlations between sleep
+              habits and self-reported stress levels during midterms.
+            </p>
+            <p>
+              This project is a showcase of my foundational data analysis
+              skills, including data cleaning, preparation, and visualization.
+              More importantly, it's a transparent look at the realities of
+              working with imperfect data and drawing honest conclusions.
             </p>
 
-            <h2>Background & Objective</h2>
+            <h2>My Role & Methods</h2>
             <p>
-              Originating from a Data Science Activity (DSA) course project
-              during my time as an undergraduate student in the Management
-              Information Systems program at FSU, the primary goal set by my
-              professor was to analyze survey data collected from every FSU
-              student taking the course, which was around 90 students total
-              between all classes.
+              As the Data Analyst for this project, I was responsible for the
+              entire process: defining the research question, cleaning and
+              preparing the raw data, analyzing it for correlations, and
+              visualizing the findings.
             </p>
             <p>
-              The specific objective I focused on was to identify potential
-              correlations between having a defined sleep strategy and outcomes
-              like stress levels and daily activities, hypothesizing that
-              students employing a consistent sleep strategy might report lower
-              stress and higher performance.
+              The methods were chosen to suit a purely quantitative analysis of
+              pre-existing survey data.
             </p>
+            <ul>
+              <li>
+                <strong>Data Cleaning (Excel):</strong> This was the most
+                critical method. The raw Qualtrics data was filled with
+                inconsistent text, duplicates, and irrelevant entries. Excel
+                was the ideal tool for meticulous, cell-by-cell
+                standardization.
+              </li>
+              <li>
+                <strong>Data Analysis (Excel):</strong> Pivot Tables were used
+                as the primary analysis tool to quickly segment the data
+                (Strategy vs. No Strategy) and compare descriptive statistics
+                across multiple metrics.
+              </li>
+              <li>
+                <strong>Data Visualization (Looker Studio):</strong> While
+                Excel can create charts, Looker Studio was chosen to build a
+                more dynamic, professional, and shareable dashboard to
+                present the final findings.
+              </li>
+            </ul>
 
-            <h2>Research Question</h2>
-            <figure className="my-4 flex flex-col items-center">
-              <img
-                src="/project4-business-question.png"
-                alt="Research Question."
-              />
-            </figure>
-            <p>
-              This question evolved after initial data exploration in Excel.
-            </p>
-            <p>
-              My hypothesis, based on personal experience, was that students
-              with a plan (like a sleep strategy) might exhibit lower stress and
-              higher performance metrics, aligning with the idea that
-              consistency and planning often lead to better outcomes.
-            </p>
+            <div className="hmw-container not-prose">
+              <div className="hmw-line"></div>
+              <h2 className="hmw-text">
+                My Hypothesis: "Do students with a defined sleep strategy
+                report significantly different sleep duration, stress levels,
+                and daily productivity indicators compared to students without a
+                strategy?"
+              </h2>
+              <div className="hmw-line"></div>
+            </div>
+          </div>
+        </div>
 
+        <div className="content-section">
+          <div className="imon-content-inner clearfix">
             <h2>Methodology</h2>
-            <p>My approach followed a standard data analysis process:</p>
+            <p>
+              My approach followed a standard data analysis process: Gather,
+              Question, Identify, Model, and Conclude.
+            </p>
             <figure className="my-4 flex flex-col items-center">
               <img
                 src="/project4-process.png"
@@ -78,169 +103,60 @@ export default function StudentWellnessPage() {
               </figcaption>
             </figure>
 
-            <h3>Data Source & Collection</h3>
-            <p>
-              Data was gathered over two weeks (October 3rd - 16th, 2023) via
-              Qualtrics surveys administered to FSU students in the course:
-            </p>
-            <ol>
-              <li>
-                <strong>Baseline Survey (Oct 3rd):</strong> Captured initial
-                sleep strategy use, stress levels, and various preference data
-                points intended for segmentation.
-              </li>
-              <figure className="my-4 flex flex-col items-center">
-                <img
-                  src="/project4-baseline.png"
-                  alt="Baseline Survey Attributes"
-                />
-                <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                  Attributes collected in the initial baseline survey.
-                </figcaption>
-              </figure>
-              <li>
-                <strong>Daily Survey (Oct 3rd - 16th, Weekdays):</strong> Logged
-                daily metrics including stress, sleep hours, water intake,
-                self-rated performance, exercise, social interactions, and study
-                hours.
-              </li>
-              <figure className="my-4 flex flex-col items-center">
-                <img src="/project4-daily.png" alt="Daily Survey Attributes" />
-                <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                  Attributes collected in the daily check-in survey.
-                </figcaption>
-              </figure>
-              <li>
-                <strong>Closing Survey (Oct 16th):</strong> Re-captured baseline
-                questions to track changes and added reflection questions.
-              </li>
-              <figure className="my-4 flex flex-col items-center">
-                <img
-                  src="/project4-closeout.png"
-                  alt="Closeout Survey Attributes"
-                />
-                <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                  Attributes collected in the final closing survey.
-                </figcaption>
-              </figure>
-            </ol>
-
             <h3>Data Cleaning & Preparation</h3>
             <p>
-              Preparing the raw survey data for analysis was crucial and
+              Preparing the raw survey data for analysis was crucial. This
               involved several steps using Microsoft Excel:
             </p>
             <ul>
               <li>
-                <strong>Dataset Selection:</strong> Decided to primarily use the
-                combined Closing and Daily datasets, omitting the Baseline data
-                due to a significantly higher response rate in the Closing
-                survey for baseline-type questions.
-              </li>
-              <li>
-                <strong>Column Renaming:</strong> Standardized and shortened
-                column names for easier reference.
-              </li>
-              <li>
-                <strong>Filtering:</strong> Applied filters to columns for
-                easier sorting and analysis.
+                <strong>Standardization:</strong> Used "Find and Replace" and{' '}
+                <code>IF</code> functions to convert text-based responses (e.g.,
+                "Like (Thumbs up)", "no water") into numerical or consistent
+                categorical values (e.g., 1, 0).
               </li>
               <li>
                 <strong>Duplicate Removal:</strong> Used the <code>EXACT</code>{' '}
-                function with conditional formatting to identify and remove
+                function and conditional formatting to identify and remove
                 duplicate submissions.
               </li>
               <li>
-                <strong>Segmentation:</strong> Used the <code>IF</code> function
-                to identify participants based on their reported use
-                ('Yes'/'No') of a sleep strategy, creating lists for filtering
-                pivot tables.
+                <strong>Filtering:</strong> Removed irrelevant data, such as
+                entries outside the collection window and participants with
+                fewer than 3 daily submissions, to ensure a baseline of data
+                quality.
               </li>
               <li>
-                <strong>Timestamp Splitting:</strong> Utilized the "Text to
-                Columns" feature to separate date and time data.
-              </li>
-              <li>
-                <strong>Value Standardization:</strong> Employed "Find and
-                Replace" to convert text-based responses into numerical or
-                consistent categorical values (e.g., water bottle counts,
-                emoticons, Yes/No).
-              </li>
-              <figure className="my-4 flex flex-col items-center">
-                <img
-                  src="/project4-datachanges.png"
-                  alt="Data Standardization Examples"
-                />
-                <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                  Examples of text responses standardized into numerical or
-                  simplified categorical values.
-                </figcaption>
-              </figure>
-              <li>
-                <strong>Outlier/Irrelevant Data Removal:</strong>
-                <ul>
-                  <li>
-                    Removed participants with fewer than 3 daily submissions.
-                  </li>
-                  <li>
-                    Filtered out any entries recorded outside the official Oct
-                    3-16 data collection window.
-                  </li>
-                  <li>
-                    Cleaned free-text numeric fields ('People interacted with',
-                    'Hours studied') by removing non-numeric characters and
-                    addressing non-answers.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Summary of Changes:</strong> Ultimately, 406 rows were
-                removed, 12 key columns were selected for analysis, and data
-                quality issues (like potential retroactive entries and
-                inconsistent free-text inputs) were noted.
+                <strong>Segmentation:</strong> Created the two primary analysis
+                groups ("Sleep Strategy" vs. "No Sleep Strategy") based on
+                closing survey responses.
               </li>
             </ul>
+            <figure className="my-4 flex flex-col items-center">
+              <img
+                src="/project4-datachanges.png"
+                alt="Data Standardization Examples"
+              />
+              <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
+                Examples of text responses standardized into numerical or
+                simplified categorical values.
+              </figcaption>
+            </figure>
 
-            <h3>Analysis Approach & Tools</h3>
-            <ul>
-              <li>
-                <strong>Primary Tool:</strong> <strong>Microsoft Excel</strong>{' '}
-                was used for data cleaning, preparation, pivot tables, and
-                initial analysis.
-              </li>
-              <li>
-                <strong>Visualization Tool:</strong>{' '}
-                <strong>Looker Studio</strong> was used for creating the final
-                dashboard visualizations.
-              </li>
-              <li>
-                <strong>Core Technique:</strong> The analysis focused on{' '}
-                <strong>comparative descriptive statistics</strong>.
-              </li>
-              <li>
-                The central approach involved segmenting the student
-                participants into two groups based on their response to the
-                "Sleep Strategy" question (Yes/No) from the closing survey.
-              </li>
-              <li>
-                <strong>Metrics Compared:</strong> To answer the research
-                question, key daily metrics such as{' '}
-                <strong>hours of sleep</strong>,{' '}
-                <strong>exercise frequency</strong>,{' '}
-                <strong>study hours</strong>,{' '}
-                <strong>social interactions</strong>,{' '}
-                <strong>stress level</strong>, and self-rated{' '}
-                <strong>performance</strong> were compared between these two
-                groups, often aggregated by day of the week, to identify
-                potential differences or patterns.
-              </li>
-            </ul>
+            <h3>Analysis & Visualization</h3>
+            <p>
+              I used Excel Pivot Tables for initial comparative analysis and
+              Looker Studio for the final dashboard visualizations. The
+              analysis focused on comparing descriptive statistics for the two
+              core segments (Sleep Strategy vs. No Strategy) across key daily
+              metrics.
+            </p>
 
             <h2>Key Findings & Visualizations</h2>
             <p>
-              The comparative analysis highlighted consistent, though often
-              modest, differences between students who reported using a sleep
-              strategy versus those who did not:
+              The analysis revealed some interesting patterns, but ultimately
+              did not support my initial hypothesis with strong, conclusive
+              evidence.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <img
@@ -248,110 +164,68 @@ export default function StudentWellnessPage() {
                 alt="Looker Studio Dashboard showing Wellness Study Visualizations"
               />
               <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                Dashboard summarizing key comparisons between students with and
-                without a sleep strategy.
+                Dashboard summarizing key comparisons.
               </figcaption>
             </figure>
             <ol>
               <li>
-                <strong>Low Adoption Rate:</strong> Only <strong>32%</strong> of
-                surveyed students reported using a consistent sleep strategy.
+                <strong>Low Adoption:</strong> Only <strong>32%</strong> of
+                students reported using a consistent sleep strategy.
               </li>
               <li>
-                <strong>Stress Level Differences:</strong> Students{' '}
-                <em>with</em> a sleep strategy reported slightly lower average
-                stress levels overall (Avg: 5.21 vs 5.31) and on most individual
-                days compared to those without.
+                <strong>Minor Stress Level Differences:</strong> Students with a
+                sleep strategy reported *slightly* lower average stress (5.21
+                vs. 5.31), but the difference is not statistically
+                significant.
               </li>
               <li>
-                <strong>Daily Activity Levels:</strong> Across measured daily
-                metrics (social interactions, hours slept, hours studied,
-                exercise frequency), students <em>with</em> a sleep strategy
-                demonstrated slightly higher average activity levels.
-              </li>
-              <li>
-                <strong>Self-Perceived Performance:</strong> Students{' '}
-                <em>with</em> a sleep strategy consistently rated their daily
-                performance higher on average (Avg: 3.44 vs 3.30).
+                <strong>Slightly Higher Performance:</strong> Similarly,
+                students with a strategy self-reported *slightly* higher
+                daily performance (3.44 vs. 3.30).
               </li>
             </ol>
 
-            <h2>Conclusion</h2>
+            <h2>Conclusion & Key Limitations</h2>
             <p>
-              The data suggests a potential positive correlation between
-              employing a sleep strategy and student wellness indicators like
-              lower stress and higher self-perceived performance, along with
-              increased daily activity levels within this cohort.
+              The data suggests a weak positive correlation between having a
+              sleep strategy and reporting lower stress or higher performance.
+              However, the findings were not conclusive.
             </p>
             <p>
-              While the observed differences were modest, their consistency
-              implies potential benefits of intentional sleep planning,
-              supporting the initial hypothesis.
+              This project's most valuable outcome was not the finding itself,
+              but the lesson in data integrity. The primary limitation, which
+              I identified during reflection, was the reliance on{' '}
+              <strong>self-reported data</strong>.
             </p>
-
-            <h2>Limitations</h2>
             <ul>
               <li>
-                Reliance on self-reported data carries inherent subjectivity and
-                potential recall bias.
+                <strong>Subjectivity:</strong> "Stress level" is deeply
+                subjective. A "5" for one student is not the same as a "5" for
+                another. This introduces significant noise into the data.
               </li>
               <li>
-                Data quality issues, including possible retroactive survey
-                completion, could affect accuracy.
-              </li>
-              <li>
-                The two-week study period coincided with midterms, likely
-                increasing stress levels for all students.
-              </li>
-              <li>
-                The findings indicate correlation, not causation; numerous other
-                factors influence student stress and performance.
+                <strong>Recall Bias:</strong> The data was collected during
+                midterms, a period of high stress for everyone, which likely
+                skewed the results and made it difficult to isolate the
+                effect of a sleep strategy.
               </li>
             </ul>
 
-            <h2>Potential Application</h2>
-            <p>
-              While primarily a descriptive analysis, these findings hold
-              potential for prescriptive applications aimed at improving student
-              well-being at FSU.
-            </p>
-            <p>
-              The identified correlations, though modest, suggest that promoting
-              awareness around the benefits of consistent sleep schedules could
-              be valuable.
-            </p>
-            <p>
-              Insights from this study could be condensed and shared with the
-              FSU student body, perhaps through targeted emails or wellness
-              program communications, to encourage students to consider
-              implementing their own sleep strategies as a tool for managing
-              stress and potentially enhancing daily performance. Similar to how
-              FSU ITS regularly sends out emails about tech safety.
-            </p>
-
             <h2>Reflection</h2>
             <p>
-              This project provided valuable hands-on experience in the
-              end-to-end process of cleaning, analyzing, and visualizing
-              real-world survey data.
+              As my first formal data analysis project, this was an
+              irreplaceable learning experience. It taught me that the data
+              cleaning phase is arguably the most important, as "garbage in,
+              garbage out."
             </p>
             <p>
-              It underscored the challenges of imperfect datasets and the
-              importance of documenting the methodology.
-            </p>
-            <p>
-              Experimenting with both Excel and Looker Studio offered insights
-              into different visualization tools.
-            </p>
-            <p>
-              The findings, though limited, suggest promoting consistent sleep
-              habits could be a beneficial avenue for student wellness
-              initiatives.
-            </p>
-            <p>
-              Future research could explore these correlations over longer
-              periods or use qualitative methods to understand the{' '}
-              <em>types</em> of strategies employed.
+              Most importantly, it taught me to be critical of my data sources
+              and to acknowledge when findings are inconclusive. Recognizing
+              that my hypothesis was not strongly supported due to flawed data
+              collection (i.e., relying on self-reported stress) was a key
+              insight. A stronger future study would need to incorporate more
+
+              objective measures of stress or performance.
             </p>
           </div>
         </div>
