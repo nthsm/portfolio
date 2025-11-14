@@ -70,8 +70,8 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 
 .imon-parallax-header-js h1 {
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
+  font-size: 2.25rem !important; /* Mobile-first default (4xl) */
+  line-height: 1.1 !important;
   margin-top: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
@@ -80,14 +80,14 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 
 .imon-parallax-header-js .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Mobile-first default (xl) */
   color: #2f3030;
   margin-top: 0.5rem;
   font-weight: normal;
   text-shadow: none;
 }
 
-/* --- MOBILE STYLES MODIFIED --- */
+/* --- MOBILE STYLES (Layout only) --- */
 @media (max-width: 768px) {
   .imon-parallax-header-js {
     background-attachment: scroll;
@@ -103,16 +103,28 @@ img[src^='/project']:not([src='/project4-process.png']):not(
     max-width: 100%;
     margin-top: 0;
   }
+}
+/* --- END OF MOBILE STYLES --- */
 
+/* --- Text Scaling for Tablet & Desktop --- */
+@media (min-width: 768px) {
   .imon-parallax-header-js h1 {
-    font-size: 2.25rem !important;
-    line-height: 1.1 !important;
+    font-size: 3rem !important; /* 5xl */
+    line-height: 1 !important;
   }
   .imon-parallax-header-js .subtitle {
-    font-size: 1.125rem !important;
+    font-size: 1.25rem; /* xl */
   }
 }
-/* --- END OF MOBILE STYLE MODIFICATIONS --- */
+@media (min-width: 1024px) {
+  .imon-parallax-header-js h1 {
+    font-size: 3.75rem !important; /* 6xl */
+  }
+  .imon-parallax-header-js .subtitle {
+    font-size: 1.5rem; /* 2xl */
+  }
+}
+/* --- END OF TEXT SCALING --- */
 
 .imon-content-wrapper .content-section {
   padding: 3rem 1rem;
@@ -202,23 +214,57 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   @apply text-sm font-semibold tracking-wider no-underline hover:underline;
 }
 
-/* Project-specific Colors */
+/* Project-specific Colors & Backgrounds */
+
+/* Mobile-first: Use portrait images by default */
+.project-color-blue {
+  background-image: url('/project1-bg-mobile.png');
+}
+.project-color-red {
+  background-image: url('/project2-bg-mobile.png');
+}
+.project-color-purple {
+  background-image: url('/project3-bg-mobile.png');
+}
+.project-color-green {
+  background-image: url('/project4-bg-mobile.png');
+}
+.project-color-navy {
+  background-image: url('/project5-bg-mobile.png');
+}
+
+/* Override with wide images ONLY on large screens (desktop) */
+@media (min-width: 1024px) {
+  .project-color-blue {
+    background-image: url('/project1-bg.png');
+  }
+  .project-color-red {
+    background-image: url('/project2-bg.png');
+  }
+  .project-color-purple {
+    background-image: url('/project3-bg.png');
+  }
+  .project-color-green {
+    background-image: url('/project4-bg.png');
+  }
+  .project-color-navy {
+    background-image: url('/project5-bg.png');
+  }
+}
+
+/* Project-specific text colors (no change) */
 .project-color-blue h1 {
   color: #25a0ea;
 }
-
 .project-color-red h1 {
   color: #e4504c;
 }
-
 .project-color-purple h1 {
   color: #9b6cc9;
 }
-
 .project-color-green h1 {
   color: #52af54;
 }
-
 .project-color-navy h1 {
   color: #35485e;
 }
