@@ -192,10 +192,10 @@ export default function HomePage() {
                 <p>
                   I'm a <span className="font-bold">user researcher</span>{' '}
                   driven by a deep curiosity about the "why" behind
-                  human-computer interaction. I believe the most successful
-                  products are built upon a rigorous{' '}
+                  human-computer interaction. I'm genuinely customer-obsessed
+                  and believe the best products are built on a rigorous{' '}
                   <span className="font-bold">foundation of research</span> and
-                  a genuine understanding of the people they serve.
+                  a true understanding of the people they serve.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -204,12 +204,11 @@ export default function HomePage() {
                 </h2>
                 <p>
                   My approach blends{' '}
-                  <span className="font-bold">analytical thinking</span> and{' '}
-                  <span className="font-bold">data-driven insights</span> with
-                  the <span className="font-bold">empathy</span> of qualitative
-                  storytelling. I love diving into complex problems, speaking
-                  with users to uncover their true needs, and synthesizing those
-                  findings into{' '}
+                  <span className="font-bold">analytical thinking</span> with the{' '}
+                  <span className="font-bold">empathy</span> of qualitative
+                  storytelling. I thrive in a fast-paced environment and love
+                  diving into complex problems, speaking with users to uncover
+                  their true needs, and synthesizing those findings into{' '}
                   <span className="font-bold">actionable strategies</span> that
                   guide the design process.
                 </p>
@@ -225,23 +224,17 @@ export default function HomePage() {
                   </span>{' '}
                   at Florida State University, specializing in{' '}
                   <span className="font-bold">User-Centered Design</span>. My
-                  undergraduate background in Management Information Systems and
-                  Computer Science gives me a unique perspective, allowing me to{' '}
-                  <span className="font-bold">bridge the gap</span> between user
-                  needs, technical feasibility, and business goals.
+                  undergraduate degree in Management Information Systems gives
+                  me a unique perspective, allowing me to{' '}
+                  <span className="font-bold">bridge the gap</span> between
+                  user needs, data analysis, and business goals.
                 </p>
-              </motion.div>
-              <motion.div variants={itemVariants}>
-                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                  My Goal
-                </h2>
                 <p>
-                  Ultimately, my goal is to{' '}
-                  <span className="font-bold">advocate for the user</span> at
-                  every stage of product development, ensuring that strategic
-                  decisions are{' '}
-                  <span className="font-bold">grounded in evidence</span>, not
-                  just assumptions.
+                  Outside of my coursework, you can usually find me either
+                  exploring Tallahassee on my gravel bike
+                  or diving into a new rogue-like on my Steam Deck. I love the
+                  process of discovery—whether it's a new trail or a new
+                  in-game strategy.
                 </p>
               </motion.div>
             </div>
