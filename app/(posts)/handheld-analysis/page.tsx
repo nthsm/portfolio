@@ -13,7 +13,6 @@ export default function HandheldAnalysisPage() {
     <div className="imon-parallax-container">
       <ParallaxHeader
         speedFactor={0.4}
-        style={{ backgroundImage: "url('/project3-bg.png')" }}
         className="project-color-purple"
       >
         <h1>The Handheld Gamer's Voice</h1>
