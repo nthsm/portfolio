@@ -14,7 +14,6 @@ export default function SleeperResearchPage() {
     <div className="imon-parallax-container">
       <ParallaxHeader
         speedFactor={0.4}
-        style={{ backgroundImage: "url('/project5-bg.png')" }}
         className="project-color-navy"
       >
         <h1>Sleeper vs. Competitors</h1>
