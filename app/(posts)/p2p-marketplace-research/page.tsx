@@ -13,7 +13,6 @@ export default function P2PMarketplacePage() {
     <div className="imon-parallax-container">
       <ParallaxHeader
         speedFactor={0.4}
-        style={{ backgroundImage: "url('/project1-bg.png')" }}
         className="project-color-blue"
       >
         <h1>FSU Tech Connect</h1>
