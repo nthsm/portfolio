@@ -68,7 +68,7 @@ export default function HomePage() {
             <div className="mb-6 space-y-1 text-base text-zinc-600 md:text-lg dark:text-zinc-400">
               <div className="flex items-center">
                 <UserCheck className="mr-2 h-4 w-4 flex-shrink-0" />
-                <span>User Experience Researcher & Data Analyst</span>
+                <span>User Researcher & Data Analyst</span>
               </div>
             </div>
             <p className="mt-4 mb-6 max-w-2xl text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
