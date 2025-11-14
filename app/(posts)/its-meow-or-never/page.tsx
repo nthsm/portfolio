@@ -25,44 +25,91 @@ export default function ItsMeowOrNeverPage() {
       <div className="imon-content-wrapper">
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h1>The Initial Hypothesis (And Where I Went Wrong)</h1>
+            <h1>Project Overview</h1>
             <p>
-              Based on an initial heuristic evaluation, I hypothesized that the
-              "It's Meow or Never" website required a comprehensive redesign. I
-              identified several potential usability issues:
+              "It's Meow or Never" (IMON) is a non-profit cat rescue with a
+              website that, based on an initial "expert" review, appeared to
+              have significant usability flaws.
+            </p>
+            <p>
+              This project documents my process of starting with a strong,
+              biased hypothesis, testing that hypothesis against real user
+              data, and ultimately pivoting to a set of recommendations that
+              were far more targeted, effective, and achievable for a
+              non-profit client. It serves as a personal case study in
+              research humility and the power of data to correct assumptions.
+            </p>
+
+            <h2>My Role & Methods</h2>
+            <p>
+              As the sole UX Researcher, I conducted the end-to-end research
+              process. The goal was to identify and validate usability issues
+              to provide actionable recommendations.
+            </p>
+            <p>
+              The methods were chosen sequentially to first generate a baseline
+              and then systematically challenge it.
+            </p>
+            <ul>
+              <li>
+                <strong>Heuristic Evaluation:</strong> I started here to
+                quickly identify "obvious" usability problems based on
+                established design principles. This formed my initial (and
+                flawed) hypothesis.
+              </li>
+              <li>
+                <strong>User Survey (N=13):</strong> Deployed to gather broad
+                quantitative and qualitative data from real users to see if
+                their sentiments matched my expert review.
+              </li>
+              <li>
+                <strong>Usability Testing:</strong> Conducted to get
+                observational data. Seeing *what users do* is the ultimate
+                test of any hypothesis, and in this case, it provided the
+                clearest evidence for a pivot.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="content-section">
+          <div className="imon-content-inner clearfix">
+            <h2>The Initial Hypothesis</h2>
+            <p>
+              Based on my heuristic evaluation, I confidently hypothesized
+              that the website required a comprehensive redesign. My expert
+              review identified several glaring usability issues:
             </p>
             <ul>
               <li>
                 <strong>Poor Color Contrast:</strong> The prominent red
-                backgrounds created accessibility issues and poor readability.
+                backgrounds created obvious accessibility issues and poor
+                readability.
               </li>
               <li>
-                <strong>Confusing Hierarchy:</strong> Key calls-to-action seemed
-                buried, and the homepage felt cluttered with redundant
-                information.
+                <strong>Confusing Hierarchy:</strong> Key calls-to-action
+                like "Adopt" and "Donate" seemed buried, and the homepage felt
+                cluttered.
               </li>
               <li>
                 <strong>Fragmented Navigation:</strong> I assumed the site
                 structure was confusing and hindered users from completing key
-                tasks like adopting or donating.
+                tasks.
               </li>
             </ul>
             <p>
-              My assumption was that these factors created significant user
-              frustration and that a complete visual and structural overhaul was
-              the only solution. <strong>I was wrong.</strong>
+              My bias as a designer-minded researcher led me to believe that
+              these aesthetic and heuristic flaws would automatically
+              translate to a poor user experience and deter users.
             </p>
 
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                Initial (Flawed) Question: "How can we redesign the entire IMON
-                website to make it usable?"
-                <br />
-                <br />
-                Revised (Data-Driven) Question: "What are the *key* user pain
-                points, and how can we make targeted improvements that
-                *actually* help users and support the shelter's goals?"
+                My Hypothesis: "The website's poor aesthetics,
+                confusing hierarchy, and accessibility flaws create a
+                frustrating user experience that is the primary barrier to
+                adoption and donations."
               </h2>
               <div className="hmw-line"></div>
             </div>
@@ -71,10 +118,11 @@ export default function ItsMeowOrNeverPage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h1>Challenging My Assumptions with Research</h1>
+            <h2>Challenging My Assumptions with Research</h2>
             <p>
-              To validate or challenge my initial hypothesis, I employed a
-              mixed-methods research approach.
+              To validate or—as it turned out—challenge my hypothesis, I
+              employed the mixed-methods research approach to hear from actual
+              users.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <img
@@ -86,41 +134,33 @@ export default function ItsMeowOrNeverPage() {
               </figcaption>
             </figure>
 
-            <h2>User Survey (N=13)</h2>
+            <h3>User Survey (N=13)</h3>
             <p>
-              I distributed a survey to gather quantitative and qualitative
-              feedback. The results provided the first wave of data that
-              directly contradicted my assumptions.
+              The survey results provided the first wave of data that directly
+              contradicted my assumptions.
             </p>
             <ul>
               <li>
-                <strong>Navigation Was Not the Problem:</strong> 5 out of 13
-                respondents (38%) gave the website a perfect 5/5 score on "how
-                easy it is to find what you're looking for." The overall
-                sentiment was positive, suggesting my concerns about navigation
-                were largely unfounded.
+                <strong>Navigation Was Not the Problem:</strong> 38% of
+                respondents gave the website a perfect 5/5 score on "how easy
+                it is to find what you're looking for." The overall sentiment
+                was positive.
               </li>
               <li>
-                <strong>Aesthetics Were "Just Okay," Not a Blocker:</strong> 7
-                out of 13 respondents (54%) gave the site a 3/5 aesthetic
-                rating. Only one person rated it 2 or lower. This told me that
-                while it wasn't winning design awards, it wasn't the critical
-                barrier I thought it was.
+                <strong>Aesthetics Were "Just Okay," Not a Blocker:</strong> 54%
+                of respondents gave the site a 3/5 aesthetic rating. This told
+                me that while it wasn't winning awards, it wasn't the
+                critical barrier I assumed it was.
               </li>
               <li>
                 <strong>Content Priorities Were Clear:</strong> Users cared most
                 about <strong>"how the adoption process works"</strong> and{' '}
-                <strong>"clear contact information."</strong> My initial focus
-                on news and events was a lower priority for them.
-              </li>
-              <li>
-                <strong>The *Real* Culprit:</strong> The most consistent
-                complaint was friction and confusion related to the "Shelterluv"
-                third-party integration.
+                <strong>"clear contact information,"</strong> not the news
+                and events I had focused on.
               </li>
             </ul>
 
-            <h2>Usability Testing</h2>
+            <h3>Usability Testing</h3>
             <p>
               I then conducted usability tests, asking participants to complete
               key tasks. This observational data was the final piece of the
@@ -129,16 +169,17 @@ export default function ItsMeowOrNeverPage() {
             <ul>
               <li>
                 <strong>High Task Success & Efficiency:</strong> Participants
-                completed core tasks like "find a cat to adopt" and "donate via
-                Shelterluv" in less than 5 seconds. This was a stunning
-                revelation—my perceived navigation and hierarchy flaws were not
-                impeding users in practice.
+                completed core tasks like "find a cat to adopt" and "donate"
+                in <strong>less than 5 seconds</strong>. My perceived
+                navigation and hierarchy flaws were not impeding users in
+                practice.
               </li>
               <li>
-                <strong>Shelterluv Friction Confirmed:</strong> While users
-                *completed* tasks, the tests confirmed that the journey
-                *involving* Shelterluv was the main source of hesitation or
-                confusion.
+                <strong>The *Real* Culprit Emerged:</strong> The most
+                consistent complaint was friction and confusion related to the
+                "Shelterluv" <strong>third-party integration</strong> used for
+                adoptions and donations. The usability break was not on the
+                IMON site itself, but in the handoff to this external tool.
               </li>
             </ul>
           </div>
@@ -146,36 +187,26 @@ export default function ItsMeowOrNeverPage() {
 
         <div className="content-section">
           <div className="imon-content-inner">
-            <h1>The Learning & Revised Recommendations</h1>
+            <h2>The Learning & Revised Recommendations</h2>
             <p>
-              This research was a valuable lesson in challenging my own
-              assumptions. My heuristic evaluation was a fine starting point,
-              but it was not a substitute for real user data. The survey and
-              usability tests proved that a complete overhaul was unnecessary.
+              This research was a valuable lesson in humility and the power of
+              challenging my own assumptions. My heuristic evaluation was a
+              fine starting point, but it was not a substitute for real user
+              data.
             </p>
             <p>
-              Instead of a redesign, I pivoted to a set of targeted, data-driven
-              recommendations for IMON that would address *actual* user needs
-              and be far more achievable for a non-profit.
+              Instead of a costly and unnecessary redesign, I pivoted to a set
+              of targeted, data-driven recommendations that would address
+              *actual* user needs and be far more achievable for a non-profit.
             </p>
-            <figure className="my-4 flex flex-col items-center">
-              <img
-                src="http://googleusercontent.com/image_generation_content/0"
-                alt="A diagram showing a 'Before' concept of a cluttered website and an 'After' concept of a simplified, data-driven layout focused on key user tasks."
-              />
-              <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                My process shifted from a total redesign (left) to a focused
-                revision based on research (right).
-              </figcaption>
-            </figure>
 
-            <h2>My Final Recommendations to "It's Meow or Never"</h2>
+            <h3>My Final Recommendations to "It's Meow or Never"</h3>
             <ol>
               <li>
                 <strong>Address Accessibility First:</strong> Remove the red
-                background that causes poor contrast. Change the red color used
-                for text and links to a shade that meets WCAG AA standards. This
-                is a high-impact, low-effort fix.
+                background that causes poor contrast. Change the red color
+                used for text and links to a shade that meets WCAG AA
+                standards. This is a high-impact, low-effort fix.
               </li>
               <li>
                 <strong>Optimize the Homepage (Don't Redesign It):</strong>
@@ -183,7 +214,6 @@ export default function ItsMeowOrNeverPage() {
                   <li>
                     Remove the "Lost & Found" database link to reduce clutter.
                   </li>
-                  <li>Use fewer, more impactful images.</li>
                   <li>
                     Break up large blocks of text to improve scannability.
                   </li>
@@ -191,22 +221,19 @@ export default function ItsMeowOrNeverPage() {
               </li>
               <li>
                 <strong>Clarify the Adoption Process:</strong> Create a new,
-                dedicated page that explains the adoption process step-by-step.
-                This directly addresses the #1 piece of information users
-                wanted.
+                dedicated page that explains the adoption process step-by-step,
+                directly addressing the #1 piece of information users wanted.
               </li>
               <li>
-                <strong>Investigate the Shelterluv Integration:</strong> Analyze
-                the user journey in and out of the Shelterluv platform. The
-                friction here is the *real* usability problem. Recommendations
-                include:
+                <strong>Investigate the Shelterluv Integration:</strong> This is
+                the *real* usability problem.
                 <ul>
                   <li>
-                    Providing clearer "what to expect" text before users click
-                    out to the platform.
+                    Add "what to expect" text before users click out to the
+                    platform to smooth the transition.
                   </li>
                   <li>
-                    Exploring if Shelterluv offers different, more seamless
+                    Research if Shelterluv offers different, more seamless
                     integration methods.
                   </li>
                 </ul>
@@ -217,14 +244,14 @@ export default function ItsMeowOrNeverPage() {
 
         <div className="content-section">
           <div className="imon-content-inner">
-            <h1>Reflection</h1>
+            <h2>Reflection</h2>
             <p>
               As a researcher, it's crucial to acknowledge when your hypothesis
-              is wrong. This project was a perfect example of that. By trusting
-              the user data over my own initial "expert" opinion, I was able to
-              move from a costly, unnecessary redesign proposal to a set of
-              simple, high-impact recommendations that directly address
-              documented user needs.
+              is wrong. This project was a perfect example. By trusting the
+              user data over my own "expert" opinion, I was able to move from a
+              costly, unnecessary redesign proposal to a set of simple,
+              high-impact recommendations that directly address documented user
+              needs.
             </p>
             <p>
               This approach not only provides more value to the stakeholder but
