@@ -13,7 +13,6 @@ export default function ItsMeowOrNeverPage() {
     <div className="imon-parallax-container">
       <ParallaxHeader
         speedFactor={0.4}
-        style={{ backgroundImage: "url('/project2-bg.png')" }}
         className="project-color-red"
       >
         <h1>Pivoting for Paws</h1>
@@ -74,7 +73,7 @@ export default function ItsMeowOrNeverPage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h2>The Initial Hypothesis</h2>
+            <h2>The Initial Hypothesis (And Where I Went Wrong)</h2>
             <p>
               Based on my heuristic evaluation, I confidently hypothesized
               that the website required a comprehensive redesign. My expert
@@ -106,7 +105,7 @@ export default function ItsMeowOrNeverPage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                My Hypothesis: "The website's poor aesthetics,
+                My Initial (Flawed) Hypothesis: "The website's poor aesthetics,
                 confusing hierarchy, and accessibility flaws create a
                 frustrating user experience that is the primary barrier to
                 adoption and donations."
