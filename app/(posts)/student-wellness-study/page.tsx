@@ -13,7 +13,6 @@ export default function StudentWellnessPage() {
     <div className="imon-parallax-container">
       <ParallaxHeader
         speedFactor={0.4}
-        style={{ backgroundImage: "url('/project4-bg.png')" }}
         className="project-color-green"
       >
         <h1>Student Wellness Report</h1>
@@ -224,7 +223,6 @@ export default function StudentWellnessPage() {
               that my hypothesis was not strongly supported due to flawed data
               collection (i.e., relying on self-reported stress) was a key
               insight. A stronger future study would need to incorporate more
-
               objective measures of stress or performance.
             </p>
           </div>
