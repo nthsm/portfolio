@@ -180,7 +180,7 @@ export default function ItsMeowOrNeverPage() {
               <li>
                 <strong>High Task Success & Efficiency:</strong> Participants
                 completed core tasks like "find a cat to adopt" and "donate"
-                in <strong>less than 5 seconds</strong>. My perceived
+                in <strong>less than 10 seconds</strong>. My perceived
                 navigation and hierarchy flaws were not impeding users in
                 practice.
               </li>
