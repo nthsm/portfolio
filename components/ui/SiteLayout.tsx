@@ -242,9 +242,11 @@ export default function SiteLayout({
 
     const handleScroll = () => {
       let makeOpaque = false
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1850) {
+        // Desktop (1851px+)
         makeOpaque = window.scrollY > window.innerHeight
       } else {
+        // Mobile (0-767) AND Tablet (768-1850)
         makeOpaque = window.scrollY > window.innerHeight * 0.5
       }
 
