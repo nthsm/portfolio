@@ -40,7 +40,7 @@ export function ParallaxHeader({
       className={cn('imon-parallax-header-js', className)}
       style={style}
     >
-      <div className="mx-auto w-full max-w-7xl">{children}</div>
+      <div className="mx-auto w-full max-w-7xl text-center">{children}</div>
     </div>
   )
 }
