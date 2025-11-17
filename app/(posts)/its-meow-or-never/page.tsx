@@ -24,10 +24,10 @@ export default function ItsMeowOrNeverPage() {
       <div className="imon-content-wrapper">
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h1>Project Overview</h1>
+            <h2>Project Overview</h2>
             <p>
               "It's Meow or Never" (IMON) is a non-profit cat rescue with a
-              website that, based on an initial "expert" review, appeared to
+              website that, based on an initial heuristic review, appeared to
               have significant usability flaws.
             </p>
             <p>
@@ -52,9 +52,8 @@ export default function ItsMeowOrNeverPage() {
             <ul>
               <li>
                 <strong>Heuristic Evaluation:</strong> I started here to
-                quickly identify "obvious" usability problems based on
-                established design principles. This formed my initial (and
-                flawed) hypothesis.
+                quickly identify obvious usability problems based on
+                established design principles. This formed my initial hypothesis.
               </li>
               <li>
                 <strong>User Survey (N=13):</strong> Deployed to gather broad
@@ -63,7 +62,7 @@ export default function ItsMeowOrNeverPage() {
               </li>
               <li>
                 <strong>Usability Testing:</strong> Conducted to get
-                observational data. Seeing *what users do* is the ultimate
+                observational data. Seeing what users do is the ultimate
                 test of any hypothesis, and in this case, it provided the
                 clearest evidence for a pivot.
               </li>
@@ -73,29 +72,30 @@ export default function ItsMeowOrNeverPage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h2>The Initial Hypothesis (And Where I Went Wrong)</h2>
+            <h2>The Initial Hypothesis</h2>
             <p>
-              Based on my heuristic evaluation, I confidently hypothesized
-              that the website required a comprehensive redesign. My expert
-              review identified several glaring usability issues:
+              Based on my heuristic evaluation, I hypothesized
+              that the website required a comprehensive redesign. My
+              review identified several usability issues:
             </p>
-            <ul>
-              <li>
-                <strong>Poor Color Contrast:</strong> The prominent red
-                backgrounds created obvious accessibility issues and poor
-                readability.
-              </li>
-              <li>
-                <strong>Confusing Hierarchy:</strong> Key calls-to-action
-                like "Adopt" and "Donate" seemed buried, and the homepage felt
-                cluttered.
-              </li>
-              <li>
-                <strong>Fragmented Navigation:</strong> I assumed the site
-                structure was confusing and hindered users from completing key
-                tasks.
-              </li>
-            </ul>
+            <figure className="my-4 flex flex-col items-center">
+              <div className="flex gap-2 not-prose">
+                <img
+                  src="/project2-findings.png"
+                  alt="Initial heuristic findings."
+                  className="w-1/2"
+                />
+                <img
+                  src="/project2-heuristic.png"
+                  alt="Heuristic evaluation screenshot."
+                  className="w-1/2"
+                />
+              </div>
+              <figcaption>
+                My initial heuristic evaluation identified several potential
+                issues.
+              </figcaption>
+            </figure>
             <p>
               My bias as a designer-minded researcher led me to believe that
               these aesthetic and heuristic flaws would automatically
@@ -105,9 +105,8 @@ export default function ItsMeowOrNeverPage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                My Initial (Flawed) Hypothesis: "The website's poor aesthetics,
-                confusing hierarchy, and accessibility flaws create a
-                frustrating user experience that is the primary barrier to
+                "The website's aesthetics, hierarchy, and accessibility flaws 
+                create a frustrating user experience that is the primary barrier to
                 adoption and donations."
               </h2>
               <div className="hmw-line"></div>
@@ -118,22 +117,7 @@ export default function ItsMeowOrNeverPage() {
         <div className="content-section">
           <div className="imon-content-inner clearfix">
             <h2>Challenging My Assumptions with Research</h2>
-            <p>
-              To validate or—as it turned out—challenge my hypothesis, I
-              employed the mixed-methods research approach to hear from actual
-              users.
-            </p>
-            <figure className="my-4 flex flex-col items-center">
-              <img
-                src="/project2-process.png"
-                alt="Process Flow: Understand, Research, Define, Design, Test"
-              />
-              <figcaption className="mt-1 mb-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-                The research-focused process I followed.
-              </figcaption>
-            </figure>
-
-            <h3>User Survey (N=13)</h3>
+            <h3>User Survey</h3>
             <p>
               The survey results provided the first wave of data that directly
               contradicted my assumptions.
@@ -158,6 +142,33 @@ export default function ItsMeowOrNeverPage() {
                 and events I had focused on.
               </li>
             </ul>
+            <figure className="my-4 flex flex-col items-center">
+              <div className="flex w-full flex-col gap-4 md:flex-row md:gap-8 not-prose">
+                <img
+                  src="/project2-navigation.png"
+                  alt="Chart: 77% of users rated site navigation a 3 or higher (out of 5)."
+                  className="md:w-1/2"
+                />
+                <img
+                  src="/project2-aesthetics.png"
+                  alt="Chart: 54% of users rated site aesthetics a 3 (out of 5)."
+                  className="md:w-1/2"
+                />
+              </div>
+              <figcaption>
+                Survey data showing user sentiment on navigation (left) and
+                aesthetics (right).
+              </figcaption>
+            </figure>
+            <figure className="my-4 flex flex-col items-center">
+              <img
+                src="/project2-content.png"
+                alt="Chart: Users rated 'Clear contact info' and 'Info on adoption process' as most important."
+              />
+              <figcaption>
+                Survey data showing what content users rated as most important.
+              </figcaption>
+            </figure>
 
             <h3>Usability Testing</h3>
             <p>
@@ -174,13 +185,21 @@ export default function ItsMeowOrNeverPage() {
                 practice.
               </li>
               <li>
-                <strong>The *Real* Culprit Emerged:</strong> The most
-                consistent complaint was friction and confusion related to the
+                The most consistent complaint was friction and confusion related to the
                 "Shelterluv" <strong>third-party integration</strong> used for
                 adoptions and donations. The usability break was not on the
                 IMON site itself, but in the handoff to this external tool.
               </li>
             </ul>
+            <figure className="my-4 flex flex-col items-center">
+            <img
+              src="/project2-quote.png"
+              alt="A representative quote from usability testing highlighting the Shelterluv friction."
+            />
+            <figcaption>
+              A representative quote from usability testing highlighting the Shelterluv friction.
+            </figcaption>
+          </figure>
           </div>
         </div>
 
@@ -190,13 +209,12 @@ export default function ItsMeowOrNeverPage() {
             <p>
               This research was a valuable lesson in humility and the power of
               challenging my own assumptions. My heuristic evaluation was a
-              fine starting point, but it was not a substitute for real user
-              data.
+              starting point, but it was not a substitute for real user data.
             </p>
             <p>
-              Instead of a costly and unnecessary redesign, I pivoted to a set
+              Instead of an unnecessary redesign, I pivoted to a set
               of targeted, data-driven recommendations that would address
-              *actual* user needs and be far more achievable for a non-profit.
+              actual user needs and be far more achievable for a non-profit.
             </p>
 
             <h3>My Final Recommendations to "It's Meow or Never"</h3>
@@ -205,7 +223,8 @@ export default function ItsMeowOrNeverPage() {
                 <strong>Address Accessibility First:</strong> Remove the red
                 background that causes poor contrast. Change the red color
                 used for text and links to a shade that meets WCAG AA
-                standards. This is a high-impact, low-effort fix.
+                standards. This is a high-impact, low-effort fix. I suggested 
+                #B30F11 as it meets contrast requirements while maintaining brand color.
               </li>
               <li>
                 <strong>Optimize the Homepage (Don't Redesign It):</strong>
@@ -214,7 +233,7 @@ export default function ItsMeowOrNeverPage() {
                     Remove the "Lost & Found" database link to reduce clutter.
                   </li>
                   <li>
-                    Break up large blocks of text to improve scannability.
+                    Break up large blocks of text to improve scannability. This is key.
                   </li>
                 </ul>
               </li>
@@ -224,8 +243,7 @@ export default function ItsMeowOrNeverPage() {
                 directly addressing the #1 piece of information users wanted.
               </li>
               <li>
-                <strong>Investigate the Shelterluv Integration:</strong> This is
-                the *real* usability problem.
+                <strong>Investigate the Shelterluv Integration:</strong>
                 <ul>
                   <li>
                     Add "what to expect" text before users click out to the
@@ -247,7 +265,7 @@ export default function ItsMeowOrNeverPage() {
             <p>
               As a researcher, it's crucial to acknowledge when your hypothesis
               is wrong. This project was a perfect example. By trusting the
-              user data over my own "expert" opinion, I was able to move from a
+              user data over my own opinion, I was able to move from a
               costly, unnecessary redesign proposal to a set of simple,
               high-impact recommendations that directly address documented user
               needs.
