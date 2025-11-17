@@ -24,7 +24,7 @@ export default function P2PMarketplacePage() {
       <div className="imon-content-wrapper">
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h1>Project Overview</h1>
+            <h2>Project Overview</h2>
             <p>
               For many students, buying and selling used electronics is a risky
               and frustrating experience. FSU students currently rely on
@@ -41,10 +41,9 @@ export default function P2PMarketplacePage() {
 
             <h2>My Role & Methods</h2>
             <p>
-              As the sole <strong>UX Researcher</strong> on this project, my
-              responsibilities were to conduct all user research, synthesize
-              the findings, and develop a set of data-driven feature
-              recommendations.
+              As a UX Researcher, my responsibilities were to conduct all 
+              user research, synthesize the findings, and develop a set 
+              of data-driven feature recommendations.
             </p>
             <p>
               A <strong>mixed-methods study</strong> was chosen to get a
@@ -55,7 +54,7 @@ export default function P2PMarketplacePage() {
             </p>
             <ul>
               <li>
-                <strong>Quantitative Survey (N=16):</strong> Deployed to
+                <strong>User Survey (N=16):</strong> Deployed to
                 quickly identify and validate core frustrations and test the
                 "trust" hypothesis around an @fsu.edu verification.
               </li>
@@ -74,10 +73,9 @@ export default function P2PMarketplacePage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                The Goal: To understand student pain points in P2P transactions
-                and identify the core features that would make a
-                university-exclusive app a safe, convenient, and trusted
-                alternative.
+                The goal is to understand student pain points in P2P transactions
+                and identify the core features that would make an
+                app a safe, convenient, and trusted alternative.
               </h2>
               <div className="hmw-line"></div>
             </div>
@@ -86,16 +84,33 @@ export default function P2PMarketplacePage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h2>Understanding the User</h2>
-            <h3>Research Summary: A Pivot from "Safety" to "Efficiency"</h3>
+            <h2>Research Summary</h2>
+            <h3>User Survey</h3>
             <p>
-              My initial hypothesis was that <strong>safety</strong> was the
+              My initial hypothesis was that safety was the
               primary concern for students. The quantitative survey data
-              validated this: <strong>81.3%</strong> of respondents (13 out of
+              validated this: <strong>87.6%</strong> of respondents (14 out of
               16) rated "Safety/Trust" as a 4 or 5 (out of 5) in importance.
               Furthermore, <strong>81.3%</strong> said an @fsu.edu email
               verification would increase their trust.
             </p>
+            <figure className="my-4 flex flex-col items-center">
+              <div className="flex w-full flex-col gap-4 md:flex-row md:gap-8 not-prose">
+                <img
+                  src="/project1-barsafety.png"
+                  alt="Bar chart showing 81.3% of users rate Safety/Trust as a 4 or 5 out of 5."
+                  className="md:w-1/2"
+                />
+                <img
+                  src="/project1-barfsuemail.png"
+                  alt="Bar chart showing 81.3% of users would trust a platform more with @fsu.edu email verification."
+                  className="md:w-1/2"
+                />
+              </div>
+              <figcaption>
+                Quantitative data validating the importance of safety and trust.
+              </figcaption>
+            </figure>
             <p>
               However, the interviews and survey free-responses revealed a
               more universal and immediate pain point: <strong>friction</strong>
@@ -103,6 +118,24 @@ export default function P2PMarketplacePage() {
               <strong>significant mental workload</strong> of the process was
               the daily frustration.
             </p>
+            <figure className="my-4 flex flex-col items-center">
+              <div className="flex w-full flex-col gap-4 md:flex-row md:gap-8 not-prose">
+                <img
+                  src="/project1-barconvenience.png"
+                  alt="Bar chart showing that users have decided not to go through with a transaction due to inconvenience or safety concerns."
+                  className="md:w-1/2"
+                />
+                <img
+                  src="/project1-piecomplication.png"
+                  alt="Pie chart showing complications in the P2P process."
+                  className="md:w-1/2"
+                />
+              </div>
+              <figcaption>
+                Further data illustrating the importance of convenience and user
+                motivations.
+              </figcaption>
+            </figure>
             <p>
               Users expressed deep frustration with pricing uncertainty,
               tedious listing processes, and the fear of being "ghosted" by
@@ -110,7 +143,22 @@ export default function P2PMarketplacePage() {
               expanding the project's goals from just "safety" to also include
               "efficiency and convenience."
             </p>
-
+            <h3>User Interviews</h3>
+            <p>
+              The qualitative interviews provided rich context to the survey
+              data. Students shared stories of failed transactions, wasted time,
+              and anxiety around meetups. Several recurring themes emerged,
+              highlighting the multifaceted nature of the pain points.
+            </p>
+            <figure className="my-4 flex flex-col items-center">
+              <img
+                src="/project1-interviewquotes.png"
+                alt="Quotes from user interviews highlighting key pain points."
+              />
+              <figcaption>
+                Quotes from user interviews highlighting key pain points.
+              </figcaption>
+            </figure>
             <h3>Key Pain Points</h3>
             <ol>
               <li>
@@ -140,35 +188,41 @@ export default function P2PMarketplacePage() {
 
         <div className="content-section">
           <div className="imon-content-inner">
-            <h2>Defining the User: Personas</h2>
+            <h3>Personas</h3>
             <p>
               From the research, I synthesized several personas to represent
               the core user base. The primary persona, "Joe," guided the
               feature recommendations by focusing on the most common and
               frustrating pain points.
             </p>
-            <h3>Primary Persona: Joe, The Non-Expert Seller</h3>
-            <ul>
-              <li>
-                <strong>Bio:</strong> A 19-year-old full-time student living on
-                campus.
-              </li>
-              <li>
-                <strong>Goal:</strong> Wants to sell his old Steam Deck for
-                extra cash with minimal time and effort. He needs a fair price
-                without doing hours of research and wants to meet a buyer
-                conveniently on campus.
-              </li>
-              <li>
-                <strong>Frustrations:</strong> He feels overwhelmed by the
-                "blank page" of creating a listing. He has no idea how to
-                price his item fairly and dreads the back-and-forth messaging.
-              </li>
-            </ul>
-            <blockquote>
-              "I know my old Steam Deck is worth something, but I have no idea
-              how to price it or what to write in the description."
-            </blockquote>
+            <figure className="my-4 flex flex-col items-center">
+              <img
+                src="/project1-joepersona.png"
+                alt="Primary Persona: Joe, The Non-Expert Seller"
+              />
+              <figcaption>
+                Primary Persona: Joe, The Non-Expert Seller
+              </figcaption>
+            </figure>
+            <p>
+              I also created a user journey map for Joe, outlining his typical
+              experience trying to sell a used Steam Deck. This map highlighted the
+              key pain points and emotional highs and lows throughout the process.
+            </p>
+            <figure className="my-4 flex flex-col items-center">
+              <img
+                src="/project1-joejourneymap.png"
+                alt="User Journey Map for Joe, The Non-Expert Seller"
+              />
+              <figcaption>
+                User Journey Map for Joe, The Non-Expert Seller
+              </figcaption>
+            </figure>
+            <p>
+              This journey map was instrumental in visualizing where the app
+              could intervene to reduce friction and improve the overall user
+              experience.
+            </p>
 
             <h3>Other Key Personas</h3>
             <ul>
@@ -191,7 +245,7 @@ export default function P2PMarketplacePage() {
 
         <div className="content-section">
           <div className="imon-content-inner">
-            <h2>Research-Driven Recommendations</h2>
+            <h2>Recommendations</h2>
             <p>
               Synthesizing the user pain points, the survey data, and the
               primary persona (Joe), I developed a set of feature
