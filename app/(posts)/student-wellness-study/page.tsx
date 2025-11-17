@@ -24,13 +24,12 @@ export default function StudentWellnessPage() {
       <div className="imon-content-wrapper">
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h1>Project Overview</h1>
+            <h2>Project Overview</h2>
             <p>
               This project originated in an undergraduate Data Science course
-              and served as my first deep dive into the full data analysis
+              and served as my first deep dive into the full product development
               lifecycle. The goal was to analyze survey data collected from
-              ~90 FSU students to find potential correlations between sleep
-              habits and self-reported stress levels during midterms.
+              ~90 FSU students to find potential patterns in the data during midterms.
             </p>
             <p>
               This project is a showcase of my foundational data analysis
@@ -53,7 +52,7 @@ export default function StudentWellnessPage() {
             <ul>
               <li>
                 <strong>Data Cleaning (Excel):</strong> This was the most
-                critical method. The raw Qualtrics data was filled with
+                critical method. The raw Google Forms data was filled with
                 inconsistent text, duplicates, and irrelevant entries. Excel
                 was the ideal tool for meticulous, cell-by-cell
                 standardization.
@@ -71,11 +70,17 @@ export default function StudentWellnessPage() {
                 present the final findings.
               </li>
             </ul>
+            <p>
+              The data collected featured a lot of different metrics, but I chose
+              to focus on sleep strategy as the key independent variable. The
+              rationale was that sleep is a well-known factor influencing stress
+              and productivity, making it a logical focal point for analysis.
+            </p>
 
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                My Hypothesis: "Do students with a defined sleep strategy
+                "Do students with a defined sleep strategy
                 report significantly different sleep duration, stress levels,
                 and daily productivity indicators compared to students without a
                 strategy?"
@@ -173,13 +178,13 @@ export default function StudentWellnessPage() {
               </li>
               <li>
                 <strong>Minor Stress Level Differences:</strong> Students with a
-                sleep strategy reported *slightly* lower average stress (5.21
+                sleep strategy reported slightly lower average stress (5.21
                 vs. 5.31), but the difference is not statistically
                 significant.
               </li>
               <li>
                 <strong>Slightly Higher Performance:</strong> Similarly,
-                students with a strategy self-reported *slightly* higher
+                students with a strategy self-reported slightly higher
                 daily performance (3.44 vs. 3.30).
               </li>
             </ol>
