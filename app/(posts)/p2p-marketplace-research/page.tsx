@@ -43,7 +43,7 @@ export default function P2PMarketplacePage() {
             <p>
               As a UX Researcher, my responsibilities were to conduct all 
               user research, synthesize the findings, and develop a set 
-              of data-driven feature recommendations.
+              of <strong>data-driven feature recommendations</strong>.
             </p>
             <p>
               A <strong>mixed-methods study</strong> was chosen to get a
@@ -84,7 +84,7 @@ export default function P2PMarketplacePage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h2>Research Summary</h2>
+            <h2>Research Summary: The Data-Driven Pivot</h2>
             <h3>User Survey</h3>
             <p>
               My initial hypothesis was that safety was the
@@ -113,10 +113,10 @@ export default function P2PMarketplacePage() {
             </figure>
             <p>
               However, the interviews and survey free-responses revealed a
-              more universal and immediate pain point: <strong>friction</strong>
-              . Safety was a major factor, but the{' '}
-              <strong>significant mental workload</strong> of the process was
-              the daily frustration.
+              more universal and immediate pain point: <strong>high friction</strong>. Safety was a major factor, but the{' '}
+              <strong>significant cognitive load</strong> of the process was
+              the daily frustration. This discovery served as the Data-Driven Pivot
+              for the project's product strategy.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <div className="flex w-full flex-col gap-4 md:flex-row md:gap-8 not-prose">
@@ -223,8 +223,8 @@ export default function P2PMarketplacePage() {
             <h3>User Journey Mapping</h3>
             <p>
               I also created a user journey map for Joe, outlining his typical
-              experience trying to sell a used Steam Deck. This map highlighted the
-              key pain points and emotional highs and lows throughout the process.
+              experience trying to sell a used Steam Deck. This map was critical for visualizing the impact
+              of <strong>cognitive load</strong> on the user's emotional state throughout the process.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <img
@@ -238,37 +238,33 @@ export default function P2PMarketplacePage() {
             <p>
               This journey map was instrumental in visualizing where the app
               could intervene to reduce friction and improve the overall user
-              experience.
+              experience, informing the final Data-Driven Product Strategy.
             </p>
           </div>
         </div>
 
         <div className="content-section">
           <div className="imon-content-inner">
-            <h2>Recommendations</h2>
+            <h2>Actionable Recommendations</h2>
             <p>
               Synthesizing the user pain points, the survey data, and the
-              primary persona (Joe), I developed a set of feature
-              recommendations. These are not design mockups, but strategic
-              proposals focused on addressing the validated user needs.
+              primary persona (Joe), I developed a set of <strong>actionable recommendations</strong>. These strategic
+              proposals are focused on maximizing efficiency and trust.
             </p>
             <ol>
               <li>
                 <strong>Mandatory @fsu.edu Verification:</strong> This is the
-                top priority to establish a baseline of trust and safety, which
-                81.3% of users confirmed would increase their trust.
+                top priority to establish a baseline of trust and safety (quantifiable success: 81.3% of users confirmed this would increase trust).
               </li>
               <li>
                 <strong>AI Price Suggestion Tool:</strong> To combat Joe's
                 "pricing uncertainty," a feature that suggests a fair market
-                price based on the item, condition, and recent listings would
-                drastically reduce friction.
+                price would drastically reduce listing <strong>friction and cognitive load</strong>.
               </li>
               <li>
                 <strong>Preset "Meetup Zones":</strong> To solve the logistical
                 nightmare of meetups, the app should feature a map of
-                pre-defined, safe, and well-lit public locations on campus
-                (e.g., Strozier Library, Student Union).
+                pre-defined, safe, and well-lit public locations on campus.
               </li>
               <li>
                 <strong>Accessibility-Labeled Meetups:</strong> A simple but
@@ -285,14 +281,12 @@ export default function P2PMarketplacePage() {
 
             <h2>Reflection</h2>
             <p>
-              This project was a fantastic exercise in mixed-methods research.
-              The most valuable insight was the pivot from my initial
+              This project was a fantastic exercise in <strong>mixed-methods research</strong>.
+              The most valuable insight was the Data-Driven Pivot from my initial
               "safety-first" hypothesis. While safety was critical, the
               qualitative interviews revealed that convenience and efficiency
               were the more immediate blockers for users. This finding
-              completely reshaped the feature recommendations from a simple
-              verification system to a suite of tools designed to reduce
-              mental effort.
+              completely reshaped the feature recommendations toward a data-driven product strategy designed to reduce mental effort.
             </p>
           </div>
         </div>
