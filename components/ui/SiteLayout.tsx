@@ -333,7 +333,7 @@ export default function SiteLayout({
         {showProgressBar && (
           <ScrollProgress
             className={cn(
-              'h-0.5 bg-zinc-800 dark:bg-zinc-600',
+              'h-0.5 bg-zinc-800 dark:bg-zinc-400',
               'transition-opacity duration-300 ease-in-out',
               isHeaderTransparent ? 'opacity-0' : 'opacity-100',
             )}
