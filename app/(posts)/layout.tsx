@@ -20,6 +20,7 @@ export default function LayoutBlogPost({
     '/p2p-marketplace-research',
     '/handheld-analysis',
     '/sleeper-research',
+    '/rocket-money',
   ]
 
   const isCaseStudyPage = caseStudyPaths.includes(pathname)
