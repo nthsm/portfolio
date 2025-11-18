@@ -204,6 +204,23 @@ export default function P2PMarketplacePage() {
                 Primary Persona: Joe, The Non-Expert Seller
               </figcaption>
             </figure>
+            <h3>Other Key Personas</h3>
+            <ul>
+              <li>
+                <strong>Rebecca, The Urgent Buyer:</strong> Needs a fast,
+                trustworthy way to find a replacement for a broken device.
+              </li>
+              <li>
+                <strong>Erica, The Motivated Mover:</strong> Needs an efficient
+                process and reliable buyers to sell items before moving out.
+              </li>
+              <li>
+                <strong>Brenda, The Accessibility Advocate:</strong> Needs a
+                way to easily identify and coordinate accessible meetup
+                locations.
+              </li>
+            </ul>
+            <h3>User Journey Mapping</h3>
             <p>
               I also created a user journey map for Joe, outlining his typical
               experience trying to sell a used Steam Deck. This map highlighted the
@@ -223,23 +240,6 @@ export default function P2PMarketplacePage() {
               could intervene to reduce friction and improve the overall user
               experience.
             </p>
-
-            <h3>Other Key Personas</h3>
-            <ul>
-              <li>
-                <strong>Rebecca, The Urgent Buyer:</strong> Needs a fast,
-                trustworthy way to find a replacement for a broken device.
-              </li>
-              <li>
-                <strong>Erica, The Motivated Mover:</strong> Needs an efficient
-                process and reliable buyers to sell items before moving out.
-              </li>
-              <li>
-                <strong>Brenda, The Accessibility Advocate:</strong> Needs a
-                way to easily identify and coordinate accessible meetup
-                locations.
-              </li>
-            </ul>
           </div>
         </div>
 
