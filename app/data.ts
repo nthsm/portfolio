@@ -42,14 +42,6 @@ export const PROJECTS: Project[] = [
     id: 'project1',
   },
   {
-    name: "The Handheld Gamer's Voice",
-    description:
-      'A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.',
-    link: '/handheld-analysis',
-    image: '/project3-tn.png',
-    id: 'project3',
-  },
-  {
     name: 'Pivoting for Paws',
     description:
       'A case study in challenging assumptions. How initial heuristics were corrected by user data, leading to targeted, high-impact recommendations for a non-profit.',
@@ -64,6 +56,14 @@ export const PROJECTS: Project[] = [
     link: '/student-wellness-study',
     image: '/project4-tn.png',
     id: 'project4',
+  },
+  {
+    name: "The Handheld Gamer's Voice",
+    description:
+      'A data-driven analysis using Python to scrape and analyze community discussions on Reddit, identifying key user pain points and feature opportunities for handheld gaming.',
+    link: '/handheld-analysis',
+    image: '/project3-tn.png',
+    id: 'project3',
   },
 ]
 
