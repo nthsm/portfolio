@@ -229,6 +229,9 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 .project-color-navy {
   background-image: url('/project5-bg-mobile.png');
 }
+.project-color-black {
+  background-image: url('/project6-bg-mobile.png');
+}
 
 /* Tablet (768px - 1850px): Use tablet images */
 @media (min-width: 768px) {
@@ -246,6 +249,9 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   }
   .project-color-navy {
     background-image: url('/project5-bg-tablet.png');
+  }
+  .project-color-black {
+    background-image: url('/project6-bg-tablet.png');
   }
 }
 
@@ -273,6 +279,9 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   .project-color-navy {
     background-image: url('/project5-bg.png');
   }
+  .project-color-black {
+    background-image: url('/project6-bg.png');
+  }
 }
 
 /* Project-specific text colors */
@@ -290,4 +299,7 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 .project-color-navy h1 {
   color: #35485e;
+}
+.project-color-black h1 {
+  color: #000000;
 }
