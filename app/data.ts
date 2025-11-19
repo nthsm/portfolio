@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     id: 'project1',
   },
   {
-    name: 'Pivoting for Paws',
+    name: 'Heuristics vs. Reality',
     description:
       'A case study in challenging heuristic bias with user data, leading to a pivot that delivered targeted, high-impact recommendations to a non-profit stakeholder.',
     link: '/its-meow-or-never',
