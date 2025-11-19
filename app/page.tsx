@@ -169,27 +169,41 @@ export default function HomePage() {
               className="float-right mb-4 ml-8 hidden md:block"
               style={{ shapeOutside: 'margin-box', width: '375px' }}
             >
-              <Image
-                src="/headshot.jpg"
-                alt="A headshot of Nathan Smith"
-                width={375}
-                height={375}
-                className="rounded-xl border-4 border-zinc-200 object-cover shadow-lg dark:border-zinc-800"
-                priority
-              />
+              <Link
+                href="https://www.linkedin.com/in/nthsm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                <Image
+                  src="/headshot.jpg"
+                  alt="A headshot of Nathan Smith"
+                  width={375}
+                  height={375}
+                  className="rounded-xl object-cover"
+                  priority
+                />
+              </Link>
             </motion.div>
             <motion.div
               variants={itemVariants}
               className="mb-12 flex justify-center md:hidden"
             >
-              <Image
-                src="/headshot.jpg"
-                alt="A headshot of Nathan Smith"
-                width={300}
-                height={300}
-                className="rounded-xl border-4 border-zinc-200 object-cover shadow-lg dark:border-zinc-800"
-                priority
-              />
+              <Link
+                href="https://www.linkedin.com/in/nthsm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                <Image
+                  src="/headshot.jpg"
+                  alt="A headshot of Nathan Smith"
+                  width={300}
+                  height={300}
+                  className="rounded-xl object-cover"
+                  priority
+                />
+              </Link>
             </motion.div>
             <div className="max-w-none space-y-8 text-xl text-zinc-700 dark:text-zinc-300">
               <motion.div variants={itemVariants}>
@@ -227,8 +241,7 @@ export default function HomePage() {
                   user needs, data analysis, and business goals.
                 </p>
                 <p>
-                  Outside of my coursework, you can usually find me either
-                  exploring on my gravel bike or diving into a new roguelike on my Steam Deck.
+                  Outside of my work, you can usually find me exploring on my gravel bike or diving into a new roguelike on my Steam Deck.
                 </p>
               </motion.div>
             </div>
@@ -259,7 +272,7 @@ export default function HomePage() {
                     href={article.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded-lg bg-white p-6 no-underline shadow-md transition-shadow hover:shadow-xl dark:bg-zinc-800/50"
+                    className="block rounded-lg bg-white p-6 no-underline shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:bg-zinc-800/50"
                   >
                     <h3 className="mb-2 text-xl font-medium text-zinc-900 dark:text-zinc-100">
                       {article.title}
