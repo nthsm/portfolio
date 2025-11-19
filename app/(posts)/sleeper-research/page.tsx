@@ -37,11 +37,11 @@ export default function SleeperResearchPage() {
               needs of die-hard sports fans.
             </p>
             <p>
-              This comparative study focuses on the <strong>mobile app experience</strong>,
-              rigorously <strong>benchmarking</strong> the performance of these social
+              This comparative study focuses on the mobile app experience,
+              rigorously benchmarking the performance of these social
               features against key competitors like ESPN Fantasy. The goal is to
               determine if Sleeper's core differentiator—connecting friends over
-              sports—is truly enhancing <strong>engagement metrics</strong> or
+              sports—is truly enhancing engagement metrics or
               contributing to a higher cognitive load for users trying to
               manage their teams.
             </p>
@@ -53,18 +53,18 @@ export default function SleeperResearchPage() {
             </p>
             <ul>
               <li>
-                <strong>Measure Social Accessibility (Discoverability):</strong>{' '}
+                Measure Social Accessibility (Discoverability):{' '}
                 Compare the task success rate and time-on-task for users trying
                 to locate and use social features (e.g., in-chat reactions,
                 trash-talking).
               </li>
               <li>
-                <strong>Evaluate Cognitive Load:</strong> Assess whether
+                Evaluate Cognitive Load: Assess whether
                 non-utility elements (mascots, complex UI layers) slow down core
                 tasks like setting a lineup or adding a free agent.
               </li>
               <li>
-                <strong>Benchmark Competition:</strong> Provide a quantitative
+                Benchmark Competition: Provide a quantitative
                 and qualitative comparison against the traditional,
                 utility-focused ESPN Fantasy app.
               </li>
@@ -82,7 +82,7 @@ export default function SleeperResearchPage() {
 
             <h2>Methodology</h2>
             <p>
-              <strong>Method:</strong> Moderated Remote Comparative Usability
+              Method: Moderated Remote Comparative Usability
               Testing (N=7).
             </p>
             <p>
@@ -94,18 +94,18 @@ export default function SleeperResearchPage() {
             <h3>Key Scenarios & Metrics</h3>
             <ol>
               <li>
-                <strong>Utility Task: Free Agent Acquisition.</strong>
+                Utility Task: Free Agent Acquisition.
                 <ul>
                   <li>
-                    <strong>Metric:</strong> Time-on-Task, Task Success Rate.
+                    Metric: Time-on-Task, Task Success Rate.
                   </li>
                 </ul>
               </li>
               <li>
-                <strong>Social Task: Public Interaction/Roast.</strong>
+                Social Task: Public Interaction/Roast.
                 <ul>
                   <li>
-                    <strong>Metric:</strong> Task Success Rate (Ability to
+                    Metric: Task Success Rate (Ability to
                     locate feature), Qualitative Satisfaction (Delight Factor).
                   </li>
                 </ul>
@@ -116,15 +116,15 @@ export default function SleeperResearchPage() {
             <p>This study specifically highlights the required skills:</p>
             <ul>
               <li>
-                <strong>Competitive Benchmarking</strong> (Full comparative
+                Competitive Benchmarking (Full comparative
                 study).
               </li>
               <li>
-                <strong>Usability Tests</strong> (Moderated remote mobile
+                Usability Tests (Moderated remote mobile
                 testing).
               </li>
               <li>
-                <strong>Synthesize Findings</strong> (Translating raw observation into strategy).
+                Synthesize Findings (Translating raw observation into strategy).
               </li>
             </ul>
           </div>
@@ -135,20 +135,20 @@ export default function SleeperResearchPage() {
             <h2>Tools & Modern UXR Workflow</h2>
             <p>
               This project leverages a hybrid approach to ensure rigor and
-              efficiency in a <strong>fast-paced environment</strong>:
+              efficiency in a fast-paced environment:
             </p>
             <ul>
               <li>
-                <strong>Remote Testing Tools:</strong> Zoom for session
+                Remote Testing Tools: Zoom for session
                 recording and screen sharing, capturing authentic mobile usage.
               </li>
               <li>
-                <strong>AI for Synthesis:</strong> Leveraging LLMs to cluster
+                AI for Synthesis: Leveraging LLMs to cluster
                 raw transcript data and accelerate thematic analysis, allowing
                 more time for deep insight generation.
               </li>
               <li>
-                <strong>Figma:</strong> Used for creating visual artifacts,
+                Figma: Used for creating visual artifacts,
                 journey maps, and flow diagrams based on testing observations.
               </li>
             </ul>
