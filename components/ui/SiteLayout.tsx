@@ -242,7 +242,8 @@ export default function SiteLayout({
 
     const handleScroll = () => {
       // Desktop, Tablet, Mobile all share full-screen header logic now
-      const makeOpaque = window.scrollY > window.innerHeight
+      // Adjusted to match the 130vh parallax header height
+      const makeOpaque = window.scrollY > window.innerHeight * 1.3
       setIsHeaderTransparent(!makeOpaque)
     }
 
