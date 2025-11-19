@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 export default function P2PMarketplacePage() {
   return (
     <div className="imon-parallax-container">
-      <ParallaxHeader
-        speedFactor={0.4}
-        className="project-color-blue"
-      >
+      <ParallaxHeader speedFactor={0.4} className="project-color-blue">
         <h1>FSU Tech Connect</h1>
         <p className="subtitle">
           Researching student needs for a P2P tech marketplace.
@@ -28,35 +25,32 @@ export default function P2PMarketplacePage() {
             <p>
               For many students, buying and selling used electronics is a risky
               and frustrating experience. FSU students currently rely on
-              impersonal, inconvenient, and often unsafe platforms like
-              Facebook Marketplace or eBay. These marketplaces lack community
-              trust, making it difficult to trade gear with confidence.
+              impersonal, inconvenient, and often unsafe platforms like Facebook
+              Marketplace or eBay. These marketplaces lack community trust,
+              making it difficult to trade gear with confidence.
             </p>
             <p>
               This research project explored the viability of a
-              university-exclusive mobile app—"FSU Tech Connect"—designed to
+              university-exclusive <strong>mobile app</strong>—"FSU Tech Connect"—designed to
               foster safety through an FSU-verified network and streamline the
               entire trading process.
             </p>
 
             <h2>My Role & Methods</h2>
             <p>
-              As a UX Researcher, my responsibilities were to conduct all 
-              user research, synthesize the findings, and develop a set 
-              of <strong>data-driven feature recommendations</strong>.
+              As a UX Researcher, my responsibilities were to conduct all user
+              research, <strong>synthesize the findings</strong>, and develop a set of{' '}
+              <strong>data-driven feature recommendations</strong>.
             </p>
             <p>
               A <strong>mixed-methods study</strong> was chosen to get a
-              complete picture. The quantitative survey would quickly gather
-              broad sentiment and validate assumptions, while the qualitative
-              interviews were essential for uncovering the "why" behind those
-              sentiments and discovering unexpected pain points.
+              complete picture. I needed to <strong>benchmark</strong> current student sentiments against existing solutions.
             </p>
             <ul>
               <li>
-                <strong>User Survey (N=16):</strong> Deployed to
-                quickly identify and validate core frustrations and test the
-                "trust" hypothesis around an @fsu.edu verification.
+                <strong>User Survey (N=16):</strong> Deployed to quickly
+                identify and validate core frustrations and test the "trust"
+                hypothesis around an @fsu.edu verification.
               </li>
               <li>
                 <strong>Qualitative Interviews:</strong> Conducted to add
@@ -73,8 +67,8 @@ export default function P2PMarketplacePage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                The goal is to understand student pain points in P2P transactions
-                and identify the core features that would make an
+                The goal is to understand student pain points in P2P
+                transactions and identify the core features that would make an
                 app a safe, convenient, and trusted alternative.
               </h2>
               <div className="hmw-line"></div>
@@ -87,12 +81,12 @@ export default function P2PMarketplacePage() {
             <h2>Research Summary: The Data-Driven Pivot</h2>
             <h3>User Survey</h3>
             <p>
-              My initial hypothesis was that safety was the
-              primary concern for students. The quantitative survey data
-              validated this: <strong>87.6%</strong> of respondents (14 out of
-              16) rated "Safety/Trust" as a 4 or 5 (out of 5) in importance.
-              Furthermore, <strong>81.3%</strong> said an @fsu.edu email
-              verification would increase their trust.
+              My initial hypothesis was that safety was the primary concern for
+              students. The quantitative survey data validated this:{' '}
+              <strong>87.6%</strong> of respondents (14 out of 16) rated
+              "Safety/Trust" as a 4 or 5 (out of 5) in importance. Furthermore,{' '}
+              <strong>81.3%</strong> said an @fsu.edu email verification would
+              increase their trust.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <div className="flex w-full flex-col gap-4 md:flex-row md:gap-8 not-prose">
@@ -112,10 +106,11 @@ export default function P2PMarketplacePage() {
               </figcaption>
             </figure>
             <p>
-              However, the interviews and survey free-responses revealed a
-              more universal and immediate pain point: <strong>high friction</strong>. Safety was a major factor, but the{' '}
-              <strong>significant cognitive load</strong> of the process was
-              the daily frustration. This discovery served as the Data-Driven Pivot
+              However, the interviews and survey free-responses revealed a more
+              universal and immediate pain point: <strong>high friction</strong>
+              . Safety was a major factor, but the{' '}
+              <strong>significant cognitive load</strong> of the process was the
+              daily frustration. This discovery served as the Data-Driven Pivot
               for the project's product strategy.
             </p>
             <figure className="my-4 flex flex-col items-center">
@@ -137,11 +132,11 @@ export default function P2PMarketplacePage() {
               </figcaption>
             </figure>
             <p>
-              Users expressed deep frustration with pricing uncertainty,
-              tedious listing processes, and the fear of being "ghosted" by
-              unreliable buyers/sellers. This led to a strategic pivot,
-              expanding the project's goals from just "safety" to also include
-              "efficiency and convenience."
+              Users expressed deep frustration with pricing uncertainty, tedious
+              listing processes, and the fear of being "ghosted" by unreliable
+              buyers/sellers. This led to a strategic pivot, expanding the
+              project's goals from just "safety" to also include "efficiency and
+              convenience."
             </p>
             <h3>User Interviews</h3>
             <p>
@@ -174,8 +169,8 @@ export default function P2PMarketplacePage() {
               </li>
               <li>
                 <strong>Inconvenient Meetup Logistics:</strong> Coordinating a
-                safe and convenient on-campus meetup is a significant
-                challenge for busy students, many of whom may not have a car.
+                safe and convenient on-campus meetup is a significant challenge
+                for busy students, many of whom may not have a car.
               </li>
               <li>
                 <strong>Accessibility Barriers:</strong> For students with
@@ -190,10 +185,10 @@ export default function P2PMarketplacePage() {
           <div className="imon-content-inner">
             <h3>Personas</h3>
             <p>
-              From the research, I synthesized several personas to represent
-              the core user base. The primary persona, "Joe," guided the
-              feature recommendations by focusing on the most common and
-              frustrating pain points.
+              From the research, I synthesized several personas to represent the
+              core user base. The primary persona, "Joe," guided the feature
+              recommendations by focusing on the most common and frustrating
+              pain points.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <img
@@ -215,16 +210,16 @@ export default function P2PMarketplacePage() {
                 process and reliable buyers to sell items before moving out.
               </li>
               <li>
-                <strong>Brenda, The Accessibility Advocate:</strong> Needs a
-                way to easily identify and coordinate accessible meetup
-                locations.
+                <strong>Brenda, The Accessibility Advocate:</strong> Needs a way
+                to easily identify and coordinate accessible meetup locations.
               </li>
             </ul>
             <h3>User Journey Mapping</h3>
             <p>
               I also created a user journey map for Joe, outlining his typical
-              experience trying to sell a used Steam Deck. This map was critical for visualizing the impact
-              of <strong>cognitive load</strong> on the user's emotional state throughout the process.
+              experience trying to sell a used Steam Deck. This map was critical
+              for visualizing the impact of <strong>cognitive load</strong> on
+              the user's emotional state throughout the process.
             </p>
             <figure className="my-4 flex flex-col items-center">
               <img
@@ -248,18 +243,22 @@ export default function P2PMarketplacePage() {
             <h2>Actionable Recommendations</h2>
             <p>
               Synthesizing the user pain points, the survey data, and the
-              primary persona (Joe), I developed a set of <strong>actionable recommendations</strong>. These strategic
+              primary persona (Joe), I developed a set of{' '}
+              <strong>actionable recommendations</strong>. These strategic
               proposals are focused on maximizing efficiency and trust.
             </p>
             <ol>
               <li>
                 <strong>Mandatory @fsu.edu Verification:</strong> This is the
-                top priority to establish a baseline of trust and safety (quantifiable success: 81.3% of users confirmed this would increase trust).
+                top priority to establish a baseline of trust and safety
+                (quantifiable success: 81.3% of users confirmed this would
+                increase trust).
               </li>
               <li>
                 <strong>AI Price Suggestion Tool:</strong> To combat Joe's
                 "pricing uncertainty," a feature that suggests a fair market
-                price would drastically reduce listing <strong>friction and cognitive load</strong>.
+                price would drastically reduce listing{' '}
+                <strong>friction and cognitive load</strong>.
               </li>
               <li>
                 <strong>Preset "Meetup Zones":</strong> To solve the logistical
@@ -281,12 +280,14 @@ export default function P2PMarketplacePage() {
 
             <h2>Reflection</h2>
             <p>
-              This project was a fantastic exercise in <strong>mixed-methods research</strong>.
-              The most valuable insight was the Data-Driven Pivot from my initial
-              "safety-first" hypothesis. While safety was critical, the
-              qualitative interviews revealed that convenience and efficiency
-              were the more immediate blockers for users. This finding
-              completely reshaped the feature recommendations toward a data-driven product strategy designed to reduce mental effort.
+              This project was a fantastic exercise in{' '}
+              <strong>mixed-methods research</strong>. The most valuable insight
+              was the Data-Driven Pivot from my initial "safety-first"
+              hypothesis. While safety was critical, the qualitative interviews
+              revealed that convenience and efficiency were the more immediate
+              blockers for users. This finding completely reshaped the feature
+              recommendations toward a data-driven product strategy designed to
+              reduce mental effort.
             </p>
           </div>
         </div>
