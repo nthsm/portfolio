@@ -25,64 +25,107 @@ export default function SleeperResearchPage() {
           <div className="imon-content-inner clearfix">
             <h2>Project Overview & Motivation</h2>
             <p>
-              Sleeper differentiates itself in the crowded fantasy sports market by positioning its app as a "digital playground" to <strong>connect friends over sports</strong>. This strategy relies heavily on gamification and integrated social features (chat, reactions, Minis).
+              I saw the potential of Sleeper years ago. As a fantasy football
+              commissioner for over a decade, I’ve always taken pleasure in
+              keeping the league fresh—changing rules, tweaking scoring, and
+              keeping engagement high. In 2024, after two years of advocating
+              for it, I finally migrated my league of 10+ years to Sleeper.
             </p>
             <p>
-              This comparative study focuses on the <strong>mobile app experience</strong>, rigorously benchmarking the performance of these social features against key competitors like ESPN Fantasy. The motivation is to determine if Sleeper's core differentiator is truly enhancing user engagement or contributing to a higher cognitive load. This project directly addresses the need for **competitive benchmarking** and <strong>mobile usability expertise</strong> requested by the Sleeper User Research Intern job description.
+              However, this transition highlighted a key UX challenge: balancing
+              Sleeper's "digital playground" philosophy with the utilitarian
+              needs of die-hard sports fans.
+            </p>
+            <p>
+              This comparative study focuses on the <strong>mobile app experience</strong>,
+              rigorously <strong>benchmarking</strong> the performance of these social
+              features against key competitors like ESPN Fantasy. The goal is to
+              determine if Sleeper's core differentiator—connecting friends over
+              sports—is truly enhancing <strong>engagement metrics</strong> or
+              contributing to a higher cognitive load for users trying to
+              manage their teams.
             </p>
 
             <h2>Research Goals</h2>
             <p>
-              The primary goal is to find the optimal balance between social "delight" and core "utility" in the mobile experience.
+              The primary goal is to find the optimal balance between social
+              "delight" and core "utility" in the mobile experience.
             </p>
             <ul>
               <li>
-                <strong>Measure Social Accessibility (Discoverability):</strong> Compare the task success rate and time-on-task for users trying to locate and use social features (e.g., in-chat reactions, trash-talking).
+                <strong>Measure Social Accessibility (Discoverability):</strong>{' '}
+                Compare the task success rate and time-on-task for users trying
+                to locate and use social features (e.g., in-chat reactions,
+                trash-talking).
               </li>
               <li>
-                <strong>Evaluate Cognitive Load:</strong> Assess whether non-utility elements (mascots, complex UI layers) slow down core tasks like setting a lineup or adding a free agent.
+                <strong>Evaluate Cognitive Load:</strong> Assess whether
+                non-utility elements (mascots, complex UI layers) slow down core
+                tasks like setting a lineup or adding a free agent.
               </li>
               <li>
-                <strong>Benchmark Competition:</strong> Provide a quantitative and qualitative comparison against the traditional, utility-focused ESPN Fantasy app.
+                <strong>Benchmark Competition:</strong> Provide a quantitative
+                and qualitative comparison against the traditional,
+                utility-focused ESPN Fantasy app.
               </li>
             </ul>
-            
-             <div className="hmw-container not-prose">
+
+            <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                Does Sleeper's focus on gamification and social features result in a measurably faster and more delightful mobile experience than its competitors?
+                Does Sleeper's focus on gamification and social features result
+                in a measurably faster and more delightful mobile experience
+                than its competitors?
               </h2>
               <div className="hmw-line"></div>
             </div>
 
             <h2>Methodology</h2>
             <p>
-              <strong>Method:</strong> Moderated Remote Comparative Usability Testing (N=7).
+              <strong>Method:</strong> Moderated Remote Comparative Usability
+              Testing (N=7).
             </p>
             <p>
-              The study utilizes a "Think Aloud" protocol to uncover user expectations, confusion, and delight while performing high-value tasks on both the Sleeper and ESPN apps.
+              The study utilizes a "Think Aloud" protocol to uncover user
+              expectations, confusion, and delight while performing high-value
+              tasks on both the Sleeper and ESPN apps.
             </p>
-            
+
             <h3>Key Scenarios & Metrics</h3>
             <ol>
-                <li><strong>Utility Task: Free Agent Acquisition.</strong>
-                    <ul>
-                        <li>**Metric:** Time-on-Task, Task Success Rate.</li>
-                    </ul>
-                </li>
-                <li><strong>Social Task: Public Interaction/Roast.</strong>
-                    <ul>
-                        <li>**Metric:** Task Success Rate (Ability to locate feature), Qualitative Satisfaction (Delight Factor).</li>
-                    </ul>
-                </li>
+              <li>
+                <strong>Utility Task: Free Agent Acquisition.</strong>
+                <ul>
+                  <li>
+                    <strong>Metric:</strong> Time-on-Task, Task Success Rate.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Social Task: Public Interaction/Roast.</strong>
+                <ul>
+                  <li>
+                    <strong>Metric:</strong> Task Success Rate (Ability to
+                    locate feature), Qualitative Satisfaction (Delight Factor).
+                  </li>
+                </ul>
+              </li>
             </ol>
-            
-            <h3>Alignment to Sleeper JD</h3>
-            <p>This study specifically highlights the required UXR skills:</p>
+
+            <h3>Alignment to Sleeper UXR</h3>
+            <p>This study specifically highlights the required skills:</p>
             <ul>
-                <li>**Competitive Benchmarking** (Full comparative study).</li>
-                <li>**Usability Tests** (Moderated remote mobile testing).</li>
-                <li>**Synthesize Findings** (The goal of the final report).</li>
+              <li>
+                <strong>Competitive Benchmarking</strong> (Full comparative
+                study).
+              </li>
+              <li>
+                <strong>Usability Tests</strong> (Moderated remote mobile
+                testing).
+              </li>
+              <li>
+                <strong>Synthesize Findings</strong> (Translating raw observation into strategy).
+              </li>
             </ul>
           </div>
         </div>
@@ -91,17 +134,31 @@ export default function SleeperResearchPage() {
           <div className="imon-content-inner clearfix">
             <h2>Tools & Modern UXR Workflow</h2>
             <p>
-               This project leverages a hybrid approach to ensure rigor and efficiency:
+              This project leverages a hybrid approach to ensure rigor and
+              efficiency in a <strong>fast-paced environment</strong>:
             </p>
-             <ul>
-                <li>**Remote Testing Tools:** Zoom for session recording and screen sharing, capturing authentic mobile usage.</li>
-                <li>**AI for Synthesis:** Utilizing AI transcription and initial clustering of qualitative data to accelerate the thematic analysis process, allowing more time for deep insight generation.</li>
-                <li>**Figma:** Used for creating visual artifacts, journey maps, and flow diagrams based on testing observations.</li>
+            <ul>
+              <li>
+                <strong>Remote Testing Tools:</strong> Zoom for session
+                recording and screen sharing, capturing authentic mobile usage.
+              </li>
+              <li>
+                <strong>AI for Synthesis:</strong> Leveraging LLMs to cluster
+                raw transcript data and accelerate thematic analysis, allowing
+                more time for deep insight generation.
+              </li>
+              <li>
+                <strong>Figma:</strong> Used for creating visual artifacts,
+                journey maps, and flow diagrams based on testing observations.
+              </li>
             </ul>
-            
+
             <h2>Next Steps</h2>
             <p>
-              I am currently in the recruitment and scheduling phase of the study, with testing set to conclude shortly to meet the course deadline. The final deliverables will include a comprehensive presentation slide deck and a detailed findings report.
+              I am currently in the recruitment and scheduling phase of the
+              study, with testing set to conclude shortly. The final
+              deliverables will include a comprehensive presentation slide deck
+              and a detailed findings report.
             </p>
           </div>
         </div>
