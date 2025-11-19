@@ -72,9 +72,7 @@ export default function HomePage() {
               </div>
             </div>
             <p className="mt-4 mb-6 max-w-2xl text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
-              Graduate student specializing in User-Centered Design. Passionate
-              about using mixed-methods research and data analysis to inform
-              product strategy and create user-centric experiences.
+              My goal is to translate research insights into product decisions that drive measurable improvements in user outcomes, conversion, and revenue.
             </p>
             <a
               href="/nathan_smith_resume.pdf"
@@ -190,12 +188,11 @@ export default function HomePage() {
                   My Philosophy
                 </h2>
                 <p>
-                  I'm a <span className="font-bold">user researcher</span>{' '}
-                  driven by a deep curiosity about the "why" behind
-                  human-computer interaction. I'm genuinely customer-obsessed
-                  and believe the best products are built on a rigorous{' '}
-                  <span className="font-bold">foundation of research</span> and
-                  a true understanding of the people they serve.
+                  I'm deeply curious about the "why" behind
+                  human-computer interaction. I discovered this during my undergraduate
+                  studies, where I realized that understanding user behavior is crucial 
+                  to designing effective technology solutions. This passion has driven 
+                  me to specialize during my graduate studies.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -203,14 +200,10 @@ export default function HomePage() {
                   My Process
                 </h2>
                 <p>
-                  My approach blends{' '}
-                  <span className="font-bold">analytical thinking</span> with the{' '}
-                  <span className="font-bold">empathy</span> of qualitative
-                  storytelling. I thrive in a fast-paced environment and love
-                  diving into complex problems, speaking with users to uncover
-                  their true needs, and synthesizing those findings into{' '}
-                  <span className="font-bold">actionable strategies</span> that
-                  guide the design process.
+                  My approach blends analytical thinking with the empathy of qualitative
+                  storytelling. I assess a problem, speak with users to uncover
+                  their true needs, test, and synthesize those findings into
+                  actionable strategies that guide the design process and deliver on business needs.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -218,23 +211,15 @@ export default function HomePage() {
                   My Background
                 </h2>
                 <p>
-                  I am currently completing my{' '}
-                  <span className="font-bold">
-                    M.S. in Information Technology
-                  </span>{' '}
-                  at Florida State University, specializing in{' '}
-                  <span className="font-bold">User-Centered Design</span>. My
+                  I am currently completing my M.S. in Information Technology
+                  at Florida State University, specializing in User-Centered Design. My
                   undergraduate degree in Management Information Systems gives
-                  me a unique perspective, allowing me to{' '}
-                  <span className="font-bold">bridge the gap</span> between
+                  me a unique perspective, allowing me to bridge the gap between
                   user needs, data analysis, and business goals.
                 </p>
                 <p>
                   Outside of my coursework, you can usually find me either
-                  exploring Tallahassee on my gravel bike
-                  or diving into a new rogue-like on my Steam Deck. I love the
-                  process of discovery—whether it's a new trail or a new
-                  in-game strategy.
+                  exploring on my gravel bike or diving into a new roguelike on my Steam Deck.
                 </p>
               </motion.div>
             </div>
@@ -253,7 +238,7 @@ export default function HomePage() {
                 'mb-0 inline-block text-6xl font-bold tracking-tight md:text-7xl',
               )}
             >
-              From the Blog
+              Medium Blog
             </h1>
           </div>
           {articles.length > 0 && (
