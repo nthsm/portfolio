@@ -61,7 +61,7 @@ const NavLink = ({
       className={cn(
         'transition-colors duration-200',
         isHeaderTransparent
-          ? 'text-zinc-900 hover:text-zinc-700'
+          ? 'text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200'
           : 'hover:text-zinc-900 dark:hover:text-zinc-100',
         isActive
           ? 'font-semibold text-zinc-900 dark:text-zinc-100'
@@ -99,8 +99,8 @@ const ThemeToggle = ({
 
   const transparentBgClasses = {
     default:
-      'rounded-lg bg-black/10 text-zinc-900 hover:bg-black/20 hover:text-zinc-700',
-    icon: 'text-zinc-900 hover:text-zinc-700',
+      'rounded-lg bg-black/10 text-zinc-900 hover:bg-black/20 hover:text-zinc-700 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20 dark:hover:text-zinc-200',
+    icon: 'text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200',
   }
 
   const currentClasses = isHeaderTransparent
@@ -241,15 +241,8 @@ export default function SiteLayout({
     }
 
     const handleScroll = () => {
-      let makeOpaque = false
-      if (window.innerWidth > 1850) {
-        // Desktop (1851px+)
-        makeOpaque = window.scrollY > window.innerHeight
-      } else {
-        // Mobile (0-767) AND Tablet (768-1850)
-        makeOpaque = window.scrollY > window.innerHeight * 0.5
-      }
-
+      // Desktop, Tablet, Mobile all share full-screen header logic now
+      const makeOpaque = window.scrollY > window.innerHeight
       setIsHeaderTransparent(!makeOpaque)
     }
 
@@ -303,7 +296,7 @@ export default function SiteLayout({
               className={cn(
                 'z-50 -mr-2 p-2 transition-colors duration-200',
                 isHeaderTransparent
-                  ? 'text-zinc-900 hover:text-zinc-700'
+                  ? 'text-zinc-900 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200'
                   : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100',
               )}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
