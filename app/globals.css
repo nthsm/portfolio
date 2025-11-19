@@ -23,6 +23,16 @@ body {
   font-family: var(--font-figtree), sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-crimson-pro), serif;
+  font-weight: 500;
+}
+
 img[src^='/project']:not([src='/project4-process.png']):not(
     [src='/project2-process.png']
   ):not([src='/project4-business-question.png']):not(
@@ -51,19 +61,18 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   margin-bottom: -4.125rem;
 }
 
-/* Mobile-first defaults (0px - 767px) */
 .imon-parallax-header-js {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll; /* Mobile/Tablet default */
-  min-height: 50vh; /* Mobile/Tablet default */
-  padding-top: calc(2rem + 4.125rem); /* Mobile/Tablet default */
+  background-attachment: scroll;
+  min-height: 100vh;
+  padding-top: calc(2rem + 4.125rem);
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Mobile/Tablet default: Text at top */
-  align-items: center; /* Centers content horizontally */
+  justify-content: flex-start;
+  align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
@@ -76,18 +85,18 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 
 .imon-parallax-header-js h1 {
-  font-size: 2.25rem !important; /* Mobile-first default (4xl) */
+  font-size: 2.25rem !important;
   line-height: 1.1 !important;
   margin-top: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
   border-bottom: none !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   text-align: center;
 }
 
 .imon-parallax-header-js .subtitle {
-  font-size: 1.125rem; /* Mobile-first default (xl) */
+  font-size: 1.125rem;
   color: #2f3030;
   margin-top: 0.5rem;
   font-weight: normal;
@@ -95,25 +104,27 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   text-align: center;
 }
 
-/* --- Text Scaling for Tablet & Desktop --- */
+.dark .imon-parallax-header-js .subtitle {
+  color: #e4e4e7;
+}
+
 @media (min-width: 768px) {
   .imon-parallax-header-js h1 {
-    font-size: 3rem !important; /* 5xl */
+    font-size: 3rem !important;
     line-height: 1 !important;
   }
   .imon-parallax-header-js .subtitle {
-    font-size: 1.25rem; /* xl */
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1024px) {
   .imon-parallax-header-js h1 {
-    font-size: 3.75rem !important; /* 6xl */
+    font-size: 3.75rem !important;
   }
   .imon-parallax-header-js .subtitle {
-    font-size: 1.5rem; /* 2xl */
+    font-size: 1.5rem;
   }
 }
-/* --- END OF TEXT SCALING --- */
 
 .imon-content-wrapper .content-section {
   padding: 3rem 1rem;
@@ -167,18 +178,18 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 
 .imon-parallax-header-js h1,
 .imon-content-inner h1 {
-  font-family: var(--font-crimson-text), serif !important;
-  font-weight: 600 !important;
+  font-family: var(--font-crimson-pro), serif !important;
+  font-weight: 500 !important;
 }
 
 .imon-content-inner h1 {
   font-size: 3rem !important;
   line-height: 1.1 !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 .imon-content-inner h2 {
-  font-family: var(--font-crimson-text), serif !important;
+  font-family: var(--font-crimson-pro), serif !important;
   font-size: 1.875rem !important;
   line-height: 1.25 !important;
   font-weight: 500 !important;
@@ -186,10 +197,10 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 
 .imon-content-inner h3 {
-  font-family: var(--font-crimson-text), serif !important;
+  font-family: var(--font-crimson-pro), serif !important;
   font-size: 1.5rem !important;
   line-height: 1.4 !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   color: inherit !important;
 }
 
@@ -202,8 +213,8 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 }
 
 .hmw-text {
-  @apply px-4 py-8 text-3xl font-semibold text-zinc-800 dark:text-zinc-200;
-  font-family: var(--font-crimson-text), serif !important;
+  @apply px-4 py-8 text-3xl font-medium text-zinc-800 dark:text-zinc-200;
+  font-family: var(--font-crimson-pro), serif !important;
   line-height: 1.4 !important;
 }
 
@@ -211,82 +222,145 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   @apply text-sm font-semibold tracking-wider no-underline hover:underline;
 }
 
-/* Project-specific Colors & Backgrounds */
-
-/* Mobile-first (0px - 767px): Use mobile images */
-.project-color-blue {
+.project-color-gold {
   background-image: url('/project1-bg-mobile.png');
 }
+.dark .project-color-gold {
+  background-image: url('/project1-bg-mobile-dark.png');
+}
+
 .project-color-red {
   background-image: url('/project2-bg-mobile.png');
 }
+.dark .project-color-red {
+  background-image: url('/project2-bg-mobile-dark.png');
+}
+
 .project-color-purple {
   background-image: url('/project3-bg-mobile.png');
 }
+.dark .project-color-purple {
+  background-image: url('/project3-bg-mobile-dark.png');
+}
+
 .project-color-green {
   background-image: url('/project4-bg-mobile.png');
 }
-.project-color-navy {
+.dark .project-color-green {
+  background-image: url('/project4-bg-mobile-dark.png');
+}
+
+.project-color-teal {
   background-image: url('/project5-bg-mobile.png');
 }
+.dark .project-color-teal {
+  background-image: url('/project5-bg-mobile-dark.png');
+}
+
 .project-color-black {
   background-image: url('/project6-bg-mobile.png');
 }
+.dark .project-color-black {
+  background-image: url('/project6-bg-mobile-dark.png');
+}
 
-/* Tablet (768px - 1850px): Use tablet images */
 @media (min-width: 768px) {
-  .project-color-blue {
+  .project-color-gold {
     background-image: url('/project1-bg-tablet.png');
   }
+  .dark .project-color-gold {
+    background-image: url('/project1-bg-tablet-dark.png');
+  }
+
   .project-color-red {
     background-image: url('/project2-bg-tablet.png');
   }
+  .dark .project-color-red {
+    background-image: url('/project2-bg-tablet-dark.png');
+  }
+
   .project-color-purple {
     background-image: url('/project3-bg-tablet.png');
   }
+  .dark .project-color-purple {
+    background-image: url('/project3-bg-tablet-dark.png');
+  }
+
   .project-color-green {
     background-image: url('/project4-bg-tablet.png');
   }
-  .project-color-navy {
+  .dark .project-color-green {
+    background-image: url('/project4-bg-tablet-dark.png');
+  }
+
+  .project-color-teal {
     background-image: url('/project5-bg-tablet.png');
   }
+  .dark .project-color-teal {
+    background-image: url('/project5-bg-tablet-dark.png');
+  }
+
   .project-color-black {
     background-image: url('/project6-bg-tablet.png');
   }
+  .dark .project-color-black {
+    background-image: url('/project6-bg-tablet-dark.png');
+  }
 }
 
-/* Large Desktop (1851px+): Use desktop images and layout */
 @media (min-width: 1851px) {
   .imon-parallax-header-js {
     min-height: calc(100vh + 4.125rem);
     padding-top: 4.125rem;
     justify-content: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
   }
 
-  .project-color-blue {
+  .project-color-gold {
     background-image: url('/project1-bg.png');
   }
+  .dark .project-color-gold {
+    background-image: url('/project1-bg-dark.png');
+  }
+
   .project-color-red {
     background-image: url('/project2-bg.png');
   }
+  .dark .project-color-red {
+    background-image: url('/project2-bg-dark.png');
+  }
+
   .project-color-purple {
     background-image: url('/project3-bg.png');
   }
+  .dark .project-color-purple {
+    background-image: url('/project3-bg-dark.png');
+  }
+
   .project-color-green {
     background-image: url('/project4-bg.png');
   }
-  .project-color-navy {
+  .dark .project-color-green {
+    background-image: url('/project4-bg-dark.png');
+  }
+
+  .project-color-teal {
     background-image: url('/project5-bg.png');
   }
+  .dark .project-color-teal {
+    background-image: url('/project5-bg-dark.png');
+  }
+
   .project-color-black {
     background-image: url('/project6-bg.png');
   }
+  .dark .project-color-black {
+    background-image: url('/project6-bg-dark.png');
+  }
 }
 
-/* Project-specific text colors */
-.project-color-blue h1 {
-  color: #25a0ea;
+.project-color-gold h1 {
+  color: #c89828;
 }
 .project-color-red h1 {
   color: #e4504c;
@@ -297,8 +371,8 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 .project-color-green h1 {
   color: #52af54;
 }
-.project-color-navy h1 {
-  color: #35485e;
+.project-color-teal h1 {
+  color: #0aabb5;
 }
 .project-color-black h1 {
   color: #000000;
