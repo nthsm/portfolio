@@ -14,6 +14,16 @@
   --backdrop-blur-xs: 2px;
 }
 
+/* Hide global scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .gradient-button {
   background: linear-gradient(to right, #0b698e 0%, #0b8e72 100%);
   color: white;
@@ -66,7 +76,7 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  min-height: 100vh;
+  min-height: 130vh;
   padding-top: calc(2rem + 4.125rem);
   width: 100%;
   display: flex;
@@ -310,7 +320,7 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 
 @media (min-width: 1851px) {
   .imon-parallax-header-js {
-    min-height: calc(100vh + 4.125rem);
+    min-height: calc(130vh + 4.125rem);
     padding-top: 4.125rem;
     justify-content: center;
     background-attachment: fixed;
