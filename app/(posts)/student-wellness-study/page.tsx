@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 export default function StudentWellnessPage() {
   return (
     <div className="imon-parallax-container">
-      <ParallaxHeader
-        speedFactor={0.4}
-        className="project-color-green"
-      >
+      <ParallaxHeader speedFactor={0.4} className="project-color-green">
         <h1>Student Wellness Report</h1>
         <p className="subtitle">
           Analyzing student survey data on sleep and stress.
@@ -26,16 +23,18 @@ export default function StudentWellnessPage() {
           <div className="imon-content-inner clearfix">
             <h2>Project Overview</h2>
             <p>
-              This project originated in an undergraduate Data Science course
+              This project originated in an undergraduate <strong>Data Science</strong> course
               and served as my first deep dive into the full product development
-              lifecycle. The goal was to analyze survey data collected from
-              ~90 FSU students to find potential patterns in the data during midterms.
+              lifecycle. The goal was to analyze survey data collected from ~90
+              FSU students to find potential patterns in the data during
+              midterms.
             </p>
             <p>
-              This project is a showcase of my foundational data analysis
-              skills, including data cleaning, preparation, and visualization.
-              More importantly, it's a transparent look at the realities of
-              working with imperfect data and drawing honest conclusions.
+              This project is a showcase of my foundational{' '}
+              <strong>data analytics</strong> skills, including data cleaning,
+              preparation, and visualization. It demonstrates a strong{' '}
+              <strong>attention to detail</strong> regarding data integrity and
+              the realities of working with imperfect datasets.
             </p>
 
             <h2>My Role & Methods</h2>
@@ -46,16 +45,15 @@ export default function StudentWellnessPage() {
               visualizing the findings.
             </p>
             <p>
-              The methods were chosen to suit a purely quantitative analysis of
+              The methods were chosen to suit a purely <strong>quantitative analysis</strong> of
               pre-existing survey data.
             </p>
             <ul>
               <li>
                 <strong>Data Cleaning (Excel):</strong> This was the most
                 critical method. The raw Google Forms data was filled with
-                inconsistent text, duplicates, and irrelevant entries. Excel
-                was the ideal tool for meticulous, cell-by-cell
-                standardization.
+                inconsistent text, duplicates, and irrelevant entries. Excel was
+                the ideal tool for meticulous, cell-by-cell standardization.
               </li>
               <li>
                 <strong>Data Analysis (Excel):</strong> Pivot Tables were used
@@ -64,26 +62,26 @@ export default function StudentWellnessPage() {
                 across multiple metrics.
               </li>
               <li>
-                <strong>Data Visualization (Looker Studio):</strong> While
-                Excel can create charts, Looker Studio was chosen to build a
-                more dynamic, professional, and shareable dashboard to
-                present the final findings.
+                <strong>Data Visualization (Looker Studio):</strong> While Excel
+                can create charts, Looker Studio was chosen to build a more
+                dynamic, professional, and shareable dashboard to present the
+                final findings.
               </li>
             </ul>
             <p>
-              The data collected featured a lot of different metrics, but I chose
-              to focus on sleep strategy as the key independent variable. The
-              rationale was that sleep is a well-known factor influencing stress
-              and productivity, making it a logical focal point for analysis.
+              The data collected featured a lot of different metrics, but I
+              chose to focus on sleep strategy as the key independent variable.
+              The rationale was that sleep is a well-known factor influencing
+              stress and productivity, making it a logical focal point for
+              analysis.
             </p>
 
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                "Do students with a defined sleep strategy
-                report significantly different sleep duration, stress levels,
-                and daily productivity indicators compared to students without a
-                strategy?"
+                "Do students with a defined sleep strategy report significantly
+                different sleep duration, stress levels, and daily productivity
+                indicators compared to students without a strategy?"
               </h2>
               <div className="hmw-line"></div>
             </div>
@@ -150,9 +148,9 @@ export default function StudentWellnessPage() {
             <h3>Analysis & Visualization</h3>
             <p>
               I used Excel Pivot Tables for initial comparative analysis and
-              Looker Studio for the final dashboard visualizations. The
-              analysis focused on comparing descriptive statistics for the two
-              core segments (Sleep Strategy vs. No Strategy) across key daily
+              Looker Studio for the final dashboard visualizations. The analysis
+              focused on comparing descriptive statistics for the two core
+              segments (Sleep Strategy vs. No Strategy) across key daily
               metrics.
             </p>
 
@@ -178,14 +176,13 @@ export default function StudentWellnessPage() {
               </li>
               <li>
                 <strong>Minor Stress Level Differences:</strong> Students with a
-                sleep strategy reported slightly lower average stress (5.21
-                vs. 5.31), but the difference is not statistically
-                significant.
+                sleep strategy reported slightly lower average stress (5.21 vs.
+                5.31), but the difference is not statistically significant.
               </li>
               <li>
                 <strong>Slightly Higher Performance:</strong> Similarly,
-                students with a strategy self-reported slightly higher
-                daily performance (3.44 vs. 3.30).
+                students with a strategy self-reported slightly higher daily
+                performance (3.44 vs. 3.30).
               </li>
             </ol>
 
@@ -197,8 +194,8 @@ export default function StudentWellnessPage() {
             </p>
             <p>
               This project's most valuable outcome was not the finding itself,
-              but the lesson in data integrity. The primary limitation, which
-              I identified during reflection, was the reliance on{' '}
+              but the lesson in data integrity. The primary limitation, which I
+              identified during reflection, was the reliance on{' '}
               <strong>self-reported data</strong>.
             </p>
             <ul>
@@ -210,8 +207,8 @@ export default function StudentWellnessPage() {
               <li>
                 <strong>Recall Bias:</strong> The data was collected during
                 midterms, a period of high stress for everyone, which likely
-                skewed the results and made it difficult to isolate the
-                effect of a sleep strategy.
+                skewed the results and made it difficult to isolate the effect
+                of a sleep strategy.
               </li>
             </ul>
 
