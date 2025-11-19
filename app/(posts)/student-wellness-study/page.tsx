@@ -23,7 +23,7 @@ export default function StudentWellnessPage() {
           <div className="imon-content-inner clearfix">
             <h2>Project Overview</h2>
             <p>
-              This project originated in an undergraduate <strong>Data Science</strong> course
+              This project originated in an undergraduate Data Science course
               and served as my first deep dive into the full product development
               lifecycle. The goal was to analyze survey data collected from ~90
               FSU students to find potential patterns in the data during
@@ -31,9 +31,9 @@ export default function StudentWellnessPage() {
             </p>
             <p>
               This project is a showcase of my foundational{' '}
-              <strong>data analytics</strong> skills, including data cleaning,
+              data analytics skills, including data cleaning,
               preparation, and visualization. It demonstrates a strong{' '}
-              <strong>attention to detail</strong> regarding data integrity and
+              attention to detail regarding data integrity and
               the realities of working with imperfect datasets.
             </p>
 
@@ -45,24 +45,24 @@ export default function StudentWellnessPage() {
               visualizing the findings.
             </p>
             <p>
-              The methods were chosen to suit a purely <strong>quantitative analysis</strong> of
+              The methods were chosen to suit a purely quantitative analysis of
               pre-existing survey data.
             </p>
             <ul>
               <li>
-                <strong>Data Cleaning (Excel):</strong> This was the most
+                Data Cleaning (Excel): This was the most
                 critical method. The raw Google Forms data was filled with
                 inconsistent text, duplicates, and irrelevant entries. Excel was
                 the ideal tool for meticulous, cell-by-cell standardization.
               </li>
               <li>
-                <strong>Data Analysis (Excel):</strong> Pivot Tables were used
+                Data Analysis (Excel): Pivot Tables were used
                 as the primary analysis tool to quickly segment the data
                 (Strategy vs. No Strategy) and compare descriptive statistics
                 across multiple metrics.
               </li>
               <li>
-                <strong>Data Visualization (Looker Studio):</strong> While Excel
+                Data Visualization (Looker Studio): While Excel
                 can create charts, Looker Studio was chosen to build a more
                 dynamic, professional, and shareable dashboard to present the
                 final findings.
@@ -112,24 +112,24 @@ export default function StudentWellnessPage() {
             </p>
             <ul>
               <li>
-                <strong>Standardization:</strong> Used "Find and Replace" and{' '}
+                Standardization: Used "Find and Replace" and{' '}
                 <code>IF</code> functions to convert text-based responses (e.g.,
                 "Like (Thumbs up)", "no water") into numerical or consistent
                 categorical values (e.g., 1, 0).
               </li>
               <li>
-                <strong>Duplicate Removal:</strong> Used the <code>EXACT</code>{' '}
+                Duplicate Removal: Used the <code>EXACT</code>{' '}
                 function and conditional formatting to identify and remove
                 duplicate submissions.
               </li>
               <li>
-                <strong>Filtering:</strong> Removed irrelevant data, such as
+                Filtering: Removed irrelevant data, such as
                 entries outside the collection window and participants with
                 fewer than 3 daily submissions, to ensure a baseline of data
                 quality.
               </li>
               <li>
-                <strong>Segmentation:</strong> Created the two primary analysis
+                Segmentation: Created the two primary analysis
                 groups ("Sleep Strategy" vs. "No Sleep Strategy") based on
                 closing survey responses.
               </li>
@@ -171,16 +171,16 @@ export default function StudentWellnessPage() {
             </figure>
             <ol>
               <li>
-                <strong>Low Adoption:</strong> Only <strong>32%</strong> of
+                Low Adoption: Only 32% of
                 students reported using a consistent sleep strategy.
               </li>
               <li>
-                <strong>Minor Stress Level Differences:</strong> Students with a
+                Minor Stress Level Differences: Students with a
                 sleep strategy reported slightly lower average stress (5.21 vs.
                 5.31), but the difference is not statistically significant.
               </li>
               <li>
-                <strong>Slightly Higher Performance:</strong> Similarly,
+                Slightly Higher Performance: Similarly,
                 students with a strategy self-reported slightly higher daily
                 performance (3.44 vs. 3.30).
               </li>
@@ -196,16 +196,16 @@ export default function StudentWellnessPage() {
               This project's most valuable outcome was not the finding itself,
               but the lesson in data integrity. The primary limitation, which I
               identified during reflection, was the reliance on{' '}
-              <strong>self-reported data</strong>.
+              self-reported data.
             </p>
             <ul>
               <li>
-                <strong>Subjectivity:</strong> "Stress level" is deeply
+                Subjectivity: "Stress level" is deeply
                 subjective. A "5" for one student is not the same as a "5" for
                 another. This introduces significant noise into the data.
               </li>
               <li>
-                <strong>Recall Bias:</strong> The data was collected during
+                Recall Bias: The data was collected during
                 midterms, a period of high stress for everyone, which likely
                 skewed the results and made it difficult to isolate the effect
                 of a sleep strategy.
