@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Figtree, Crimson_Text } from 'next/font/google'
+import { Figtree, Crimson_Pro } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from '@vercel/analytics/next'
@@ -39,10 +39,10 @@ const figtree = Figtree({
   subsets: ['latin'],
 })
 
-const crimsonText = Crimson_Text({
-  variable: '--font-crimson-text',
+const crimsonPro = Crimson_Pro({
+  variable: '--font-crimson-pro',
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: '500',
 })
 
 export default function RootLayout({
@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} ${crimsonText.variable} bg-zinc-50 tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${figtree.variable} ${crimsonPro.variable} bg-zinc-50 tracking-tight antialiased dark:bg-zinc-950`}
       >
         <ThemeProvider
           enableSystem={true}
@@ -66,7 +66,6 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
 
-        {/* Google Analytics Tag */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-C8NQQPYW96"
