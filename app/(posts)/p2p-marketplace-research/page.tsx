@@ -31,7 +31,7 @@ export default function P2PMarketplacePage() {
             </p>
             <p>
               This research project explored the viability of a
-              university-exclusive <strong>mobile app</strong>—"FSU Tech Connect"—designed to
+              university-exclusive mobile app—"FSU Tech Connect"—designed to
               foster safety through an FSU-verified network and streamline the
               entire trading process.
             </p>
@@ -39,26 +39,26 @@ export default function P2PMarketplacePage() {
             <h2>My Role & Methods</h2>
             <p>
               As a UX Researcher, my responsibilities were to conduct all user
-              research, <strong>synthesize the findings</strong>, and develop a set of{' '}
-              <strong>data-driven feature recommendations</strong>.
+              research, synthesize the findings, and develop a set of{' '}
+              data-driven feature recommendations.
             </p>
             <p>
-              A <strong>mixed-methods study</strong> was chosen to get a
-              complete picture. I needed to <strong>benchmark</strong> current student sentiments against existing solutions.
+              A mixed-methods study was chosen to get a
+              complete picture. I needed to benchmark current student sentiments against existing solutions.
             </p>
             <ul>
               <li>
-                <strong>User Survey (N=16):</strong> Deployed to quickly
+                User Survey (N=16): Deployed to quickly
                 identify and validate core frustrations and test the "trust"
                 hypothesis around an @fsu.edu verification.
               </li>
               <li>
-                <strong>Qualitative Interviews:</strong> Conducted to add
+                Qualitative Interviews: Conducted to add
                 context and empathy to the survey data, allowing me to
                 understand the stories behind the frustrations.
               </li>
               <li>
-                <strong>Persona Development & Journey Mapping:</strong> Used to
+                Persona Development & Journey Mapping: Used to
                 synthesize the data into actionable artifacts that defined the
                 user and their primary pain points.
               </li>
@@ -83,9 +83,9 @@ export default function P2PMarketplacePage() {
             <p>
               My initial hypothesis was that safety was the primary concern for
               students. The quantitative survey data validated this:{' '}
-              <strong>87.6%</strong> of respondents (14 out of 16) rated
+              87.6% of respondents (14 out of 16) rated
               "Safety/Trust" as a 4 or 5 (out of 5) in importance. Furthermore,{' '}
-              <strong>81.3%</strong> said an @fsu.edu email verification would
+              81.3% said an @fsu.edu email verification would
               increase their trust.
             </p>
             <figure className="my-4 flex flex-col items-center">
@@ -107,9 +107,9 @@ export default function P2PMarketplacePage() {
             </figure>
             <p>
               However, the interviews and survey free-responses revealed a more
-              universal and immediate pain point: <strong>high friction</strong>
+              universal and immediate pain point: high friction
               . Safety was a major factor, but the{' '}
-              <strong>significant cognitive load</strong> of the process was the
+              significant cognitive load of the process was the
               daily frustration. This discovery served as the Data-Driven Pivot
               for the project's product strategy.
             </p>
@@ -157,23 +157,23 @@ export default function P2PMarketplacePage() {
             <h3>Key Pain Points</h3>
             <ol>
               <li>
-                <strong>Lack of Trust & Safety:</strong> Students hesitate to
+                Lack of Trust & Safety: Students hesitate to
                 engage in transactions due to the high risk of scams and the
                 anxiety of meeting strangers from unverified platforms.
               </li>
               <li>
-                <strong>High Friction & Wasted Time:</strong> The process of
+                High Friction & Wasted Time: The process of
                 listing an item—determining a price, taking photos, writing a
                 good description, and communicating—is seen as tedious and
                 frustrating.
               </li>
               <li>
-                <strong>Inconvenient Meetup Logistics:</strong> Coordinating a
+                Inconvenient Meetup Logistics: Coordinating a
                 safe and convenient on-campus meetup is a significant challenge
                 for busy students, many of whom may not have a car.
               </li>
               <li>
-                <strong>Accessibility Barriers:</strong> For students with
+                Accessibility Barriers: For students with
                 mobility impairments, the lack of information about accessible
                 meetup locations creates a major barrier to participation.
               </li>
@@ -218,7 +218,7 @@ export default function P2PMarketplacePage() {
             <p>
               I also created a user journey map for Joe, outlining his typical
               experience trying to sell a used Steam Deck. This map was critical
-              for visualizing the impact of <strong>cognitive load</strong> on
+              for visualizing the impact of cognitive load on
               the user's emotional state throughout the process.
             </p>
             <figure className="my-4 flex flex-col items-center">
@@ -244,35 +244,35 @@ export default function P2PMarketplacePage() {
             <p>
               Synthesizing the user pain points, the survey data, and the
               primary persona (Joe), I developed a set of{' '}
-              <strong>actionable recommendations</strong>. These strategic
+              actionable recommendations. These strategic
               proposals are focused on maximizing efficiency and trust.
             </p>
             <ol>
               <li>
-                <strong>Mandatory @fsu.edu Verification:</strong> This is the
+                Mandatory @fsu.edu Verification: This is the
                 top priority to establish a baseline of trust and safety
                 (quantifiable success: 81.3% of users confirmed this would
                 increase trust).
               </li>
               <li>
-                <strong>AI Price Suggestion Tool:</strong> To combat Joe's
+                AI Price Suggestion Tool: To combat Joe's
                 "pricing uncertainty," a feature that suggests a fair market
                 price would drastically reduce listing{' '}
-                <strong>friction and cognitive load</strong>.
+                friction and cognitive load.
               </li>
               <li>
-                <strong>Preset "Meetup Zones":</strong> To solve the logistical
+                Preset "Meetup Zones": To solve the logistical
                 nightmare of meetups, the app should feature a map of
                 pre-defined, safe, and well-lit public locations on campus.
               </li>
               <li>
-                <strong>Accessibility-Labeled Meetups:</strong> A simple but
+                Accessibility-Labeled Meetups: A simple but
                 critical feature. Meetup Zones should be tagged with
                 accessibility information (e.g., "Wheelchair Accessible") to
                 serve users like Brenda.
               </li>
               <li>
-                <strong>User Rating & Reporting System:</strong> To build
+                User Rating & Reporting System: To build
                 long-term community trust and weed out "ghosters," a simple
                 rating system and a robust reporting feature are essential.
               </li>
@@ -281,7 +281,7 @@ export default function P2PMarketplacePage() {
             <h2>Reflection</h2>
             <p>
               This project was a fantastic exercise in{' '}
-              <strong>mixed-methods research</strong>. The most valuable insight
+              mixed-methods research. The most valuable insight
               was the Data-Driven Pivot from my initial "safety-first"
               hypothesis. While safety was critical, the qualitative interviews
               revealed that convenience and efficiency were the more immediate
