@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { PROJECTS, projectBlurbs } from './data'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { cn } from '@/lib/utils'
-import { ArrowRight, Download, MapPin, UserCheck } from 'lucide-react'
+import { ArrowRight, Download, UserCheck } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 const containerVariants = {
@@ -62,7 +62,7 @@ export default function HomePage() {
         {/* Hero & Work Section */}
         <motion.section variants={itemVariants}>
           <div className="mb-16 text-left">
-            <h1 className="mb-4 inline-block text-6xl font-bold tracking-tight md:text-7xl">
+            <h1 className="mb-4 inline-block text-6xl font-medium tracking-tight md:text-7xl">
               Nathan Smith
             </h1>
             <div className="mb-6 space-y-1 text-base text-zinc-600 md:text-lg dark:text-zinc-400">
@@ -101,13 +101,22 @@ export default function HomePage() {
                     index % 2 !== 0 && 'md:order-2',
                   )}
                 >
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    width={800}
-                    height={600}
-                    className="h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300"
-                  />
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={800}
+                      height={600}
+                      className="h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 dark:hidden block"
+                    />
+                    <Image
+                      src={project.image.replace('.png', '-dark.png')}
+                      alt={`${project.name} (Dark Mode)`}
+                      width={800}
+                      height={600}
+                      className="h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 hidden dark:block"
+                    />
+                  </div>
                 </Link>
                 <div
                   className={cn(
@@ -115,7 +124,7 @@ export default function HomePage() {
                     index % 2 !== 0 && 'md:order-1',
                   )}
                 >
-                  <h2 className="text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl dark:text-zinc-100">
+                  <h2 className="text-3xl font-medium tracking-tight text-zinc-900 md:text-4xl dark:text-zinc-100">
                     {project.name}
                   </h2>
                   {projectBlurbs[project.id as keyof typeof projectBlurbs] && (
@@ -148,7 +157,7 @@ export default function HomePage() {
           <div className="mb-12">
             <h1
               className={cn(
-                'inline-block text-6xl font-bold tracking-tight md:text-7xl',
+                'inline-block text-6xl font-medium tracking-tight md:text-7xl',
               )}
             >
               About Me
@@ -184,19 +193,19 @@ export default function HomePage() {
             </motion.div>
             <div className="max-w-none space-y-8 text-xl text-zinc-700 dark:text-zinc-300">
               <motion.div variants={itemVariants}>
-                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                <h2 className="text-2xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100">
                   My Philosophy
                 </h2>
                 <p>
                   I'm deeply curious about the "why" behind
                   human-computer interaction. I discovered this during my undergraduate
-                  studies, where I realized that understanding user behavior is crucial 
-                  to designing effective technology solutions. This passion has driven 
+                  studies, where I realized that understanding user behavior is crucial
+                  to designing effective technology solutions. This passion has driven
                   me to specialize during my graduate studies.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                <h2 className="text-2xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100">
                   My Process
                 </h2>
                 <p>
@@ -207,7 +216,7 @@ export default function HomePage() {
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                <h2 className="text-2xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100">
                   My Background
                 </h2>
                 <p>
@@ -235,7 +244,7 @@ export default function HomePage() {
           <div className="mb-12">
             <h1
               className={cn(
-                'mb-0 inline-block text-6xl font-bold tracking-tight md:text-7xl',
+                'mb-0 inline-block text-6xl font-medium tracking-tight md:text-7xl',
               )}
             >
               Medium Blog
@@ -252,7 +261,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="block rounded-lg bg-white p-6 no-underline shadow-md transition-shadow hover:shadow-xl dark:bg-zinc-800/50"
                   >
-                    <h3 className="mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                    <h3 className="mb-2 text-xl font-medium text-zinc-900 dark:text-zinc-100">
                       {article.title}
                     </h3>
                     <p
