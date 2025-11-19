@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function P2PMarketplacePage() {
   return (
     <div className="imon-parallax-container">
-      <ParallaxHeader speedFactor={0.4} className="project-color-blue">
+      <ParallaxHeader speedFactor={0.4} className="project-color-gold">
         <h1>FSU Tech Connect</h1>
         <p className="subtitle">
           Researching student needs for a P2P tech marketplace.
