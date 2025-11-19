@@ -41,7 +41,7 @@ export default function ItsMeowOrNeverPage() {
               As a UX Researcher, I conducted the end-to-end research
               process. The goal was to identify and validate usability issues to
               provide actionable recommendations. Being{' '}
-              <strong>customer-obsessed</strong> meant looking past my own
+              customer-obsessed meant looking past my own
               design preferences to find what actually helped the users (and the
               cats).
             </p>
@@ -51,17 +51,17 @@ export default function ItsMeowOrNeverPage() {
             </p>
             <ul>
               <li>
-                <strong>Heuristic Evaluation:</strong> I started here to quickly
+                Heuristic Evaluation: I started here to quickly
                 identify obvious usability problems based on established design
                 principles. This formed my initial hypothesis.
               </li>
               <li>
-                <strong>User Survey (N=13):</strong> Deployed to gather broad
+                User Survey (N=13): Deployed to gather broad
                 quantitative and qualitative data from real users to see if
                 their sentiments matched my expert review.
               </li>
               <li>
-                <strong>Usability Testing:</strong> Conducted to get
+                Usability Testing: Conducted to get
                 observational data. Seeing what users do is the ultimate test of
                 any hypothesis, and in this case, it provided the clearest
                 evidence for a pivot.
@@ -124,21 +124,21 @@ export default function ItsMeowOrNeverPage() {
             </p>
             <ul>
               <li>
-                <strong>Navigation Was Not the Problem:</strong> 38% of
+                Navigation Was Not the Problem: 38% of
                 respondents gave the website a perfect 5/5 score on "how easy it
                 is to find what you're looking for." The overall sentiment was
                 positive.
               </li>
               <li>
-                <strong>Aesthetics Were "Just Okay," Not a Blocker:</strong> 54%
+                Aesthetics Were "Just Okay," Not a Blocker: 54%
                 of respondents gave the site a 3/5 aesthetic rating. This told
                 me that while it wasn't winning awards, it wasn't the critical
                 barrier I assumed it was.
               </li>
               <li>
-                <strong>Content Priorities Were Clear:</strong> Users cared most
-                about <strong>"how the adoption process works"</strong> and{' '}
-                <strong>"clear contact information,"</strong> not the news and
+                Content Priorities Were Clear: Users cared most
+                about "how the adoption process works" and{' '}
+                "clear contact information," not the news and
                 events I had focused on.
               </li>
             </ul>
@@ -178,15 +178,15 @@ export default function ItsMeowOrNeverPage() {
             </p>
             <ul>
               <li>
-                <strong>High Task Success & Efficiency:</strong> Participants
+                High Task Success & Efficiency: Participants
                 completed core tasks like "find a cat to adopt" and "donate" in{' '}
-                <strong>less than 10 seconds</strong>. My perceived navigation
+                less than 10 seconds. My perceived navigation
                 and hierarchy flaws were not impeding users in practice.
               </li>
               <li>
                 The most consistent complaint was friction and confusion related
                 to the
-                "Shelterluv" <strong>third-party integration</strong> used for
+                "Shelterluv" third-party integration used for
                 adoptions and donations. The usability break was not on the IMON
                 site itself, but in the handoff to this external tool.
               </li>
@@ -221,14 +221,14 @@ export default function ItsMeowOrNeverPage() {
             <h3>My Final Recommendations to "It's Meow or Never"</h3>
             <ol>
               <li>
-                <strong>Address Accessibility First:</strong> Remove the red
+                Address Accessibility First: Remove the red
                 background that causes poor contrast. Change the red color used
                 for text and links to a shade that meets WCAG AA standards. This
                 is a high-impact, low-effort fix. I suggested #B30F11 as it
                 meets contrast requirements while maintaining brand color.
               </li>
               <li>
-                <strong>Optimize the Homepage (Don't Redesign It):</strong>
+                Optimize the Homepage (Don't Redesign It):
                 <ul>
                   <li>
                     Remove the "Lost & Found" database link to reduce clutter.
@@ -240,12 +240,12 @@ export default function ItsMeowOrNeverPage() {
                 </ul>
               </li>
               <li>
-                <strong>Clarify the Adoption Process:</strong> Create a new,
+                Clarify the Adoption Process: Create a new,
                 dedicated page that explains the adoption process step-by-step,
                 directly addressing the #1 piece of information users wanted.
               </li>
               <li>
-                <strong>Investigate the Shelterluv Integration:</strong>
+                Investigate the Shelterluv Integration:
                 <ul>
                   <li>
                     Add "what to expect" text before users click out to the
