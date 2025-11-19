@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function SleeperResearchPage() {
   return (
     <div className="imon-parallax-container">
-      <ParallaxHeader speedFactor={0.4} className="project-color-navy">
+      <ParallaxHeader speedFactor={0.4} className="project-color-teal">
         <h1>Sleeper Mobile Usability</h1>
         <p className="subtitle">
           Gamification vs. Utility: Benchmarking the "Social Glue" of fantasy
