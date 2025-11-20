@@ -321,8 +321,8 @@ img[src^='/project']:not([src='/project4-process.png']):not(
 @media (min-width: 1851px) {
   .imon-parallax-header-js {
     min-height: calc(130vh + 4.125rem);
-    padding-top: 4.125rem;
-    justify-content: center;
+    padding-top: 40vh;
+    justify-content: flex-start;
     background-attachment: fixed;
   }
 
