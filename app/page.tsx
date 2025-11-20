@@ -212,10 +212,10 @@ export default function HomePage() {
                 </h2>
                 <p>
                   I'm deeply curious about the "why" behind
-                  human-computer interaction. I discovered this during my undergraduate
-                  studies, where I realized that understanding user behavior is crucial
-                  to designing effective technology solutions. This passion has driven
-                  me to specialize during my graduate studies.
+                  human-computer interaction. I believe that 
+                  understanding user behavior is crucial
+                  to designing effective solutions. 
+                  Without the users, there is no product.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -225,8 +225,8 @@ export default function HomePage() {
                 <p>
                   My approach blends analytical thinking with the empathy of qualitative
                   storytelling. I assess a problem, speak with users to uncover
-                  their true needs, test, and synthesize those findings into
-                  actionable strategies that guide the design process and deliver on business needs.
+                  their needs, test, and synthesize those findings into
+                  actionable strategies. I aim to help guide the design process and deliver on business needs.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -241,7 +241,7 @@ export default function HomePage() {
                   user needs, data analysis, and business goals.
                 </p>
                 <p>
-                  Outside of my work, you can usually find me exploring on my gravel bike or diving into a new roguelike on my Steam Deck.
+                  Outside of my work, you can usually find me exploring on my gravel bike or diving into a new roguelike on my Steam Deck. I'm looking forward to getting my hands on the Steam Frame!
                 </p>
               </motion.div>
             </div>
