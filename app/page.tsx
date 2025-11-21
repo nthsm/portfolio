@@ -291,9 +291,6 @@ export default function HomePage() {
             </motion.div>
           )}
         </motion.section>
-
-        {/* Gallery Section */}
-        <ReactiveGallery />
       </motion.div>
     </SiteLayout>
   )
