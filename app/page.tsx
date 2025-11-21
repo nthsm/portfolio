@@ -2,11 +2,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { PROJECTS, projectBlurbs } from './data'
+import { PROJECTS, projectBlurbs, type Project } from '@/app/data'
 import SiteLayout from '@/components/ui/SiteLayout'
 import { cn } from '@/lib/utils'
 import { ArrowRight, Download, UserCheck } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { ReactiveGallery } from '@/components/ui/reactive-gallery'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,7 +73,9 @@ export default function HomePage() {
               </div>
             </div>
             <p className="mt-4 mb-6 max-w-2xl text-lg text-zinc-600 md:text-xl dark:text-zinc-400">
-              My goal is to translate research insights into product decisions that drive measurable improvements in user outcomes, conversion, and revenue.
+              My goal is to translate research insights into product decisions
+              that drive measurable improvements in user outcomes, conversion,
+              and revenue.
             </p>
             <a
               href="/nathan_smith_resume.pdf"
@@ -85,7 +88,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-24 flex flex-col gap-24 md:mt-32 md:gap-32">
-            {PROJECTS.map((project, index) => (
+            {PROJECTS.map((project: Project, index: number) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
@@ -107,14 +110,14 @@ export default function HomePage() {
                       alt={project.name}
                       width={800}
                       height={600}
-                      className="h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 dark:hidden block"
+                      className="block h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 dark:hidden"
                     />
                     <Image
                       src={project.image.replace('.png', '-dark.png')}
                       alt={`${project.name} (Dark Mode)`}
                       width={800}
                       height={600}
-                      className="h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 hidden dark:block"
+                      className="hidden h-full w-full transform-gpu rounded-lg object-cover transition-transform duration-300 dark:block"
                     />
                   </div>
                 </Link>
@@ -211,11 +214,10 @@ export default function HomePage() {
                   My Philosophy
                 </h2>
                 <p>
-                  I'm deeply curious about the "why" behind
-                  human-computer interaction. I believe that 
-                  understanding user behavior is crucial
-                  to designing effective solutions. 
-                  Without the users, there is no product.
+                  I'm deeply curious about the "why" behind human-computer
+                  interaction. I believe that understanding user behavior is
+                  crucial to designing effective solutions. Without the users,
+                  there is no product.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -223,10 +225,11 @@ export default function HomePage() {
                   My Process
                 </h2>
                 <p>
-                  My approach blends analytical thinking with the empathy of qualitative
-                  storytelling. I assess a problem, speak with users to uncover
-                  their needs, test, and synthesize those findings into
-                  actionable strategies. I aim to help guide the design process and deliver on business needs.
+                  My approach blends analytical thinking with the empathy of
+                  qualitative storytelling. I assess a problem, speak with users
+                  to uncover their needs, test, and synthesize those findings
+                  into actionable strategies. I aim to help guide the design
+                  process and deliver on business needs.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -234,14 +237,15 @@ export default function HomePage() {
                   My Background
                 </h2>
                 <p>
-                  I am currently completing my M.S. in Information Technology
-                  at Florida State University, specializing in User-Centered Design. My
-                  undergraduate degree in Management Information Systems gives
-                  me a unique perspective, allowing me to bridge the gap between
-                  user needs, data analysis, and business goals.
+                  I am currently completing my M.S. in Information Technology at
+                  Florida State University, specializing in User-Centered
+                  Design. My undergraduate degree in Management Information
+                  Systems gives me a unique perspective, allowing me to bridge
+                  the gap between user needs, data analysis, and business goals.
                 </p>
                 <p>
-                  Outside of my work, you can usually find me exploring on my gravel bike or diving into a new roguelike on my Steam Deck. I'm looking forward to getting my hands on the Steam Frame!
+                  Outside of work, you can usually find me exploring on my gravel bike
+                  or diving into a new game on my PC. I'm currently playing Days Gone!
                 </p>
               </motion.div>
             </div>
@@ -287,6 +291,9 @@ export default function HomePage() {
             </motion.div>
           )}
         </motion.section>
+
+        {/* Gallery Section */}
+        <ReactiveGallery />
       </motion.div>
     </SiteLayout>
   )
