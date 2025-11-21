@@ -19,14 +19,14 @@ export const projectBlurbs: { [key: string]: string } = {
   project1: 'Mixed-Methods Research | Data-Driven Product Strategy',
   project2: 'Research Humility | Heuristic Evaluation | Usability Testing',
   project4: 'Quantitative Data Analysis | Data Integrity | Metrics',
-  project5: 'Comparative Usability Testing | Mobile Benchmarking | Social UX',
+  project5: 'Competitive Benchmarking | Python Sentiment Analysis | Mobile Usability',
 }
 
 export const PROJECTS: Project[] = [
   {
     name: 'Sleeper Mobile Usability',
     description:
-      "A comparative study benchmarking the social features of the Sleeper mobile app against its competitors to measure engagement and cognitive load.",
+      "A mixed-methods benchmark of Sleeper vs. ESPN, utilizing usability testing and programmatic sentiment analysis to quantify the impact of features such as gambling on core app utility.",
     link: '/sleeper-research',
     image: '/project5-tn.png',
     id: 'project5',
