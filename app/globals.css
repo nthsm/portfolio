@@ -49,7 +49,12 @@ img[src^='/project']:not([src='/project4-process.png']):not(
     [src='/project2-quote.png']
   ):not([src='/project2-heuristic.png']):not([src='/project2-findings.png']):not(
     [src='/project1-interviewquotes.png']
-  ) {
+  ):not([src='/project5-heuristics.png']):not(
+    [src='/project5-personas.png']
+  ):not([src='/project5-pythonscript.png']):not(
+    [src='/project5-sociallistening.png']
+  )
+{
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
 }
@@ -61,7 +66,12 @@ img[src^='/project']:not([src='/project4-process.png']):not(
     [src='/project2-quote.png']
   ):not([src='/project2-heuristic.png']):not([src='/project2-findings.png']):not(
     [src='/project1-interviewquotes.png']
-  ) {
+  ):not([src='/project5-heuristics.png']):not(
+    [src='/project5-personas.png']
+  ):not([src='/project5-pythonscript.png']):not(
+    [src='/project5-sociallistening.png']
+  )
+{
   border-color: #3f3f46;
 }
 
