@@ -69,15 +69,19 @@ export default function SleeperResearchPage() {
               The goal was to move beyond my own bias and
               see if the "bloat" I felt was a widespread sentiment.
             </p>
+            <p>
+              To do this, I created a post asking users about what they'd change, add, or remove from the app.
+              Over 150 comments later, it was clear what the primary pain points were.
+            </p>
             <figure className="my-8 flex flex-col items-center">
               <img
-                src="/placeholder.png"
+                src="/project5-sociallistening.png"
                 alt="Visualization of Reddit threads complaining about UI clutter."
-                className="w-full rounded-lg shadow-md"
+                className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-center text-sm text-zinc-500">
                 Social listening highlighted a high volume of posts complaining
-                about UI clutter and feature bloat.
+                about messaging, the desktop experience, and gambling.
               </figcaption>
             </figure>
 
@@ -87,63 +91,11 @@ export default function SleeperResearchPage() {
               Usability Heuristics. This identified specific violations
               that served as the basis for my usability test script.
             </p>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="rounded-lg bg-zinc-50 p-6 dark:bg-zinc-900">
-                <h3 className="mt-0 mb-2 text-lg font-bold">
-                  1. Navigation Identity Crisis
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  <strong>Violates: Consistency & Standards.</strong>
-                  <br />
-                  The app attempts to be a Chat App, a Fantasy Tool, and a
-                  Sportsbook simultaneously. High-value real estate (Bottom Nav)
-                  is occupied by low-utility pages like "Profile," while
-                  essential "Chats" are fragmented.
-                </p>
-              </div>
-              <div className="rounded-lg bg-zinc-50 p-6 dark:bg-zinc-900">
-                <h3 className="mt-0 mb-2 text-lg font-bold">
-                  2. Task Friction
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  <strong>Violates: Flexibility & Efficiency.</strong>
-                  <br />
-                  When adding players, the default view is "Trending" rather
-                  than "Available." This forces an extra tap for every
-                  transaction, prioritizing discovery over the user's primary
-                  intent (utility).
-                </p>
-              </div>
-              <div className="rounded-lg bg-zinc-50 p-6 dark:bg-zinc-900">
-                <h3 className="mt-0 mb-2 text-lg font-bold">
-                  3. "Mystery Meat" Navigation
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  <strong>Violates: Match Between System & Real World.</strong>
-                  <br />
-                  Terms like "Minis" are system-oriented jargon with no semantic
-                  meaning to the user. High-value tools (Research) are hidden
-                  under these ambiguous labels, killing discoverability.
-                </p>
-              </div>
-              <div className="rounded-lg bg-zinc-50 p-6 dark:bg-zinc-900">
-                <h3 className="mt-0 mb-2 text-lg font-bold">
-                  4. Goal Interference
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  <strong>Violates: User Control & Freedom.</strong>
-                  <br />
-                  The "Picks" integration physically obstructs fantasy data. It
-                  is a secondary business goal (Monetization) that actively
-                  impedes the primary user goal (Team Management).
-                </p>
-              </div>
-            </div>
             <figure className="my-8 flex flex-col items-center">
               <img
-                src="/placeholder.png"
+                src="/project5-heuristics.png"
                 alt="Heuristic markup of the Sleeper interface."
-                className="w-full rounded-lg shadow-md"
+                className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-center text-sm text-zinc-500">
                 Visual audit highlighting areas where monetization features
@@ -158,13 +110,12 @@ export default function SleeperResearchPage() {
             </p>
             <figure className="my-8 flex flex-col items-center">
               <img
-                src="/placeholder.png"
-                alt="Proto-Personas: The Commissioner (Power User) vs The Social Casual."
-                className="w-full rounded-lg shadow-md"
+                src="/project5-personas.png"
+                alt="Proto-Personas: The Social Butterfly vs The Power User vs The Social Casual."
+                className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-center text-sm text-zinc-500">
-                Targeting both "Power Users" and "Casuals" ensures the study
-                covers the full spectrum of friction.
+                The Social Butterfly vs The Power User vs The Social Casual.
               </figcaption>
             </figure>
             <p>
@@ -174,9 +125,7 @@ export default function SleeperResearchPage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                The aggressive integration of new features
-                is creating friction that degrades the Social and
-                Utility experience for core users.
+                The messaging system is a major pain point for users of the mobile app, and it needs a substantial rework.
               </h2>
               <div className="hmw-line"></div>
             </div>
@@ -222,36 +171,37 @@ export default function SleeperResearchPage() {
 
         <div className="content-section">
           <div className="imon-content-inner clearfix">
-            <h2>Phase 3: Programmatic Sentiment Analysis</h2>
+            <h2>Phase 3: Sentiment Analysis</h2>
             <p>
-              <em>Currently In Progress.</em> Following the qualitative phase, I
-              will perform a sentiment analysis to quantify broader user sentiment.
+              Following the qualitative phase, I performed a sentiment analysis to quantify broader user sentiment.
             </p>
             <p>
-              Using Python (PRAW library), I will scrape recent discussion
-              threads to quantify the sentiment around specific features
-              identified in Phase 2. This will allow me to validate if the
-              friction points observed in 6 users are representative of the
-              broader 10M+ user base.
+              Reddit allows users to add '.json' to the end of any thread URL to access its raw data. I scraped 8 posts (including my own) containing plenty of user comments by copying the JSON data into a text file.
+            </p>
+            <p>
+              I then wrote a Python script utilizing the VADER sentiment analysis library to analyze the comments and generate a sentiment score.
             </p>
             <figure className="my-8 flex flex-col items-center">
               <img
-                src="/placeholder.png"
+                src="/project5-pythonscript.png"
                 alt="Placeholder for Python Sentiment Analysis Charts."
-                className="w-full rounded-lg shadow-md"
+                className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-center text-sm text-zinc-500">
-                (Upcoming) Sentiment distribution comparing "Social Features"
-                vs. "Gambling Features."
+                Python script utilizing VADER sentiment analysis to quantify
+                user sentiment.
               </figcaption>
             </figure>
+            <p>
+              My keywords were relating to DMs as that was the focal point of my testing. The results showed a substantial negative sentiment towards the messaging system, validating my initial hypothesis.
+            </p>
+            <p>
+              There was a large volume of "neutral" comments, likely from users stating facts or asking questions without expressing sentiment.
+            </p>
 
             <h2>Next Steps & Recommendation Strategy</h2>
             <p>
               The final goal is to provide Sleeper with a data-driven roadmap.
-              This will likely focus on decoupling the "Betting" experience from
-              the "Fantasy" experience through Context-Aware Navigation,
-              ensuring that revenue goals do not cannibalize user retention.
             </p>
           </div>
         </div>
