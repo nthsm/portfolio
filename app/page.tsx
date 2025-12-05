@@ -243,9 +243,10 @@ export default function HomePage() {
                   Systems gives me a unique perspective, allowing me to bridge
                   the gap between user needs, data analysis, and business goals.
                 </p>
+                <br></br>
                 <p>
                   Outside of work, you can usually find me exploring on my gravel bike
-                  or diving into a new game on my PC. I'm currently playing Days Gone!
+                  or diving into a new game on my PC!
                 </p>
               </motion.div>
             </div>
