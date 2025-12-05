@@ -35,11 +35,11 @@ export function ZoomableImage({ src, alt, className }: ZoomableImageProps) {
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
         <MorphingDialogContent className="relative flex items-center justify-center pointer-events-none">
-          <div className="pointer-events-auto relative p-4">
+          <div className="pointer-events-auto relative p-2 md:p-4 bg-white dark:bg-zinc-900 rounded-xl shadow-2xl">
             <MorphingDialogImage
               src={src}
               alt={alt}
-              className="h-auto w-full max-w-[90vw] max-h-[90vh] rounded-lg object-contain shadow-2xl"
+              className="h-auto w-full max-w-[90vw] max-h-[85vh] rounded-lg object-contain"
             />
             <MorphingDialogClose className="absolute -top-4 -right-4 p-2 bg-zinc-900/50 hover:bg-zinc-900/80 backdrop-blur-md rounded-full text-white transition-colors border border-white/10">
               <X className="h-5 w-5" />
