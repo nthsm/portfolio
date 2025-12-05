@@ -53,7 +53,14 @@ img[src^='/project']:not([src='/project4-process.png']):not(
     [src='/project5-personas.png']
   ):not([src='/project5-pythonscript.png']):not(
     [src='/project5-sociallistening.png']
-  )
+  ):not([src='/project5-empathymap-casual.png']):not(
+    [src='/project5-empathymap-power.png']):not(
+    [src='/project5-userjourneymap.png']
+  ):not([src='/project5-mockup1.png']):not(
+    [src='/project5-mockup2.png']
+  ):not([src='/project5-mockup3.png']):not([src='/project5-task1flow.png']):not(
+    [src='/project5-task2flow.png']
+  ):not([src='/project5-task3flow.png'])
 {
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -70,7 +77,14 @@ img[src^='/project']:not([src='/project4-process.png']):not(
     [src='/project5-personas.png']
   ):not([src='/project5-pythonscript.png']):not(
     [src='/project5-sociallistening.png']
-  )
+  ):not([src='/project5-empathymap-casual.png']):not(
+    [src='/project5-empathymap-power.png']):not(
+    [src='/project5-userjourneymap.png']
+  ):not([src='/project5-mockup1.png']):not(
+    [src='/project5-mockup2.png']
+  ):not([src='/project5-mockup3.png']):not([src='/project5-task1flow.png']):not(
+    [src='/project5-task2flow.png']
+  ):not([src='/project5-task3flow.png'])
 {
   border-color: #3f3f46;
 }
@@ -220,6 +234,14 @@ img[src^='/project']:not([src='/project4-process.png']):not(
   font-family: var(--font-crimson-pro), serif !important;
   font-size: 1.5rem !important;
   line-height: 1.4 !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+}
+
+.imon-content-inner h4 {
+  font-family: var(--font-crimson-pro), serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
   font-weight: 500 !important;
   color: inherit !important;
 }
