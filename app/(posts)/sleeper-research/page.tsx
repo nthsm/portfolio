@@ -151,7 +151,7 @@ export default function SleeperResearchPage() {
               While not particularly relevant to messaging, I noted that the app
               also violated Heuristic #10 (Help & Documentation) by lacking any
               information within the app on how to disable the Picks tab. It
-              seemes that many users on Reddit were unaware that this feature
+              seems that many users on Reddit were unaware that this feature
               could be turned off.
             </p>
             <p>
