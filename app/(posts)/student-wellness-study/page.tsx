@@ -79,9 +79,9 @@ export default function StudentWellnessPage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                "Do students with a defined sleep strategy report significantly
+                Do students with a defined sleep strategy report significantly
                 different sleep duration, stress levels, and daily productivity
-                indicators compared to students without a strategy?"
+                indicators compared to students without a strategy?
               </h2>
               <div className="hmw-line"></div>
             </div>
