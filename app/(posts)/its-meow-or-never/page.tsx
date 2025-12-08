@@ -35,13 +35,30 @@ export default function ItsMeowOrNeverPage() {
               It serves as a personal case study in research humility and the
               power of data to correct assumptions.
             </p>
+            <h3>My Background</h3>
+            <p>
+              My girlfriend and I adopted our cat, Fawn, from IMON in 2024. I was
+              initially drawn to the organization because of their mission and
+              impact, but as a UX professional, I couldn't help but notice the
+              usability issues on their website.
+            </p>
+            <p>
+              Wanting to help, I offered to conduct a UX review and provide
+              recommendations. This personal connection added motivation but also
+              introduced bias, as I was eager to "fix" the site based on my own
+              design preferences.
+            </p>
+            <p>
+              We are so happy with Fawn and grateful to IMON for their work, which made me
+              want to give back in my own way.
+            </p>
 
             <h2>My Role & Methods</h2>
             <p>
               As a UX Researcher, I conducted the end-to-end research
               process. The goal was to identify and validate usability issues to
-              provide actionable recommendations. Being{' '}
-              customer-obsessed meant looking past my own
+              provide actionable recommendations. Being
+              user-centered meant looking past my own
               design preferences to find what actually helped the users (and the
               cats).
             </p>
@@ -105,9 +122,9 @@ export default function ItsMeowOrNeverPage() {
             <div className="hmw-container not-prose">
               <div className="hmw-line"></div>
               <h2 className="hmw-text">
-                "The website's aesthetics, hierarchy, and accessibility flaws
+                The website's aesthetics, hierarchy, and accessibility flaws
                 create a frustrating user experience that is the primary barrier
-                to adoption and donations."
+                to adoption and donations.
               </h2>
               <div className="hmw-line"></div>
             </div>
