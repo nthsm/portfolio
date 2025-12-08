@@ -458,8 +458,8 @@ export default function SleeperResearchPage() {
               interaction.
             </p>
             <p>
-              By weaving communication into the core gameplay loop
-              (Matchups/Players), Sleeper can reduce the cognitive load of
+              By weaving communication into the core gameplay loop, 
+              Sleeper can reduce the cognitive load of
               socializing.
             </p>
             <p>
