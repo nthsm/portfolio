@@ -4,7 +4,7 @@ import { ZoomableImage } from '@/components/ui/zoomable-image'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Sleeper Mobile: Social Utility Optimization — Nathan Smith',
+    absolute: 'Sleeper Mobile — Nathan Smith',
   },
   description:
     'Redesigning the messaging architecture to restore the platforms core social promise.',
@@ -14,7 +14,7 @@ export default function SleeperResearchPage() {
   return (
     <div className="imon-parallax-container">
       <ParallaxHeader speedFactor={0.4} className="project-color-teal">
-        <h1>Sleeper Mobile: Social Utility Optimization</h1>
+        <h1>Sleeper Mobile</h1>
         <p className="subtitle">
           Redesigning the messaging architecture to restore the platform's core social promise.
         </p>
@@ -33,9 +33,9 @@ export default function SleeperResearchPage() {
               amidst growing feature density.
             </p>
             <p>
-              This study performs a deep-dive analysis of Sleeper's internal
+              This study performs a deep-dive analysis of Sleeper's 
               messaging architecture. By identifying the gap between what users
-              want to do (trash talk, negotiate, react) and what the interface
+              want to do and what the interface
               allows them to do, I aim to propose a redesigned social flow that
               restores the app's core promise of connection.
             </p>
@@ -79,8 +79,7 @@ export default function SleeperResearchPage() {
             </p>
             <p>
               Many users expressed frustration with the messaging system, citing
-              issues like cluttered UI, difficulty finding conversations, and
-              intrusive gambling features.
+              issues like cluttered UI and difficulty finding conversations.
             </p>
             <figure className="my-8 flex flex-col items-center">
               <ZoomableImage
@@ -136,6 +135,9 @@ export default function SleeperResearchPage() {
               This identified specific violations that could be tested in
               usability sessions.
             </p>
+            <p>
+              If these screens were found to be problematic during testing, I could begin to consider design solutions.
+            </p>
             <figure className="my-8 flex flex-col items-center">
               <ZoomableImage
                 src="/project5-heuristics.png"
@@ -181,6 +183,14 @@ export default function SleeperResearchPage() {
               These personas helped ensure that I recruited a diverse set of
               users who represented different engagement levels and communication
               styles within Sleeper.
+            </p>
+            <p>
+              I tried to consider different needs of users that I know personally,
+              as well as those expressed in Reddit comments. Testing will reveal which personas are accurate, most common, and relevant to the messaging experience.
+            </p>
+            <p>
+              With these insights, I formulated my core hypothesis to be tested in
+              the next phase.
             </p>
 
             <h2>The Hypothesis</h2>
@@ -441,7 +451,7 @@ export default function SleeperResearchPage() {
               />
             </figure>
 
-            <h2>Strategic Recommendation</h2>
+            <h2>Next Steps</h2>
             <p>
               Sleeper's competitive advantage is its social layer. However, the
               current architecture creates friction that actively inhibits social
@@ -453,9 +463,26 @@ export default function SleeperResearchPage() {
               socializing.
             </p>
             <p>
-              My recommendation is to A/B test these changes in the next beta
-              release to measure its impact on Daily Active Users and message
+              My recommendation to Sleeper is to <strong>A/B test these changes in the next beta
+              release</strong> to measure its impact on Daily Active Users and message
               volume.
+            </p>
+            <p>
+              Check analytics, see how many users engage with the new messaging
+              features, and gather feedback through in-app surveys to iterate
+              further.
+            </p>
+            <p>
+              Check your subreddit for user feedback post-launch to see if sentiment
+              has improved.
+            </p>
+            <p>
+              Research is never truly done, and continuous iteration based on user
+              feedback is key to maintaining a user-centric product.
+            </p>
+            <p>
+              This would be my plan if I were to hand off this research to the Sleeper
+              product team.
             </p>
           </div>
         </div>

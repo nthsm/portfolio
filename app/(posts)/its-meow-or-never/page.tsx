@@ -3,7 +3,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Heuristics vs. Reality — Nathan Smith',
+    absolute: 'Meow or Never — Nathan Smith',
   },
   description: 'How user data corrected heuristics for a non-profit.',
 }
@@ -12,7 +12,7 @@ export default function ItsMeowOrNeverPage() {
   return (
     <div className="imon-parallax-container">
       <ParallaxHeader speedFactor={0.4} className="project-color-red">
-        <h1>Heuristics vs. Reality</h1>
+        <h1>Meow or Never</h1>
         <p className="subtitle">
           How user data corrected heuristics for a non-profit.
         </p>
@@ -218,7 +218,7 @@ export default function ItsMeowOrNeverPage() {
               user needs and be far more achievable for a non-profit.
             </p>
 
-            <h3>My Final Recommendations to "It's Meow or Never"</h3>
+            <h3>My Final Recommendations</h3>
             <ol>
               <li>
                 Address Accessibility First: Remove the red
@@ -228,7 +228,7 @@ export default function ItsMeowOrNeverPage() {
                 meets contrast requirements while maintaining brand color.
               </li>
               <li>
-                Optimize the Homepage (Don't Redesign It):
+                Optimize the Homepage:
                 <ul>
                   <li>
                     Remove the "Lost & Found" database link to reduce clutter.
@@ -258,12 +258,52 @@ export default function ItsMeowOrNeverPage() {
                 </ul>
               </li>
             </ol>
+            <h3>A Quick Redesign</h3>
+            <p>
+              To help visualize the impact of these recommendations, I created a
+              quick redesign prototype focusing on the homepage and adoption flow, while
+              implementing aesthetic and accessibility improvements.
+            </p>
+            <p>
+              I started with a cleaner, more modern layout that prioritized key user
+              needs identified in the research.
+            </p>
+            <figure className="my-8 flex flex-col items-center">
+              <img
+                src="/project2-wireframe-home.png"
+                alt="Wireframe of redesigned homepage."
+              />
+              <figcaption>
+                Wireframe of redesigned homepage.
+              </figcaption>
+            </figure>
+            <p>
+              I then fed that into Figma Make to create a high-fidelity mockup. Below is a video walkthrough of the interactive prototype.
+            </p>
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden my-8 shadow-lg">
+              <iframe
+                src="https://player.vimeo.com/video/1130071186?badge=0&autopause=0&player_id=0&app_id=58479"
+                className="absolute top-0 left-0 w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="IMON Interactive Prototype"
+                allowFullScreen
+              />
+            </div>
+            <p>
+              After this video was captured, I refined the prototype further based on feedback from peers and stakeholders. IMON wanted me to change the red color to a darker shade for better readability, so I updated it to #B30F11.
+            </p>
           </div>
         </div>
 
         <div className="content-section">
           <div className="imon-content-inner">
             <h2>Reflection</h2>
+            <p>
+              As of the time of writing, IMON has not yet implemented these
+              recommendations. However, the research process itself was invaluable
+              to me.
+            </p>
             <p>
               As a researcher, it's crucial to acknowledge when your hypothesis
               is wrong. This project was a perfect example. By trusting the user

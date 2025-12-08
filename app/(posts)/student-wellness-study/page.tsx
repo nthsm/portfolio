@@ -3,7 +3,7 @@ import { ParallaxHeader } from '@/components/ui/ParallaxHeader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Student Wellness Report — Nathan Smith',
+    absolute: 'Student Wellness — Nathan Smith',
   },
   description: 'Analyzing student survey data on sleep and stress.',
 }
@@ -12,7 +12,7 @@ export default function StudentWellnessPage() {
   return (
     <div className="imon-parallax-container">
       <ParallaxHeader speedFactor={0.4} className="project-color-green">
-        <h1>Student Wellness Report</h1>
+        <h1>Student Wellness</h1>
         <p className="subtitle">
           Analyzing student survey data on sleep and stress.
         </p>
