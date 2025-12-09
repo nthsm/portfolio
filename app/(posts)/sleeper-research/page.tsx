@@ -303,20 +303,77 @@ export default function SleeperResearchPage() {
 
             <h4>Testing Results</h4>
             <p>
-              Key metrics collected included task completion time, success rate,
-              and user satisfaction ratings:
+              Key metrics collected are as follows:
             </p>
-            <figure className="my-8 flex flex-col items-center">
-              <ZoomableImage
-                src="/project5-usabilitymetrics.png"
-                alt="Usability Testing Metrics: Task Completion Time, Success Rate, User Satisfaction."
-                className="w-full rounded-lg"
-              />
-              <figcaption className="mt-2 text-center text-sm text-zinc-500">
-                Usability Testing Metrics: Task Completion Time, Success Rate,
-                User Satisfaction.
-              </figcaption>
-            </figure>
+            <ul>
+              <li>
+                <strong>Time on Task:</strong> Time taken to complete
+                each task.
+              </li>
+              <li>
+                <strong>User Satisfaction:</strong> Post-task satisfaction
+                ratings on a scale of 1-5.
+              </li>
+              <li>
+                <strong>Error Rate:</strong> Number of misclicks or incorrect
+                actions taken during each task. I included switching between manager chats in Task 2 as an error since it indicates confusion.
+              </li>
+            </ul>
+            <p>
+              The quantitative data revealed significant friction points:
+            </p>
+            <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+              <figure className="flex flex-col items-center">
+                <ZoomableImage
+                  src="/project5-metrics-time.png"
+                  alt="Time on Task Metrics"
+                  className="w-full rounded-lg"
+                />
+                <figcaption className="mt-2 text-center text-xs text-zinc-500">
+                  Time on Task Metrics
+                </figcaption>
+              </figure>
+              <figure className="flex flex-col items-center">
+                <ZoomableImage
+                  src="/project5-metrics-satisfy.png"
+                  alt="User Satisfaction Metrics"
+                  className="w-full rounded-lg"
+                />
+                <figcaption className="mt-2 text-center text-xs text-zinc-500">
+                  User Satisfaction Metrics
+                </figcaption>
+              </figure>
+              <figure className="flex flex-col items-center">
+                <ZoomableImage
+                  src="/project5-metrics-error.png"
+                  alt="Misclick (Error) Rate Metrics"
+                  className="w-full rounded-lg"
+                />
+                <figcaption className="mt-2 text-center text-xs text-zinc-500">
+                  Misclick (Error) Rate Metrics
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              I was shocked at how many people didn't even know what I was talking about in Task 1.
+            </p>
+            <p>
+              Next time, I believe I could have picked better tasks (2 and 3 weren't as strong) for testing. However, I picked these tasks because I was curious about how users would choose to navigate the app.
+            </p>
+            <p>
+              For example, in Task 2, many users went through DMs instead of navigating to the 'Trades' tab. This revealed that users don't have a clear mental model of where to find certain features.
+              Adding a 'search' function to chats would help users who choose this path find what they need faster.
+            </p>
+            <p>
+              In Task 3, I wanted to see if users would instinctively try to create a trade directly from the DM screen by tapping the other manager's name. Most users did, indicating that this is a natural expectation that the app fails to meet.
+            </p>
+            <p>
+              I also considered doing a sentiment score after each task, but with only 7 participants, I felt the qualitative feedback would be more valuable. I was already able to gauge sentiment from the satisfaction ratings and observed frustrations.
+            </p>
+            <p>
+              Overall, the quantitative data confirmed my hypothesis that the messaging architecture creates friction, but the qualitative data
+              provided deeper insights into the specific pain points and user expectations.
+            </p>
             <h4>Qualitative Synthesis</h4>
             <p>
               After each task, I asked participants a series of follow-up
@@ -450,6 +507,19 @@ export default function SleeperResearchPage() {
                 className="w-full rounded-lg"
               />
             </figure>
+            <h2>Reflection</h2>
+            <p>
+              I didn't iterate on the designs of pages such as "Taunt" or "League Chat"
+              as I felt the core architectural changes were more important to
+              validate first. I believe real analytical data that Sleeper posess will provide a clearer
+              direction for future design iterations.
+            </p>
+            <p>
+              I also didn't conduct a second round of usability testing on the
+              new designs due to time constraints. However, I would recommend
+              doing so to validate that the proposed changes effectively reduce
+              friction and enhance the social experience.
+            </p>
 
             <h2>Next Steps</h2>
             <p>
